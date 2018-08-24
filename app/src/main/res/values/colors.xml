@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorStart">#e2d7db</color>
+    <color name="colorTextToolStart">#03072e</color>
+    <color name="colorTextBookStart">#f506c5</color>
+    <color name="colorTextCorrectStart">#030c5c</color>
+    <color name="colorGradientStart">#d3f1ea</color>
+    <color name="colorGradientEnd">#83d2f1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorGradientLogInStart">#19AA88</color>
+    <color name="colorGradientLogInEnd">#23A7D8</color>
+
+
+</resources>
