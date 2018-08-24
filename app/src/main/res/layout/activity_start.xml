@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_bg"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tool"
+            android:padding="20sp"/>
+
+        <TextView
+            android:id="@+id/tvTool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextToolStart"
+            android:layout_gravity="center"
+            android:text="Hệ Thống"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/book"
+            android:padding="20sp"/>
+
+        <TextView
+            android:id="@+id/tvBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextBookStart"
+            android:layout_gravity="center"
+            android:text="Tiện Lợi"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/correct"
+            android:padding="20sp"/>
+
+        <TextView
+            android:id="@+id/tvCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextCorrectStart"
+            android:layout_gravity="center"
+            android:text="Chính Xác"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_drl_student"
+        android:padding="20sp"/>
+
+    <ImageView
+        android:id="@+id/impProcess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/process" />
+
+</LinearLayout>
