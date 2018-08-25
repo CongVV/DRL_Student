@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\congv\\Documents\\DRLStudent\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
+            "outputFile": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hu\\values-hu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d118a60c4269c251412eab1dd60d7ab1\\res\\values-hu\\values-hu.xml",

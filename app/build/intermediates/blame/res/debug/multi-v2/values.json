@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\congv\\Documents\\DRLStudent\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d118a60c4269c251412eab1dd60d7ab1\\res\\values\\values.xml",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\congv\\Documents\\DRLStudent\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -97,7 +97,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\congv\\Documents\\DRLStudent\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "4,12,16,15,11,2,3,7,9,10,8,5,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -114,7 +114,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\congv\\Documents\\DRLStudent\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
