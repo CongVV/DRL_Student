@@ -103,7 +103,7 @@
                         android:inputType="textPassword"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:id="@+id/edtPass"
+                        android:id="@+id/edt_password"
                         android:textColor="@color/colorWhite"
                         android:textSize="15sp"
                         android:hint="Mật Khẩu"

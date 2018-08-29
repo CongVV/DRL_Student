@@ -7,40 +7,70 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import hcmue.congvu.drlstudent.Adapter.SchoolAdapter.SchoolAdapter;
 import hcmue.congvu.drlstudent.Adapter.SchoolAdapter.SchoolItem;
+import hcmue.congvu.drlstudent.Controller.SignUpController.ControllerLogicProcessSignUp;
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
 
 /**
  * Created by CongVu on 24/08/2018.
  */
-public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
-    private String array_spinner[];
+public class SignUpActivity extends AppCompatActivity implements ViewProcessSignUp,View.OnClickListener{
+
     private ArrayList<SchoolItem> mSchoolList;
     private SchoolAdapter mSchoolAdapter;
-    private Button btn_login, btn_birthday;
+    private Button btn_login, btn_birthday, btn_signup;
+    private EditText edt_fullname, edt_email, edt_phone, edt_username, edt_password, edt_repassword;
+    private Spinner spinner_school;
+    private RadioGroup radio_gender;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private ControllerLogicProcessSignUp controllerLogicProcessSignUp = new ControllerLogicProcessSignUp(this,this);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
         btn_login = (Button) findViewById(R.id.btn_login);
+        btn_signup = (Button) findViewById(R.id.btn_signup);
         btn_birthday = (Button) findViewById(R.id.btn_birthday);
+        radio_gender = (RadioGroup) findViewById(R.id.radio_gender);
+        edt_fullname = (EditText) findViewById(R.id.edt_fullname);
+        edt_email = (EditText) findViewById(R.id.edt_email);
+        edt_phone = (EditText) findViewById(R.id.edt_phone);
+        edt_username = (EditText) findViewById(R.id.edt_username);
+        edt_password = (EditText) findViewById(R.id.edt_password);
+        edt_repassword = (EditText) findViewById(R.id.edt_repassword);
+
         btn_login.setOnClickListener(this);
         btn_birthday.setOnClickListener(this);
+        btn_signup.setOnClickListener(this);
+
+        spinner_school = (Spinner) findViewById(R.id.spinner_school);
+
+
+
+
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -51,39 +81,28 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             }
         };
 
-        array_spinner = new String[5];
-        array_spinner[0]="option 1";
-        array_spinner[1]="option 2";
-        array_spinner[2]="option 3";
-        array_spinner[3]="option 4";
-        array_spinner[4]="option 5";
+        controllerLogicProcessSignUp.getSchoolList();
+        /*try {
+            presenterLogicProcessSignUp.getSchoolList();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("errPresenter", e.toString());
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }*/
+        //initList();
 
-        initList();
 
-        Spinner spinnerSchool = (Spinner) findViewById(R.id.spin_school);
         /*ArrayAdapter adapter = new ArrayAdapter(this,
                 android.R.layout.simple_spinner_item, array_spinner);
         s.setAdapter(adapter);*/
 
-        mSchoolAdapter = new SchoolAdapter(this, mSchoolList);
-        spinnerSchool.setAdapter(mSchoolAdapter);
-        spinnerSchool.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                SchoolItem clickedItem = (SchoolItem) parent.getItemAtPosition(position);
-                String clickedSchoolName = clickedItem.getmSchoolName();
-                Toast.makeText(SignUpActivity.this, clickedSchoolName + " selected", Toast.LENGTH_SHORT).show();
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
 
 
     }
+
+
 
     private void initList(){
         mSchoolList = new ArrayList<>();
@@ -137,6 +156,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intent);
                 break;
             case R.id.btn_signup:
+                //validateForm();
+                //Toast.makeText(SignUpActivity.this, "here here!!!", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.btn_birthday:
                 Calendar calendar = Calendar.getInstance();
@@ -153,7 +175,101 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    public void checkButton(){
+    @Override
+    public void signUpSuccessfull() {
 
+    }
+
+    @Override
+    public void signUpFail() {
+
+    }
+
+    @Override
+    public boolean validateForm() {
+        boolean valid = true;
+        if(TextUtils.isEmpty(edt_fullname.getText().toString())){
+            edt_fullname.setError("Họ và tên không được trống!");
+            valid = false;
+        } else {
+            edt_fullname.setError(null);
+        }
+
+        if(!isEmailValidate(edt_email.getText().toString())){
+            edt_email.setError("Nhập đúng định dạng Email!");
+            valid = false;
+        }
+        else {
+            edt_email.setError(null);
+        }
+
+        if(TextUtils.isEmpty(edt_phone.getText().toString())){
+            edt_phone.setError("Họ và tên không được trống!");
+            valid = false;
+        } else {
+            edt_phone.setError(null);
+        }
+
+        if(TextUtils.isEmpty(edt_username.getText().toString())){
+            edt_username.setError("Tên đăng nhập không được trống!");
+            valid = false;
+        } else {
+            edt_username.setError(null);
+        }
+
+        if(TextUtils.isEmpty(edt_password.getText().toString())){
+            edt_password.setError("Mật khẩu không được trống!");
+            valid = false;
+        } else {
+            if (!edt_password.getText().toString().equals(edt_repassword.getText().toString())) {
+                edt_password.setError("Mật khẩu phải trùng nhau!");
+                edt_repassword.setError("Mật khẩu phải trùng nhau!");
+                valid = false;
+            } else {
+                edt_password.setError(null);
+                edt_repassword.setError(null);
+            }
+        }
+
+        return valid;
+    }
+
+    @Override
+    public void setSpinnerSchool(JSONArray listSchool) {
+        mSchoolList = new ArrayList<>();
+        for (int i=0; i<listSchool.length(); i++){
+            try{
+                JSONObject jsonObject = listSchool.getJSONObject(i);
+                SchoolItem schoolItem = new SchoolItem();
+                schoolItem.setmIdSchool(jsonObject.getInt("id"));
+                schoolItem.setmSchoolName(jsonObject.getString("name"));
+                Toast.makeText(SignUpActivity.this, jsonObject.getString("name"), Toast.LENGTH_SHORT).show();
+                mSchoolList.add(schoolItem);
+            } catch (JSONException e){
+                e.printStackTrace();
+            }
+        }
+        mSchoolAdapter = new SchoolAdapter(this, mSchoolList);
+        spinner_school.setAdapter(mSchoolAdapter);
+        spinner_school.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //SchoolItem clickedItem = (SchoolItem) parent.getItemAtPosition(position);
+                //String clickedSchoolName = clickedItem.getmSchoolName();
+                //Toast.makeText(SignUpActivity.this, clickedSchoolName + " selected", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    private boolean isEmailValidate(String email){
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

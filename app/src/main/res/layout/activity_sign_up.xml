@@ -123,6 +123,7 @@
                         android:textSize="15sp"/>
 
                     <RadioGroup
+                        android:id="@+id/radio_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                             <RadioButton
@@ -229,14 +230,15 @@
                     android:textSize="15sp"/>
 
                 <Spinner
-                    android:id="@+id/spin_school"
+                    android:id="@+id/spinner_school"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"
-                    android:textStyle="italic"/>
+                    android:textStyle="italic"
+                    android:background="@drawable/spinner_bg"/>
             </LinearLayout>
 
             <LinearLayout

@@ -12,6 +12,17 @@ public class SchoolItem {
         mIdSchool = idSchool;
     }
 
+    public SchoolItem() {
+    }
+
+    public void setmSchoolName(String mSchoolName) {
+        this.mSchoolName = mSchoolName;
+    }
+
+    public void setmIdSchool(int mIdSchool) {
+        this.mIdSchool = mIdSchool;
+    }
+
     public String getmSchoolName(){
         return mSchoolName;
     }
