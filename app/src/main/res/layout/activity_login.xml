@@ -73,8 +73,8 @@
                         android:textSize="15sp"
                         android:hint="Tên Đăng Nhập"
                         android:textStyle="italic"
-                        android:textColorHint="@android:color/white"
-                        android:inputType="textEmailAddress"/>
+                        android:singleLine="true"
+                        android:textColorHint="@android:color/white"/>
 
                 </LinearLayout>
 

@@ -39,6 +39,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="hcmue.congvu.drlstudent.View.HomeView.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeHome" />
+        <activity
+            android:name="hcmue.congvu.drlstudent.View.UserInfoView.UserInfoActivity"
             android:screenOrientation="portrait" />
     </application>
 

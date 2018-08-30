@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import hcmue.congvu.drlstudent.Controller.LogInController.ControllerLogicProcessLogIn;
+import hcmue.congvu.drlstudent.Model.UserModel.UserItem;
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.ForgotPassView.ForgotPassActivity;
 import hcmue.congvu.drlstudent.View.HomeView.HomeActivity;
@@ -59,8 +60,9 @@ public class LogInActivity extends AppCompatActivity implements ViewProcessLogIn
     }
 
     @Override
-    public void logInSuccessfull(String s) {
+    public void logInSuccessfull(int userId) {
         Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
+        intent.putExtra("userId", userId);
         startActivity(intent);
         finish();
     }

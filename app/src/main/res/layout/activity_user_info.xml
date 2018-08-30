@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/login_bg"
     android:animateLayoutChanges="true"
-    tools:context=".View.SignUpView.SignUpActivity">
+    tools:context=".View.UserInfoView.UserInfoActivity">
 
     <RelativeLayout
         android:id="@+id/relative1"
@@ -21,11 +21,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif"
-            android:text="Đăng Ký"
+            android:text="Thông tin tài khoản"
             android:textAllCaps="true"
             android:textStyle="bold"
-            android:textColor="@color/colorWhite"
-            android:textSize="30sp"/>
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"/>
 
 
         <LinearLayout
@@ -62,7 +62,6 @@
                     android:paddingRight="15dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"
-                    android:singleLine="true"
                     android:hint="Họ và tên"
                     android:textStyle="italic"
                     android:textColorHint="@color/colorWhite"/>
@@ -101,7 +100,7 @@
                         android:paddingRight="15dp"
                         android:textColor="@color/colorWhite"
                         android:textSize="15sp"
-                        android:hint="Ngày/Tháng/Năm sinh"
+                        android:hint="Click để chọn ngày/tháng/năm sinh"
                         android:textStyle="italic"
                         android:textColorHint="@color/colorWhite"/>
                 </LinearLayout>
@@ -127,51 +126,26 @@
                         android:id="@+id/radio_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
-                            <RadioButton
-                                android:id="@+id/raio_male"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Nam"
-                                android:textColor="@color/colorWhite"
-                                android:checked="true" />
+                        <RadioButton
+                            android:id="@+id/raio_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nam"
+                            android:textColor="@color/colorWhite"
+                            android:checked="true" />
 
-                            <RadioButton
-                                android:id="@+id/raio_female"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Nữ"
-                                android:textColor="@color/colorWhite"/>
+                        <RadioButton
+                            android:id="@+id/raio_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nữ"
+                            android:textColor="@color/colorWhite"/>
                     </RadioGroup>
 
                 </LinearLayout>
-            </LinearLayout>
 
-            <LinearLayout
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Chọn Trường"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <Spinner
-                    android:id="@+id/spinner_school"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:textStyle="italic"
-                    android:background="@drawable/spinner_bg"/>
             </LinearLayout>
 
             <LinearLayout
@@ -224,7 +198,7 @@
                     android:textSize="15sp"/>
 
                 <EditText
-                    android:id="@+id/edt_address"
+                    android:id="@+id/edt_phone"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -234,10 +208,37 @@
                     android:paddingRight="15dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"
-                    android:singleLine="true"
                     android:hint="Địa chỉ"
                     android:textStyle="italic"
                     android:textColorHint="@color/colorWhite"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Chọn Trường"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:background="@drawable/spinner_bg"/>
             </LinearLayout>
 
             <LinearLayout
@@ -268,9 +269,6 @@
                     android:textSize="15sp"
                     android:hint="Tên Đăng Nhập"
                     android:textStyle="italic"
-                    android:singleLine="true"
-                    android:inputType="textCapCharacters"
-                    android:digits="0,1,2,3,4,5,6,7,8,9,*,qwertzuiopasdfghjklyxcvbnm,_,-"
                     android:textColorHint="@color/colorWhite"/>
             </LinearLayout>
 
@@ -378,7 +376,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/linear1"
-            android:text="Đăng Ký"
+            android:text="Cập nhật"
             android:textAllCaps="true"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
@@ -395,7 +393,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Đăng Nhập Ngay!"
+            android:text="Trở về trang chủ!"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:layout_below="@+id/btn_signup"
@@ -403,8 +401,6 @@
             android:textSize="20sp"
             android:fontFamily="sans-serif"
             android:background="@color/transparent"/>
-
-
     </RelativeLayout>
 
 </ScrollView>

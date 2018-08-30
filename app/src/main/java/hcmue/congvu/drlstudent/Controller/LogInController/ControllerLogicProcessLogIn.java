@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import hcmue.congvu.drlstudent.AppConstants.AppUrl;
+import hcmue.congvu.drlstudent.Model.UserModel.UserItem;
 import hcmue.congvu.drlstudent.View.LogInView.ViewProcessLogIn;
 
 /**
@@ -48,7 +49,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
 
                             JSONObject jsonObject = new JSONObject(response.toString());
                             if(!jsonObject.getString("id").equals("fail")){
-                                viewProcessLogIn.logInSuccessfull(jsonObject.toString());
+                            viewProcessLogIn.logInSuccessfull(jsonObject.getInt("id"));
                             }
                             else {
                                 viewProcessLogIn.logInFail();
