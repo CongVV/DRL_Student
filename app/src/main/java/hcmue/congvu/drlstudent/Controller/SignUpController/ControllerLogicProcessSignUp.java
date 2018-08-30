@@ -13,12 +13,13 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 
+import hcmue.congvu.drlstudent.AppConstants.AppUrl;
 import hcmue.congvu.drlstudent.View.SignUpView.ViewProcessSignUp;
 
 /**
  * Created by CongVu on 28/08/2018.
  */
-public class ControllerLogicProcessSignUp implements ControllerImpProcessSignUp {
+public class ControllerLogicProcessSignUp extends AppUrl implements ControllerImpProcessSignUp {
     ViewProcessSignUp viewProcessSignUp;
     Context context;
 
@@ -35,60 +36,14 @@ public class ControllerLogicProcessSignUp implements ControllerImpProcessSignUp 
     }
 
     public void getSchoolList(){
-        //JsonArrayClass jsonSchoolList = new JsonArrayClass();
-        //ModelSchoolTable modelSchoolTable = new ModelSchoolTable();
-        //modelSchoolTable.setContext(context);
-        //modelSchoolTable.getData(jsonSchoolList);
-//        Toast.makeText(context, modelSchoolTable.getListSchool().toString(), Toast.LENGTH_SHORT).show();
-        /*for(int i=0; i<modelSchoolTable.getListSchool().length(); i++){
-            try{
-                JSONObject jsonObject = modelSchoolTable.getListSchool().getJSONObject(i);
-                //.put(jsonObject);
-                Toast.makeText(context, jsonObject.getString("id")+jsonObject.getString("name"), Toast.LENGTH_SHORT).show();
-            } catch (JSONException e){
-                e.printStackTrace();
-            }
-        }
-        */
-        //modelSchoolTable.tmp();
-        //viewProcessSignUp.setSpinnerSchool(jsonSchoolList.getMJsonArray());
-
-        /*for(int i=0; i<modelSchoolTable.getListSchool().length(); i++){
-            JSONObject jsonObject = modelSchoolTable.getListSchool().getJSONObject(i);
-            Toast.makeText(context, jsonObject.getString("name"), Toast.LENGTH_SHORT).show();
-        }*/
-        //modelSchoolTable.getListSchool();
-
-        String url = "http://192.168.1.88//drlstudent//getdataschool.php";
-        //Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
 
         RequestQueue requestQueue = Volley.newRequestQueue(context);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL_GET_SCHOOL_LIST, null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        /*for(int i=0; i<response.length(); i++){
-                            try{
-                                JSONObject jsonObject = response.getJSONObject(i);
-                                listSchool.put(jsonObject);
-                                //Toast.makeText(context, jsonObject.getString("id")+jsonObject.getString("name"), Toast.LENGTH_SHORT).show();
-                            } catch (JSONException e){
-                                e.printStackTrace();
-                            }
-                        }*/
+                        Log.i("response", response.toString());
                         viewProcessSignUp.setSpinnerSchool(response);
-
-
-
-                        /*for(int i=0; i<listSchool.length(); i++){
-                            try{
-                                JSONObject jsonObject = listSchool.getJSONObject(i);
-                                //listSchool.put(jsonObject);
-                                Toast.makeText(context, jsonObject.getString("id")+jsonObject.getString("name"), Toast.LENGTH_SHORT).show();
-                            } catch (JSONException e){
-                                e.printStackTrace();
-                            }
-                        }*/
                     }
                 },
                 new Response.ErrorListener() {

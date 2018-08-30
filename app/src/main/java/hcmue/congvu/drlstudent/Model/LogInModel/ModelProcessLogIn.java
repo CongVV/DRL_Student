@@ -18,6 +18,7 @@ import org.json.JSONArray;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
 
@@ -54,6 +55,7 @@ public class ModelProcessLogIn{
                         result[0] = response.toString();
                         Toast.makeText(context, "Response is: " + response.substring(0,10), Toast.LENGTH_SHORT).show();
                         //ResultCheckLogIn(response);
+
                     }
                 },
                 new Response.ErrorListener() {

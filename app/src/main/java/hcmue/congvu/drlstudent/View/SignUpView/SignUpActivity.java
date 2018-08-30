@@ -26,8 +26,8 @@ import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import hcmue.congvu.drlstudent.Adapter.SchoolAdapter.SchoolAdapter;
-import hcmue.congvu.drlstudent.Adapter.SchoolAdapter.SchoolItem;
+import hcmue.congvu.drlstudent.Model.SchoolModel.SchoolAdapter;
+import hcmue.congvu.drlstudent.Model.SchoolModel.SchoolItem;
 import hcmue.congvu.drlstudent.Controller.SignUpController.ControllerLogicProcessSignUp;
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
@@ -82,27 +82,7 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
         };
 
         controllerLogicProcessSignUp.getSchoolList();
-        /*try {
-            presenterLogicProcessSignUp.getSchoolList();
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Log.e("errPresenter", e.toString());
-            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
-        }*/
-        //initList();
-
-
-        /*ArrayAdapter adapter = new ArrayAdapter(this,
-                android.R.layout.simple_spinner_item, array_spinner);
-        s.setAdapter(adapter);*/
-
-
-
-
-
     }
-
-
 
     private void initList(){
         mSchoolList = new ArrayList<>();
@@ -143,7 +123,6 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
         mSchoolList.add(new SchoolItem("abc",2));
         mSchoolList.add(new SchoolItem("xyz",3));
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){

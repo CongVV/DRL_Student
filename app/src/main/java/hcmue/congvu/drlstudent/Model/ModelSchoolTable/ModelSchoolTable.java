@@ -12,13 +12,8 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
 
-import hcmue.congvu.drlstudent.Adapter.SchoolAdapter.SchoolItem;
-import hcmue.congvu.drlstudent.Json.JsonArrayClass;
 
 /**
  * Created by CongVu on 28/08/2018.
@@ -43,7 +38,7 @@ public class ModelSchoolTable {
         this.context = context;
     }
 
-    public void getData(JsonArrayClass jsonSchoolList){
+    public void getData(){
         String url = "http://192.168.1.18//drlstudent/getdataschool.php";
         //Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
 

@@ -26,6 +26,12 @@
         <activity android:name=".View.SignUpView.SignUpActivity"
             android:screenOrientation="portrait"></activity>
 
+        <activity android:name=".View.ForgotPassView.ForgotPassActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".View.HomeView.HomeActivity"
+            android:screenOrientation="portrait"></activity>
+
     </application>
 
 </manifest>

@@ -34,6 +34,12 @@
         <activity
             android:name="hcmue.congvu.drlstudent.View.SignUpView.SignUpActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="hcmue.congvu.drlstudent.View.ForgotPassView.ForgotPassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hcmue.congvu.drlstudent.View.HomeView.HomeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

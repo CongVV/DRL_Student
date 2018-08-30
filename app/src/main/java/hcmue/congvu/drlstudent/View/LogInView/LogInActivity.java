@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import hcmue.congvu.drlstudent.Controller.LogInController.ControllerLogicProcessLogIn;
 import hcmue.congvu.drlstudent.R;
+import hcmue.congvu.drlstudent.View.ForgotPassView.ForgotPassActivity;
+import hcmue.congvu.drlstudent.View.HomeView.HomeActivity;
 import hcmue.congvu.drlstudent.View.SignUpView.SignUpActivity;
 
 /**
@@ -19,7 +21,7 @@ public class LogInActivity extends AppCompatActivity implements ViewProcessLogIn
     private Button btnLogIn, btnSignUp, btnForgotPass;
     private EditText edtUsername, edtPassword;
     private String username, password;
-    private ControllerLogicProcessLogIn presenterLogicProcessLogIn = new ControllerLogicProcessLogIn(this,this);
+    private ControllerLogicProcessLogIn controllerLogicProcessLogIn = new ControllerLogicProcessLogIn(this,this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,24 +45,28 @@ public class LogInActivity extends AppCompatActivity implements ViewProcessLogIn
             case R.id.btn_login:
                 username = edtUsername.getText().toString();
                 password = edtPassword.getText().toString();
-                presenterLogicProcessLogIn.checkLogIn(username,password);
+                controllerLogicProcessLogIn.checkLogIn(username,password);
                 break;
             case R.id.btn_signup:
-                Intent intent = new Intent(LogInActivity.this, SignUpActivity.class);
-                startActivity(intent);
+                Intent intentSignUp = new Intent(LogInActivity.this, SignUpActivity.class);
+                startActivity(intentSignUp);
                 break;
             case R.id.btn_forgot_pass:
+                Intent intentForgot = new Intent(LogInActivity.this, ForgotPassActivity.class);
+                startActivity(intentForgot);
                 break;
         }
     }
 
     @Override
     public void logInSuccessfull(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
     public void logInFail() {
-        Toast.makeText(this, "Bad", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Tên Đăng Nhập hoặc Mật khẩu không đúng!", Toast.LENGTH_SHORT).show();
     }
 }
