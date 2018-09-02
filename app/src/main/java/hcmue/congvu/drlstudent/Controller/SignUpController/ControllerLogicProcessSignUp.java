@@ -112,7 +112,7 @@ public class ControllerLogicProcessSignUp extends AppUrl implements ControllerIm
                             viewProcessSignUp.signUpFail();
                         }
                         else {
-                            viewProcessSignUp.signUpSuccessfull();
+                            viewProcessSignUp.signUpSuccessful();
                         }
                     }
                 },

@@ -8,7 +8,7 @@ import java.text.ParseException;
  * Created by CongVu on 28/08/2018.
  */
 public interface ViewProcessSignUp {
-    void signUpSuccessfull();
+    void signUpSuccessful();
     void signUpFail();
     boolean validateForm();
     void setSpinnerSchool(JSONArray listSchool);

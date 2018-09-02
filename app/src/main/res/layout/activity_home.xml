@@ -3,17 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    tools:context=".View.HomeView.HomeActivity">
+    android:orientation="horizontal"
+    tools:context=".View.HomeView.HomeActivity"
+    android:background="@drawable/start_bg">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Xin chào các bạn"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_create_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center|center_vertical|center_horizontal"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="sans-serif-light"
+            android:text="Tạo Lớp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Xin chào các bạn"/>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btn_curent_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center|center_vertical|center_horizontal"
+            android:background="@drawable/btn_bg"
+            android:backgroundTint="@color/colorGreen"
+            android:fontFamily="sans-serif-light"
+            android:text="Lớp Hiện Tại"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>

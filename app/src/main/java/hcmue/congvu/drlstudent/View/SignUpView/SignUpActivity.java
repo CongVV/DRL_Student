@@ -130,7 +130,7 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
     }
 
     @Override
-    public void signUpSuccessfull() {
+    public void signUpSuccessful() {
         Toast.makeText(this, "sucess", Toast.LENGTH_SHORT).show();
     }
 

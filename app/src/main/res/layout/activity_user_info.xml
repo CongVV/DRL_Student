@@ -1,358 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
-    android:animateLayoutChanges="true"
-    tools:context=".View.UserInfoView.UserInfoActivity">
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/login_bg"
+android:animateLayoutChanges="true"
+tools:context=".View.UserInfoView.UserInfoActivity">
 
-    <RelativeLayout
-        android:id="@+id/relative1"
+<RelativeLayout
+    android:id="@+id/relative1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp">
+
+    <TextView
+        android:id="@+id/tv_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp">
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Thông tin tài khoản"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/tv_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif"
-            android:text="Thông tin tài khoản"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"/>
 
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tv_signup"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/linear1"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/tv_signup"
             android:orientation="vertical">
 
-            <LinearLayout
-
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:fontFamily="sans-serif"
+                android:text="Họ và tên"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="true"
+                android:textSize="15sp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Họ và tên"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/edt_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:hint="Họ và tên"
+                android:textStyle="italic"
+                android:textColorHint="@color/colorWhite"/>
+        </LinearLayout>
 
-                <EditText
-                    android:id="@+id/edt_fullname"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/et_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Họ và tên"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:paddingRight="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="Ngày sinh"
-                        android:textColor="@color/colorWhite"
-                        android:textAllCaps="true"
-                        android:textSize="15sp"/>
-
-                    <Button
-                        android:id="@+id/btn_birthday"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/btn_bg"
-                        android:fontFamily="sans-serif"
-                        android:paddingLeft="15dp"
-                        android:paddingRight="15dp"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="15sp"
-                        android:hint="Click để chọn ngày/tháng/năm sinh"
-                        android:textStyle="italic"
-                        android:textColorHint="@color/colorWhite"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_signup"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:paddingLeft="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="Giới tính"
-                        android:textColor="@color/colorWhite"
-                        android:textAllCaps="true"
-                        android:textSize="15sp"/>
-
-                    <RadioGroup
-                        android:id="@+id/radio_gender"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <RadioButton
-                            android:id="@+id/raio_male"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nam"
-                            android:textColor="@color/colorWhite"
-                            android:checked="true" />
-
-                        <RadioButton
-                            android:id="@+id/raio_female"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Nữ"
-                            android:textColor="@color/colorWhite"/>
-                    </RadioGroup>
-
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="20dp">
+                android:layout_weight="1"
+                android:paddingRight="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="Email"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:id="@+id/edt_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/et_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Địa chỉ"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:id="@+id/edt_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/et_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Địa chỉ"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
-            </LinearLayout>
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Chọn Trường"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <Spinner
-                    android:id="@+id/spinner_school"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:textStyle="italic"
-                    android:background="@drawable/spinner_bg"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Tên Đăng Nhập"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:id="@+id/edt_username"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/et_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Tên Đăng Nhập"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Mật Khẩu"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:id="@+id/edt_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/et_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Mật Khẩu"
-                    android:inputType="textPassword"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Nhập Lại Mật Khẩu"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="true"
-                    android:textSize="15sp"/>
-
-                <EditText
-                    android:id="@+id/edt_repassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/et_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Nhập Lại Mật Khẩu"
-                    android:inputType="textPassword"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:text="Ảnh đại diện"
+                    android:text="Ngày sinh"
                     android:textColor="@color/colorWhite"
                     android:textAllCaps="true"
                     android:textSize="15sp"/>
 
                 <Button
-                    android:id="@+id/btn_avatar"
+                    android:id="@+id/btn_birthday"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
@@ -362,45 +101,226 @@
                     android:paddingRight="15dp"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"
-                    android:hint="Chọn Ảnh"
-                    android:inputType="textPassword"
+                    android:hint="Ngày/Tháng/Năm sinh"
                     android:textStyle="italic"
                     android:textColorHint="@color/colorWhite"/>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_signup"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Giới tính"
+                    android:textColor="@color/colorWhite"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/raio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nam"
+                        android:textColor="@color/colorWhite"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/raio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nữ"
+                        android:textColor="@color/colorWhite"/>
+                </RadioGroup>
+
+            </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linear1"
-            android:text="Cập nhật"
-            android:textAllCaps="true"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/colorWhite"
-            android:background="@drawable/btn_bg"
-            android:textSize="20sp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"/>
+        <LinearLayout
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Trở về trang chủ!"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite"
-            android:layout_below="@+id/btn_signup"
-            android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
-            android:background="@color/transparent"/>
-    </RelativeLayout>
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Chọn Trường"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="true"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/spinner_school"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:background="@drawable/spinner_bg"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Email"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="true"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textStyle="italic"
+                android:textColorHint="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Địa chỉ"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="true"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_bg"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:hint="Địa chỉ"
+                android:textStyle="italic"
+                android:textColorHint="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Ảnh đại diện"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="true"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/btn_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:hint="Chọn Ảnh"
+                android:inputType="textPassword"
+                android:textStyle="italic"
+                android:textColorHint="@color/colorWhite"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear1"
+        android:text="Cập Nhật"
+        android:textAllCaps="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_bg"
+        android:textSize="20sp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_update_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sửa Mật Khẩu!"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/btn_update"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"
+        android:background="@color/transparent"/>
+
+    <Button
+        android:id="@+id/btn_home_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Trang Chủ!"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/btn_update_pass"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif"
+        android:background="@color/transparent"/>
+
+
+</RelativeLayout>
 
 </ScrollView>

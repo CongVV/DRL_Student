@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/start_bg"
-    android:animateLayoutChanges="true">
+    android:animateLayoutChanges="true"
+    tools:context=".View.StartView.StartActivity">
 
     <RelativeLayout
         android:id="@+id/relative_content"

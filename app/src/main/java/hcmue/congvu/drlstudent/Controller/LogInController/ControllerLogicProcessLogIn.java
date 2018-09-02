@@ -56,7 +56,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
                             }
 
                         } catch (JSONException e) {
-                            Log.e("checkDBVolley",e.toString());
+                            Log.e("errVolley",e.toString());
                             e.printStackTrace();
                         }
                         //ResultCheckLogIn(response);

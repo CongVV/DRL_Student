@@ -39,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intentUserInfo = new Intent(HomeActivity.this, UserInfoActivity.class);
                 intentUserInfo.putExtra("userId", userId);
                 startActivity(intentUserInfo);
+                finish();
                 break;
             case R.id.item_logout:
                 Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
@@ -47,5 +48,11 @@ public class HomeActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
