@@ -3,6 +3,7 @@
     package="hcmue.congvu.drlstudent">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -30,7 +31,9 @@
 
         <activity android:name=".View.HomeView.HomeActivity"
             android:theme="@style/ThemeHome"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+
+        </activity>
 
         <activity android:name=".View.UserInfoView.UserInfoActivity"
             android:screenOrientation="portrait"></activity>

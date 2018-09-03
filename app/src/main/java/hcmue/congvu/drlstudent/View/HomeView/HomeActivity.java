@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
@@ -16,6 +17,8 @@ import hcmue.congvu.drlstudent.View.UserInfoView.UserInfoActivity;
  */
 public class HomeActivity extends AppCompatActivity {
     private int userId;
+    private Button btnCreateClass, btnCurrentClass;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,9 @@ public class HomeActivity extends AppCompatActivity {
 
         Bundle bundle = this.getIntent().getExtras();
         userId = bundle.getInt("userId");
+
+        btnCreateClass = (Button) findViewById(R.id.btn_create_class);
+        btnCurrentClass = (Button) findViewById(R.id.btn_current_class);
 
     }
 

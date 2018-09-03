@@ -352,22 +352,35 @@
                     android:textColor="@color/colorWhite"
                     android:textAllCaps="true"
                     android:textSize="15sp"/>
-
-                <Button
-                    android:id="@+id/btn_avatar"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/btn_bg"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:hint="Chọn Ảnh"
-                    android:inputType="textPassword"
-                    android:textStyle="italic"
-                    android:textColorHint="@color/colorWhite"/>
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:hint="Chọn Ảnh"
+                        android:textStyle="italic"
+                        android:textColorHint="@color/colorWhite"/>
+
+                    <ImageView
+                        android:id="@+id/imgView_avatar"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="20dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/no_avatar"/>
+                </LinearLayout>
+
             </LinearLayout>
 
 

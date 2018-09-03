@@ -9,6 +9,7 @@
         android:targetSdkVersion="27" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -40,7 +41,8 @@
         <activity
             android:name="hcmue.congvu.drlstudent.View.HomeView.HomeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ThemeHome" />
+            android:theme="@style/ThemeHome" >
+        </activity>
         <activity
             android:name="hcmue.congvu.drlstudent.View.UserInfoView.UserInfoActivity"
             android:screenOrientation="portrait" />

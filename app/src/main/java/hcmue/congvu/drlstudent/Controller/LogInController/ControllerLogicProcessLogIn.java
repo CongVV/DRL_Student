@@ -39,7 +39,6 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
 
     @Override
     public void checkLogIn(final String username, final String password) {
-
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_CHECK_LOG_IN,
                 new Response.Listener<String>() {
@@ -49,7 +48,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
 
                             JSONObject jsonObject = new JSONObject(response.toString());
                             if(!jsonObject.getString("id").equals("fail")){
-                            viewProcessLogIn.logInSuccessfull(jsonObject.getInt("id"));
+                                viewProcessLogIn.logInSuccessfull(jsonObject.getInt("id"));
                             }
                             else {
                                 viewProcessLogIn.logInFail();
@@ -67,7 +66,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.i("err","loi-loi");
-                        Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Lỗi Mạng!!!", Toast.LENGTH_SHORT).show();
                     }
                 }
         ){
