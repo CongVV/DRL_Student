@@ -2,6 +2,7 @@ package hcmue.congvu.drlstudent.View.SignUpView;
 
 import android.Manifest;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -28,6 +29,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -78,6 +80,7 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
     final int CODE_GALLERY_REQUEST = 999;
     private Bitmap bitmap;
     private String imageData;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -137,6 +140,9 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
                 break;
             case R.id.btn_signup:
                 if(validateForm()){
+                    //progressDialog = new ProgressDialog(SignUpActivity.this);
+                    //progressDialog.setTitle("Đang Đăng Ký...");
+                    //progressDialog.setMessage("Vui lòng đợi...");
                     controllerLogicProcessSignUp.validateUser(edt_username.getText().toString());
                 }
                 //Toast.makeText(SignUpActivity.this, "here here!!!", Toast.LENGTH_SHORT).show();
@@ -169,11 +175,11 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
                 Intent intent = new Intent(Intent.ACTION_PICK);
                 intent.setType("image/*");
-                Toast.makeText(this, String.valueOf(requestCode), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, String.valueOf(requestCode), Toast.LENGTH_SHORT).show();
                 startActivityForResult(Intent.createChooser(intent, "Select Image"), CODE_GALLERY_REQUEST);
             }
             else {
-                Toast.makeText(this, "You don't have permission to access galary!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Bạn không được quyền truy cập Bộ Sưu Tập!!!", Toast.LENGTH_SHORT).show();
             }
             return;
         }
@@ -193,8 +199,8 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
                 imageData = imageToString(bitmap);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-                Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
-                Log.e("errImg", e.toString());
+                //Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+                //Log.e("errImg", e.toString());
             }
         }
         //Toast.makeText(this, String.valueOf(resultCode)+"-"+String.valueOf(RESULT_OK), Toast.LENGTH_SHORT).show();
@@ -203,12 +209,14 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
 
     @Override
     public void signUpSuccessful() {
-        Toast.makeText(this, "sucess", Toast.LENGTH_SHORT).show();
+        //progressDialog.dismiss();
+        Toast.makeText(this, "Đăng Ký Thành Công!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void signUpFail() {
-        Toast.makeText(this, "fail", Toast.LENGTH_SHORT).show();
+        //progressDialog.dismiss();
+        Toast.makeText(this, "Đăng Ký Thất Bại! Do Lỗi Mạng", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -327,6 +335,7 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
             userInfo.setAvatar(imageData);
             //Toast.makeText(this, imageData, Toast.LENGTH_SHORT).show();
             controllerLogicProcessSignUp.signUpUser(userItem, userInfo);
+
         }
 
 

@@ -48,7 +48,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
 
                             JSONObject jsonObject = new JSONObject(response.toString());
                             if(!jsonObject.getString("id").equals("fail")){
-                                viewProcessLogIn.logInSuccessfull(jsonObject.getInt("id"));
+                                viewProcessLogIn.logInSuccessfull(jsonObject.getInt("id"), URL_APP_BASE + jsonObject.getString("avatar"));
                             }
                             else {
                                 viewProcessLogIn.logInFail();

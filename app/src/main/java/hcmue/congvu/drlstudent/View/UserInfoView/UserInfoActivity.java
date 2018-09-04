@@ -135,11 +135,13 @@ public class UserInfoActivity extends AppCompatActivity implements ViewProcessUs
             radio_gender.check(R.id.raio_female);
         }
 
-        for(int i=0; i<mSchoolList.size(); i++){
-            if(mSchoolList.get(i).getmIdSchool() == userInfo.getIdSchool()){
-                idSchool = mSchoolList.get(i).getmIdSchool();
+        int i=0;
+        for (SchoolItem item:mSchoolList) {
+            if(item.getmIdSchool() == userInfo.getIdSchool()){
+                idSchool = item.getmIdSchool();
                 spinner_school.setSelection(i);
             }
+            i++;
         }
 
         edt_email.setText(userInfo.getEmail());
@@ -195,5 +197,11 @@ public class UserInfoActivity extends AppCompatActivity implements ViewProcessUs
     public void openDialog(){
         ResetPassDialog resetPassDialog = new ResetPassDialog();
         resetPassDialog.show(getSupportFragmentManager(), "Reset Password");
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

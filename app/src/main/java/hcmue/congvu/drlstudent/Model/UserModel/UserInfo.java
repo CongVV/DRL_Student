@@ -29,6 +29,17 @@ public class UserInfo {
         this.avatar = avatar;
     }
 
+    public void setUserInfo(UserInfo userInfo){
+        this.idUser     = userInfo.idUser;
+        this.idSchool   = userInfo.idSchool;
+        this.fullName   = userInfo.fullName;
+        this.birthday   = userInfo.birthday;
+        this.email      = userInfo.email;
+        this.address    = userInfo.address;
+        this.gender     = userInfo.gender;
+        this.avatar     = userInfo.avatar;
+    }
+
     public int getIdUser() {
         return idUser;
     }

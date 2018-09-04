@@ -18,13 +18,13 @@ import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
  */
 
 public class StartActivity extends AppCompatActivity {
-
+    TextView tvTool, tvBook, tvCorrect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        TextView tvTool, tvBook, tvCorrect;
+
         tvTool = (TextView) findViewById(R.id.tvTool);
         tvBook = (TextView) findViewById(R.id.tvBook);
         tvCorrect = (TextView) findViewById(R.id.tvCorrect);

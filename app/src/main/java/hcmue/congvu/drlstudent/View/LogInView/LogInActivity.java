@@ -60,9 +60,10 @@ public class LogInActivity extends AppCompatActivity implements ViewProcessLogIn
     }
 
     @Override
-    public void logInSuccessfull(int userId) {
+    public void logInSuccessfull(int userId, String avatar) {
         Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
         intent.putExtra("userId", userId);
+        intent.putExtra("avatar", avatar);
         startActivity(intent);
         finish();
     }

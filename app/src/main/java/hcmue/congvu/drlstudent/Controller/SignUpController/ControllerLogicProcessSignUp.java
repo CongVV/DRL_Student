@@ -101,14 +101,14 @@ public class ControllerLogicProcessSignUp extends AppUrl implements ControllerIm
 
     @Override
     public void signUpUser(final UserItem userItem, final UserInfo userInfo) {
-        Toast.makeText(context, userInfo.getAvatar(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, userInfo.getAvatar(), Toast.LENGTH_SHORT).show();
         Log.i("base64", userInfo.getAvatar());
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_POST_SIGN_UP_USER,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(context, response.toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, response.toString(), Toast.LENGTH_SHORT).show();
                         Log.i("us", response);
                         if(response.equals("fail")){
                             viewProcessSignUp.signUpFail();
@@ -121,7 +121,7 @@ public class ControllerLogicProcessSignUp extends AppUrl implements ControllerIm
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
                         Log.e("err",error.toString());
                     }
                 }
