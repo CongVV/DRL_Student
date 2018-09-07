@@ -119,7 +119,10 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_create_class:
-                startActivity(new Intent(HomeActivity.this, CreateClassActivity.class));
+                Intent intentCreateClass = new Intent(HomeActivity.this, CreateClassActivity.class);
+                intentCreateClass.putExtra("userId", userId);
+                intentCreateClass.putExtra("avatar", avatar);
+                startActivity(intentCreateClass);
                 break;
             case R.id.btn_current_class:
                 startActivity(new Intent(HomeActivity.this, CurrentClassActivity.class));
