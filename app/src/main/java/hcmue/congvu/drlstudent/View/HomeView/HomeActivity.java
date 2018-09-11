@@ -21,6 +21,7 @@ import hcmue.congvu.drlstudent.Controller.HomeController.ControllerLogicProcessH
 import hcmue.congvu.drlstudent.Model.UserModel.UserInfo;
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.CreateClassView.CreateClassActivity;
+import hcmue.congvu.drlstudent.View.CreateClassView.CreateClassSecondActivity;
 import hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity;
 import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
 import hcmue.congvu.drlstudent.View.UserInfoView.UserInfoActivity;
@@ -125,7 +126,10 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                 startActivity(intentCreateClass);
                 break;
             case R.id.btn_current_class:
-                startActivity(new Intent(HomeActivity.this, CurrentClassActivity.class));
+                Intent intentCurrentClass = new Intent(HomeActivity.this, CreateClassSecondActivity.class);
+                intentCurrentClass.putExtra("userId", userId);
+                intentCurrentClass.putExtra("avatar", avatar);
+                startActivity(intentCurrentClass);
                 break;
         }
     }

@@ -41,6 +41,9 @@
         <activity android:name=".View.CreateClassView.CreateClassActivity"
             android:screenOrientation="portrait"></activity>
 
+        <activity android:name=".View.CreateClassView.CreateClassSecondActivity"
+            android:screenOrientation="portrait"></activity>
+
         <activity android:name=".View.CurrentClassView.CurrentClassActivity"
             android:screenOrientation="portrait"></activity>
 

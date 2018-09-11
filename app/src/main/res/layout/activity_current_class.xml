@@ -5,4 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".View.CurrentClassView.CurrentClassActivity">
 
+    <GridView
+        android:id="@+id/gridViewClassCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="auto_fit"
+        android:gravity="center"
+        android:columnWidth="100dp">
+
+    </GridView>
+
+    <ListView
+        android:id="@+id/listViewCurrentClass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
 </RelativeLayout>

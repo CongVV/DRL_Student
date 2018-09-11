@@ -49,6 +49,9 @@
             android:name="hcmue.congvu.drlstudent.View.CreateClassView.CreateClassActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name="hcmue.congvu.drlstudent.View.CreateClassView.CreateClassSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity"
             android:screenOrientation="portrait" />
     </application>
