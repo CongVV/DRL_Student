@@ -73,6 +73,8 @@
                         android:textColor="@color/colorWhite"
                         android:textSize="15sp"
                         android:textStyle="italic" />
+
+                    <requestFocus />
                 </LinearLayout>
 
                 <LinearLayout

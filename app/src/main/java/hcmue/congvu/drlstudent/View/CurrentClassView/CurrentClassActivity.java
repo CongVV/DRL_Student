@@ -1,5 +1,6 @@
 package hcmue.congvu.drlstudent.View.CurrentClassView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import org.json.JSONArray;
 
 import hcmue.congvu.drlstudent.Controller.CurrentClassController.ControllerLogicProcessCurrentClass;
 import hcmue.congvu.drlstudent.R;
+import hcmue.congvu.drlstudent.View.HomeView.HomeActivity;
 
 /**
  * Created by CongVu on 31/08/2018.
@@ -33,5 +35,15 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
     @Override
     public void setGridViewClass(JSONArray jsonArrayClass) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentHome = new Intent(CurrentClassActivity.this, HomeActivity.class);
+        intentHome.putExtra("userId", userId);
+        intentHome.putExtra("avatar", avatar);
+        startActivity(intentHome);
+        finish();
     }
 }

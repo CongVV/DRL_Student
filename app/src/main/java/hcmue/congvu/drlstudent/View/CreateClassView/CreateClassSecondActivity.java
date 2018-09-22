@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.HomeView.HomeActivity;
@@ -24,6 +25,8 @@ public class CreateClassSecondActivity extends AppCompatActivity {
         Bundle bundle = this.getIntent().getExtras();
         userId = bundle.getInt("userId");
         avatar = bundle.getString("avatar");
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
     }
 
@@ -45,5 +48,15 @@ public class CreateClassSecondActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentHome = new Intent(CreateClassSecondActivity.this, HomeActivity.class);
+        intentHome.putExtra("userId", userId);
+        intentHome.putExtra("avatar", avatar);
+        startActivity(intentHome);
+        finish();
     }
 }

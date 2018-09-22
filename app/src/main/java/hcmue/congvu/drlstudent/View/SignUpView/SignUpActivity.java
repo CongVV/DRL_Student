@@ -24,6 +24,7 @@ import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -102,7 +103,7 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
         //imgView_avatar.setImageResource(R.drawable.female_avatar);
         imageData = "avatar";
 
-
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         btn_login.setOnClickListener(this);
         btn_birthday.setOnClickListener(this);
         btn_signup.setOnClickListener(this);

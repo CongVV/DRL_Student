@@ -159,4 +159,14 @@ public class CreateClassActivity extends AppCompatActivity implements ViewProces
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intentHome = new Intent(CreateClassActivity.this, HomeActivity.class);
+        intentHome.putExtra("userId", userId);
+        intentHome.putExtra("avatar", avatar);
+        startActivity(intentHome);
+        finish();
+    }
 }

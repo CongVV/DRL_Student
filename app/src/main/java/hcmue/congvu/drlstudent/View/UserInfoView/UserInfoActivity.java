@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -54,7 +55,7 @@ public class UserInfoActivity extends AppCompatActivity implements ViewProcessUs
 
         Bundle bundle = this.getIntent().getExtras();
         idUser = bundle.getInt("userId");
-
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         btn_update_pass     = (Button)      findViewById(R.id.btn_update_pass);
         btn_update          = (Button)      findViewById(R.id.btn_update);
         btn_home_activity   = (Button)      findViewById(R.id.btn_home_activity);
