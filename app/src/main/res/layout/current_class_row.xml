@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:background="@drawable/start_bg">
     <ImageView
         android:id="@+id/imgViewClass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_account_circle_black_24dp"/>
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:layout_centerVertical="true"/>
 
-    <TextView
-        android:id="@+id/tvCurrentClass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:layout_gravity="center"
-        android:text="SP Tin K41B"/>
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/imgViewClass"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvClassName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="10dp"
+            android:text="SP Tin K41B SP "/>
+
+        <TextView
+            android:id="@+id/tvClassNumberStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="10sp"
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="10dp"
+            android:text="50 Sinh viên"/>
+    </LinearLayout>
+</RelativeLayout>

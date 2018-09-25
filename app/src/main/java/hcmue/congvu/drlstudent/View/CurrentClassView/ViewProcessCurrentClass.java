@@ -6,5 +6,5 @@ import org.json.JSONArray;
  * Created by CongVu on 11/09/2018.
  */
 public interface ViewProcessCurrentClass {
-    void setGridViewClass(JSONArray jsonArrayClass);
+    void setListViewClass(JSONArray jsonArrayClass);
 }

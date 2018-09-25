@@ -127,7 +127,7 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                 finish();
                 break;
             case R.id.btn_current_class:
-                Intent intentCurrentClass = new Intent(HomeActivity.this, CreateClassSecondActivity.class);
+                Intent intentCurrentClass = new Intent(HomeActivity.this, CurrentClassActivity.class);
                 intentCurrentClass.putExtra("userId", userId);
                 intentCurrentClass.putExtra("avatar", avatar);
                 startActivity(intentCurrentClass);

@@ -84,7 +84,6 @@ public class ControllerLogicProcessSignUp extends AppUrl implements ControllerIm
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        Log.i("response", response.toString());
                         viewProcessSignUp.setSpinnerSchool(response);
                     }
                 },

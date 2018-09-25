@@ -18,6 +18,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon_launcher"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="hcmue.congvu.drlstudent.View.StartView.StartActivity"
@@ -53,6 +54,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="hcmue.congvu.drlstudent.View.CurrentClassDetailView.CurrentClassDetailActivity"
             android:screenOrientation="portrait" />
     </application>
 

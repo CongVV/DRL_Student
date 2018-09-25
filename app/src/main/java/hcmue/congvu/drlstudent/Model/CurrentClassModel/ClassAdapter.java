@@ -1,6 +1,7 @@
 package hcmue.congvu.drlstudent.Model.CurrentClassModel;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,39 +22,45 @@ import hcmue.congvu.drlstudent.R;
 /**
  * Created by CongVu on 11/09/2018.
  */
-public class ClassAdapter extends ArrayAdapter<ClassItem> {
+public class ClassAdapter extends BaseAdapter {
 
-    public ClassAdapter(Context context, ArrayList<ClassItem> schoolList){
-        super(context, 0, (List) schoolList);
+    Context context;
+    int layout;
+    List<ClassItem> classItemList;
+
+    public ClassAdapter(Context context, int layout, List<ClassItem> classItemList){
+        this.context = context;
+        this.layout = layout;
+        this.classItemList = classItemList;
     }
 
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return initView(position, convertView, parent);
+    public int getCount() {
+        return classItemList.size();
     }
 
     @Override
-    public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return initView(position, convertView, parent);
+    public Object getItem(int position) {
+        return null;
     }
 
-    private View initView(int position, View convertView, ViewGroup parent){
-        if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.current_class_row, parent, false
-            );
-        }
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
 
-        TextView textViewFlag = convertView.findViewById(R.id.tvCurrentClass);
-        ImageView imageViewFlag = convertView.findViewById(R.id.imgViewClass);
-        ClassItem currentClassItem = getItem(position);
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        convertView = inflater.inflate(layout, null);
 
-        if(currentClassItem != null) {
-            textViewFlag.setText(currentClassItem.getmClassName());
-            //imageViewFlag.setImageDrawable(R.drawable.currentClassItem.getmClassImg());
-        }
+        ImageView imgClass              = (ImageView) convertView.findViewById(R.id.imgViewClass);
+        TextView tvClassName            = (TextView) convertView.findViewById(R.id.tvClassName);
+        TextView tvClassNumberStudent   = (TextView) convertView.findViewById(R.id.tvClassNumberStudent);
 
+        imgClass.setImageResource(R.drawable.book);
+        tvClassName.setText(classItemList.get(position).getmClassName());
+        tvClassNumberStudent.setText(String.valueOf(classItemList.get(position).getmIdClass()));
         return convertView;
     }
 }
