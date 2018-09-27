@@ -55,6 +55,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
                             }
 
                         } catch (JSONException e) {
+                            viewProcessLogIn.logInError();
                             Log.e("errVolley",e.toString());
                             e.printStackTrace();
                         }
@@ -66,7 +67,7 @@ public class ControllerLogicProcessLogIn extends AppUrl implements ControllerImp
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.i("err","loi-loi");
-                        Toast.makeText(context, "Lỗi Mạng!!!", Toast.LENGTH_SHORT).show();
+                        viewProcessLogIn.logInError();
                     }
                 }
         ){

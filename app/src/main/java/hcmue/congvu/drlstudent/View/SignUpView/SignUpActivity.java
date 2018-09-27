@@ -64,7 +64,7 @@ import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
  */
 public class SignUpActivity extends AppCompatActivity implements ViewProcessSignUp,View.OnClickListener{
 
-    private ArrayList<SchoolItem> mSchoolList;
+    private ArrayList<SchoolItem> mSchoolList = new ArrayList<>();
     private SchoolAdapter mSchoolAdapter;
     private Button btn_login, btn_birthday, btn_signup, btn_avatar;
     private EditText edt_fullname, edt_email, edt_address, edt_username, edt_password, edt_repassword;
@@ -81,25 +81,26 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
     final int CODE_GALLERY_REQUEST = 999;
     private Bitmap bitmap;
     private String imageData;
-    private ProgressDialog progressDialog;
+    private ProgressBar progressBarSignUp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        btn_login       = (Button)      findViewById(R.id.btn_login);
-        btn_signup      = (Button)      findViewById(R.id.btn_signup);
-        btn_birthday    = (Button)      findViewById(R.id.btn_birthday);
-        btn_avatar      = (Button)      findViewById(R.id.btn_avatar);
-        radio_gender    = (RadioGroup)  findViewById(R.id.radio_gender);
-        edt_fullname    = (EditText)    findViewById(R.id.edt_fullname);
-        edt_email       = (EditText)    findViewById(R.id.edt_email);
-        edt_address     = (EditText)    findViewById(R.id.edt_address);
-        edt_username    = (EditText)    findViewById(R.id.edt_username);
-        edt_password    = (EditText)    findViewById(R.id.edt_password);
-        edt_repassword  = (EditText)    findViewById(R.id.edt_repassword);
-        imgView_avatar  = (ImageView)   findViewById(R.id.imgView_avatar);
+        btn_login           = (Button)      findViewById(R.id.btn_login);
+        btn_signup          = (Button)      findViewById(R.id.btn_signup);
+        btn_birthday        = (Button)      findViewById(R.id.btn_birthday);
+        btn_avatar          = (Button)      findViewById(R.id.btn_avatar);
+        radio_gender        = (RadioGroup)  findViewById(R.id.radio_gender);
+        edt_fullname        = (EditText)    findViewById(R.id.edt_fullname);
+        edt_email           = (EditText)    findViewById(R.id.edt_email);
+        edt_address         = (EditText)    findViewById(R.id.edt_address);
+        edt_username        = (EditText)    findViewById(R.id.edt_username);
+        edt_password        = (EditText)    findViewById(R.id.edt_password);
+        edt_repassword      = (EditText)    findViewById(R.id.edt_repassword);
+        imgView_avatar      = (ImageView)   findViewById(R.id.imgView_avatar);
+        progressBarSignUp   = (ProgressBar) findViewById(R.id.progressBarSignUp);
         //imgView_avatar.setImageResource(R.drawable.female_avatar);
         imageData = "avatar";
 
@@ -144,6 +145,7 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
                     //progressDialog = new ProgressDialog(SignUpActivity.this);
                     //progressDialog.setTitle("Đang Đăng Ký...");
                     //progressDialog.setMessage("Vui lòng đợi...");
+                    progressBarSignUp.setVisibility(View.VISIBLE);
                     controllerLogicProcessSignUp.validateUser(edt_username.getText().toString());
                 }
                 //Toast.makeText(SignUpActivity.this, "here here!!!", Toast.LENGTH_SHORT).show();
@@ -211,18 +213,30 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
     @Override
     public void signUpSuccessful() {
         //progressDialog.dismiss();
+        progressBarSignUp.setVisibility(View.GONE);
         Toast.makeText(this, "Đăng Ký Thành Công!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
     @Override
     public void signUpFail() {
         //progressDialog.dismiss();
-        Toast.makeText(this, "Đăng Ký Thất Bại! Do Lỗi Mạng", Toast.LENGTH_SHORT).show();
+        progressBarSignUp.setVisibility(View.GONE);
+        Toast.makeText(this, "Lỗi Mạng! Đăng Ký Thất Bại!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public boolean validateForm() {
         boolean valid = true;
+
+        if(mSchoolList.size() == 0){
+            Toast.makeText(this, "Không thể tải tên trường!", Toast.LENGTH_SHORT).show();
+            valid = false;
+        }
+
         if(TextUtils.isEmpty(edt_fullname.getText().toString())){
             edt_fullname.setError("Họ và tên không được trống!");
             valid = false;
@@ -271,7 +285,6 @@ public class SignUpActivity extends AppCompatActivity implements ViewProcessSign
 
     @Override
     public void setSpinnerSchool(JSONArray listSchool) {
-        mSchoolList = new ArrayList<>();
         for (int i=0; i<listSchool.length(); i++){
             try{
                 JSONObject jsonObject = listSchool.getJSONObject(i);

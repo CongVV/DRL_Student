@@ -69,30 +69,5 @@ public class ControllerLogicProcessCurrentClass extends AppUrl implements Contro
         };
         requestQueue.add(stringRequest);
 
-       /* RequestQueue requestQueue = Volley.newRequestQueue(context);
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.POST, URL_GET_CURRENT_CLASS, null,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        viewProcessCurrentClass.setListViewClass(response);
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(context, String.valueOf(idUser), Toast.LENGTH_SHORT).show();
-                        Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
-                        Log.e("err",error.toString());
-                    }
-                }
-        ){
-            @Override
-            protected Map<String, String> getParams(){
-                Map<String, String> params = new HashMap<>();
-                params.put("idUser",String.valueOf(idUser));
-                return params;
-            }
-        };
-        requestQueue.add(jsonArrayRequest);*/
     }
 }

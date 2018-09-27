@@ -15,4 +15,6 @@ public abstract class AppUrl {
     public static final String URL_CREATE_CLASS                 = URL_APP_BASE + "createclass.php";
     public static final String URL_GET_CURRENT_CLASS            = URL_APP_BASE + "getdatacurrentclass.php";
     public static final String URL_GET_CURRENT_CLASS_DETAIL     = URL_APP_BASE + "getdatacurrentclassdetail.php";
+    public static final String URL_CHECK_USERNAME_ADD_CLASS     = URL_APP_BASE + "checkusernameaddclass.php";
+    public static final String URL_SAVE_CLASS_LIST              = URL_APP_BASE + "saveclasslist.php";
 }

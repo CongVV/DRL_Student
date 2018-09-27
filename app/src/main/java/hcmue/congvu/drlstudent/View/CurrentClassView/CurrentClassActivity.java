@@ -71,7 +71,8 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
                 ClassItem classItem = new ClassItem();
                 classItem.setmIdClass(jsonObject.getInt("idClass"));
                 classItem.setmClassName(jsonObject.getString("className"));
-                classItem.setmClassImg(jsonObject.getString("schoolName"));
+                classItem.setmNumberStudent(jsonObject.getInt("numberStudent"));
+                classItem.setmClassImg(jsonObject.getString("classImage"));
                 arrayClass.add(classItem);
             } catch (JSONException e){
                 e.printStackTrace();

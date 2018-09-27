@@ -60,7 +60,7 @@ public class ClassAdapter extends BaseAdapter {
 
         imgClass.setImageResource(R.drawable.book);
         tvClassName.setText(classItemList.get(position).getmClassName());
-        tvClassNumberStudent.setText(String.valueOf(classItemList.get(position).getmIdClass()));
+        tvClassNumberStudent.setText(String.valueOf(classItemList.get(position).getmNumberStudent()) + " Sinh viên");
         return convertView;
     }
 }

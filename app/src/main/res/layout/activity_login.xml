@@ -7,6 +7,7 @@
     android:background="@drawable/login_bg"
     android:animateLayoutChanges="true"
     tools:context=".View.LogInView.LogInActivity">
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -133,6 +134,7 @@
 
 
         </RelativeLayout>
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -163,4 +165,14 @@
             android:textColor="@color/colorWhite"/>
 
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarLogIn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
 </RelativeLayout>

@@ -45,7 +45,7 @@
             android:layout_marginRight="10dp"
             android:layout_gravity="center|center_vertical|center_horizontal"
             android:background="@drawable/btn_bg"
-            android:backgroundTint="@color/colorGreen"
+            android:backgroundTint="@color/colorBlue"
             android:fontFamily="sans-serif-light"
             android:text="Lớp Hiện Tại"
             android:textAllCaps="true"

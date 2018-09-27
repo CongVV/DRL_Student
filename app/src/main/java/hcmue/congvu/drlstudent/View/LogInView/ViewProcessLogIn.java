@@ -8,4 +8,5 @@ import hcmue.congvu.drlstudent.Model.UserModel.UserItem;
 public interface ViewProcessLogIn {
     void logInSuccessfull(int userId, String avatar);
     void logInFail();
+    void logInError();
 }

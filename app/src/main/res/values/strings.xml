@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DRL Student</string>
+    <string-array name="type_student">
+        <item>Sinh viên</item>
+        <item>Cán bộ</item>
+    </string-array>
 </resources>

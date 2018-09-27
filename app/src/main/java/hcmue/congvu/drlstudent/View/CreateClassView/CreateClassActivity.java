@@ -85,7 +85,13 @@ public class CreateClassActivity extends AppCompatActivity implements ViewProces
                                 edtClassName.setError("Tên lớp không được trống!");
                             }
                             else{
-                                controllerLogicProcessCreateClass.createClass(edtClassName.getText().toString(), userId, idSchool);
+                                //controllerLogicProcessCreateClass.createClass(edtClassName.getText().toString(), userId, idSchool);
+                                Intent intentCreateClassNext = new Intent(CreateClassActivity.this, CreateClassSecondActivity.class);
+                                intentCreateClassNext.putExtra("userId", userId);
+                                intentCreateClassNext.putExtra("avatar", avatar);
+                                intentCreateClassNext.putExtra("idSchool", idSchool);
+                                intentCreateClassNext.putExtra("className", edtClassName.getText().toString());
+                                startActivity(intentCreateClassNext);
                             }
                             break;
                     }
@@ -132,8 +138,12 @@ public class CreateClassActivity extends AppCompatActivity implements ViewProces
         mSchoolList = new ArrayList<>();
         for (int i=0; i<listSchool.length(); i++){
             try{
+
                 JSONObject jsonObject = listSchool.getJSONObject(i);
                 SchoolItem schoolItem = new SchoolItem();
+                if(i==0){
+                    idSchool = jsonObject.getInt("id");
+                }
                 schoolItem.setmIdSchool(jsonObject.getInt("id"));
                 schoolItem.setmSchoolName(jsonObject.getString("name"));
                 mSchoolList.add(schoolItem);
@@ -158,6 +168,7 @@ public class CreateClassActivity extends AppCompatActivity implements ViewProces
 
             }
         });
+
     }
 
     @Override
