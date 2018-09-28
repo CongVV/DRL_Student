@@ -3,15 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".View.CurrentClassView.CurrentClassActivity">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        app:menu="@menu/top_menu_class"
+        android:background="?android:attr/windowBackground">
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <ProgressBar
+        android:id="@+id/progressBarCreateClass"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/listViewClassCurrent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="auto_fit"
+        android:layout_marginTop="80dp"
+        android:columnWidth="100dp"
         android:gravity="center"
-        android:columnWidth="100dp">
+        android:numColumns="auto_fit"
+        android:background="@drawable/login_bg">
 
     </ListView>
 
