@@ -1,56 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridViewHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:numColumns="auto_fit"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     tools:context=".View.HomeView.HomeActivity"
-    android:background="@drawable/start_bg">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        <Button
-            android:id="@+id/btn_create_class"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="100dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center|center_vertical|center_horizontal"
-            android:background="@drawable/btn_bg"
-            android:backgroundTint="@color/colorAccent"
-            android:fontFamily="sans-serif-light"
-            android:text="Tạo Lớp Mới"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/colorWhite"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        <Button
-            android:id="@+id/btn_current_class"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center|center_vertical|center_horizontal"
-            android:background="@drawable/btn_bg"
-            android:backgroundTint="@color/colorBlue"
-            android:fontFamily="sans-serif-light"
-            android:text="Lớp Hiện Tại"
-            android:textAllCaps="true"
-            android:textColor="@color/colorWhite"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-</LinearLayout>
+    android:background="@drawable/start_bg"
+    android:gravity="center|center_horizontal|center_vertical"
+    android:foregroundGravity="center"
+    android:stretchMode="columnWidth">
+</GridView>

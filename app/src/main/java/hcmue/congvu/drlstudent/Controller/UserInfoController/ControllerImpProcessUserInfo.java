@@ -9,4 +9,6 @@ public interface ControllerImpProcessUserInfo {
     void getDataUserInfo(int idUser);
     void getSchoolList();
     void updateUserInfo(UserInfo userInfo);
+    void checkCurrentPassword(int userId, String currentPassword);
+    void updatePassword(int userId, String newPassword);
 }

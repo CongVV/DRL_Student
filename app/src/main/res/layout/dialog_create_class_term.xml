@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/login_bg"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Năm Học"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="true"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:background="@drawable/spinner_bg"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/linear1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Học Kỳ"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="true"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_term"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/term_class"/>
+    </LinearLayout>
+
+</RelativeLayout>

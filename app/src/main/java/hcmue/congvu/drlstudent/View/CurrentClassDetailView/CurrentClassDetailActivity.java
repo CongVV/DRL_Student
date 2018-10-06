@@ -1,9 +1,17 @@
 package hcmue.congvu.drlstudent.View.CurrentClassDetailView;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,12 +28,15 @@ import hcmue.congvu.drlstudent.R;
 /**
  * Created by CongVu on 24/09/2018.
  */
-public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail {
+public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail, CreateClassTermDialog.CreateClassTermDialogListener {
     ListView listViewClassDetail;
     ArrayList<ClassDetailItem> arrayClassDetail;
     int userId;
-    int idCurrentClassDetail;
-    int numberStudent;
+    int idClass;
+    int typeStudent;
+    boolean isAdmin;
+    android.support.design.widget.BottomNavigationView bottomNavigationItemView;
+    LinearLayout linearListTerm;
     String avatar;
     ControllerLogicProcessCurrentClassDetail controllerLogicProcessCurrentClassDetail = new ControllerLogicProcessCurrentClassDetail(this, this);
 
@@ -37,11 +48,25 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
         Bundle bundle = this.getIntent().getExtras();
         userId = bundle.getInt("userId");
         avatar = bundle.getString("avatar");
-        idCurrentClassDetail = bundle.getInt("idCurrentClassDetail");
-        numberStudent = 10;
+        idClass = bundle.getInt("idClass");
+        isAdmin = bundle.getBoolean("isAdmin");
+        typeStudent = bundle.getInt("typeUserClass");
 
         listViewClassDetail = (ListView) findViewById(R.id.listViewClassCurrentDetail);
-        controllerLogicProcessCurrentClassDetail.getCurrentClassDetailList(userId, idCurrentClassDetail);
+        bottomNavigationItemView = (android.support.design.widget.BottomNavigationView) findViewById(R.id.navi_current_class_detail);
+        linearListTerm = (LinearLayout) findViewById(R.id.linearListTerm);
+
+        if(typeStudent == 2){
+            bottomNavigationItemView.setVisibility(View.VISIBLE);
+        }
+        else{
+            bottomNavigationItemView.setVisibility(View.GONE);
+            ViewGroup.MarginLayoutParams margin =(ViewGroup.MarginLayoutParams) listViewClassDetail.getLayoutParams();
+            margin.setMargins(0, 0, 0, 0);
+            listViewClassDetail.requestLayout();
+        }
+        bottomNavigationItemView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        controllerLogicProcessCurrentClassDetail.getCurrentClassDetailList(userId, idClass);
 
 
     }
@@ -52,24 +77,60 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
         for (int i=0; i<jsonArray.length(); i++){
             try{
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                ClassDetailItem classItem = new ClassDetailItem();
-                classItem.setmIdClass(jsonObject.getInt("idClass"));
-                classItem.setmTerm(jsonObject.getInt("term"));
-                classItem.setmYearStart(jsonObject.getInt("yearStart"));
-                classItem.setmYearEnd(jsonObject.getInt("yearEnd"));
-                classItem.setmClassDetailImg(jsonObject.getString("image"));
-                classItem.setmNumberStudent(numberStudent);
-                arrayClassDetail.add(classItem);
+                ClassDetailItem classDetailItem = new ClassDetailItem();
+                classDetailItem.setmIdClassDetail(jsonObject.getInt("idClass"));
+                classDetailItem.setmTerm(jsonObject.getInt("term"));
+                classDetailItem.setmYearStart(jsonObject.getInt("yearStart"));
+                classDetailItem.setmYearEnd(jsonObject.getInt("yearEnd"));
+                arrayClassDetail.add(classDetailItem);
             } catch (JSONException e){
                 e.printStackTrace();
             }
         }
         ClassDetailAdapter adapbter = new ClassDetailAdapter(
                 CurrentClassDetailActivity.this,
-                R.layout.current_class_row,
+                R.layout.current_class_detail_row,
                 arrayClassDetail
         );
 
         listViewClassDetail.setAdapter(adapbter);
+    }
+
+    @Override
+    public void resutlCreateClassDetail(int value) {
+        if(value == 1){
+            Toast.makeText(this, "Tạo Học Kỳ Mới Thành Công!", Toast.LENGTH_LONG).show();
+            controllerLogicProcessCurrentClassDetail.getCurrentClassDetailList(userId, idClass);
+        }
+        else {
+            Toast.makeText(this, "Lỗi Mạng! Tạo Học Kỳ Mới Thất Bại!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener
+            = new android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener(){
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Toast.makeText(CurrentClassDetailActivity.this, "Vào đây rồi nè!", Toast.LENGTH_SHORT).show();
+            switch (item.getItemId()){
+                case R.id.item_nav_add:
+                    openDialog();
+                    break;
+                case R.id.item_nav_delete:
+                    break;
+            }
+            return true;
+        }
+    };
+
+    public void openDialog(){
+        CreateClassTermDialog createClassTermDialog = new CreateClassTermDialog();
+        createClassTermDialog.context = CurrentClassDetailActivity.this;
+        createClassTermDialog.show(getSupportFragmentManager(), "Create Term Class");
+    }
+
+    @Override
+    public void applyCreateClassTerm(int yearStart, int yearEnd, int yearTerm) {
+        controllerLogicProcessCurrentClassDetail.createCurrentClassDetail(userId, idClass, yearStart, yearEnd, yearTerm);
     }
 }

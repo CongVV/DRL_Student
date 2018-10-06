@@ -1,24 +1,28 @@
 package hcmue.congvu.drlstudent.View.UserInfoView;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import hcmue.congvu.drlstudent.R;
 
 /**
  * Created by CongVu on 01/09/2018.
  */
-public class ResetPassDialog extends AppCompatDialogFragment {
+
+public class ResetPassDialog extends AppCompatDialogFragment{
     private EditText edtPassCurrent, edtPassNew, edtRePassNew;
     private ResetPassDialogListener resetPassDialogListener;
-    private int idUser;
+
+    public ResetPassDialog() {
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -28,16 +32,21 @@ public class ResetPassDialog extends AppCompatDialogFragment {
 
         builder.setView(view)
                 .setTitle("Reset Mật Khẩu")
-                .setNegativeButton("hủy", new DialogInterface.OnClickListener() {
+                .setNegativeButton("HỦY", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        /*Toast.makeText(context, edtPassCurrent.getText().toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "123 nè", Toast.LENGTH_SHORT).show();*/
                     }
                 })
-                .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        String currentPassword, newPassword, reNewPassword;
+                        currentPassword = edtPassCurrent.getText().toString();
+                        newPassword = edtPassNew.getText().toString();
+                        reNewPassword = edtRePassNew.getText().toString();
+                        resetPassDialogListener.applyResetPass(currentPassword, newPassword, reNewPassword);
                     }
                 });
         edtPassCurrent = view.findViewById(R.id.edt_current_pass);
@@ -46,7 +55,19 @@ public class ResetPassDialog extends AppCompatDialogFragment {
         return builder.create();
     }
 
-    public interface ResetPassDialogListener{
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            resetPassDialogListener = (ResetPassDialogListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() +
+            "Phải thực thi....");
+        }
+    }
 
+
+    public interface ResetPassDialogListener{
+        void applyResetPass(String currentPassword, String newPassword, String reNewPassword);
     }
 }

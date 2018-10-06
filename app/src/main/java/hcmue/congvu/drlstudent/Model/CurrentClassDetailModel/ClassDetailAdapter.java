@@ -17,7 +17,6 @@ import hcmue.congvu.drlstudent.R;
  * Created by CongVu on 24/09/2018.
  */
 public class ClassDetailAdapter extends BaseAdapter {
-
     Context context;
     int layout;
     List<ClassDetailItem> classDetailItemList;
@@ -49,14 +48,12 @@ public class ClassDetailAdapter extends BaseAdapter {
         convertView = inflater.inflate(layout, null);
 
         ImageView imgClassDetail = (ImageView) convertView.findViewById(R.id.imgViewClass);
-        TextView tvClassDetailName = (TextView) convertView.findViewById(R.id.tvClassName);
-        TextView tvClassDetailNumberStudent = (TextView) convertView.findViewById(R.id.tvClassNumberStudent);
+        TextView tvClassDetailName = (TextView) convertView.findViewById(R.id.tvClassDetailName);
 
         imgClassDetail.setImageResource(R.drawable.correct);
         tvClassDetailName.setText(String.valueOf(classDetailItemList.get(position).getmYearStart()) + " - " +
                 String.valueOf(classDetailItemList.get(position).getmYearEnd()) + " (Học kỳ: " +
                 String.valueOf(classDetailItemList.get(position).getmTerm()) + " )");
-        tvClassDetailNumberStudent.setText(String.valueOf("Số lượng sinh viên: " + classDetailItemList.get(position).getmNumberStudent()));
         return convertView;
     }
 }

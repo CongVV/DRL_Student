@@ -10,7 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -18,6 +21,7 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 
 import hcmue.congvu.drlstudent.Controller.HomeController.ControllerLogicProcessHome;
+import hcmue.congvu.drlstudent.Model.HomeModel.HomeAdapter;
 import hcmue.congvu.drlstudent.Model.UserModel.UserInfo;
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.CreateClassView.CreateClassActivity;
@@ -34,7 +38,11 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
     private UserInfo userInfoHome = new UserInfo();
     public String avatar="";
     private Button btnCreateClass, btnCurrentClass;
+    private GridView gridView;
     private ControllerLogicProcessHome controllerLogicProcessHome = new ControllerLogicProcessHome(this, this);
+    private String[] nameIcon = {"Lớp Hiện Tại", "Tạo Lớp Mới", "Thống Kê", "Thông Tin"};
+    private int[] imgIcon = {R.drawable.ic_current_class_24dp, R.drawable.ic_new_class_24dp, R.drawable.ic_analysis_24dp, R.drawable.ic_user_24dp};
+    private TextView tvNameIcon;
 
 
     @Override
@@ -46,17 +54,51 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
         userId = bundle.getInt("userId");
         avatar = bundle.getString("avatar");
 
-        btnCreateClass = (Button) findViewById(R.id.btn_create_class);
-        btnCurrentClass = (Button) findViewById(R.id.btn_current_class);
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/windsorb.ttf");
-        btnCreateClass.setTypeface(typeface);
+        //btnCreateClass = (Button) findViewById(R.id.btn_create_class);
+        //btnCurrentClass = (Button) findViewById(R.id.btn_current_class);
+        //Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/windsorb.ttf");
+        //tvNameIcon = (TextView) findViewById(R.id.tvIconHome);
+        //tvNameIcon.setTypeface(typeface);
+       /* btnCreateClass.setTypeface(typeface);
         btnCurrentClass.setTypeface(typeface);
         btnCreateClass.setOnClickListener(this);
-        btnCurrentClass.setOnClickListener(this);
-
+        btnCurrentClass.setOnClickListener(this);*/
 
         //controllerLogicProcessHome.loadDataHome(userId);
 
+        gridView = findViewById(R.id.gridViewHome);
+        gridView.setAdapter(new HomeAdapter(this, nameIcon, imgIcon));
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        Intent intentCreateClass = new Intent(HomeActivity.this, CreateClassActivity.class);
+                        intentCreateClass.putExtra("userId", userId);
+                        intentCreateClass.putExtra("avatar", avatar);
+                        startActivity(intentCreateClass);
+                        finish();
+                        break;
+                    case 0:
+                        Intent intentCurrentClass = new Intent(HomeActivity.this, CurrentClassActivity.class);
+                        intentCurrentClass.putExtra("userId", userId);
+                        intentCurrentClass.putExtra("avatar", avatar);
+                        startActivity(intentCurrentClass);
+                        finish();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        Intent intentUserInfo = new Intent(HomeActivity.this, UserInfoActivity.class);
+                        intentUserInfo.putExtra("userId", userId);
+                        intentUserInfo.putExtra("avatar", avatar);
+                        startActivity(intentUserInfo);
+                        break;
+                }
+                Toast.makeText(HomeActivity.this, ""+position, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -99,6 +141,7 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
             case R.id.item_user:
                 Intent intentUserInfo = new Intent(HomeActivity.this, UserInfoActivity.class);
                 intentUserInfo.putExtra("userId", userId);
+                intentUserInfo.putExtra("avatar", avatar);
                 startActivity(intentUserInfo);
                 break;
             case R.id.item_logout:
@@ -118,7 +161,7 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        /*switch (v.getId()){
             case R.id.btn_create_class:
                 Intent intentCreateClass = new Intent(HomeActivity.this, CreateClassActivity.class);
                 intentCreateClass.putExtra("userId", userId);
@@ -133,7 +176,7 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                 startActivity(intentCurrentClass);
                 finish();
                 break;
-        }
+        }*/
     }
 
     @Override

@@ -4,20 +4,55 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".View.CurrentClassView.CurrentClassActivity">
+    tools:context=".View.CurrentClassView.CurrentClassActivity"
+    android:background="@drawable/login_bg">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navi"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentTop="true"
-        app:menu="@menu/top_menu_class"
-        android:background="?android:attr/windowBackground">
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow">
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_launcher"/>
 
-    </android.support.design.widget.BottomNavigationView>
+        <TextView
+            android:id="@+id/tv_current_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toRightOf="@id/imgLogo"
+            android:fontFamily="sans-serif"
+            android:text="Danh Sách Lớp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/listViewClassCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="125dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="auto_fit">
+
+    </ListView>
 
     <ProgressBar
-        android:id="@+id/progressBarCreateClass"
+        android:id="@+id/progressBarCurrentClass"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
@@ -25,17 +60,5 @@
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="162dp"
         tools:ignore="MissingConstraints" />
-
-    <ListView
-        android:id="@+id/listViewClassCurrent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
-        android:columnWidth="100dp"
-        android:gravity="center"
-        android:numColumns="auto_fit"
-        android:background="@drawable/login_bg">
-
-    </ListView>
 
 </RelativeLayout>

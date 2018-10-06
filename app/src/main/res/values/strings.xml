@@ -4,4 +4,10 @@
         <item>Sinh viên</item>
         <item>Cán bộ</item>
     </string-array>
+
+    <string-array name="term_class">
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+    </string-array>
 </resources>

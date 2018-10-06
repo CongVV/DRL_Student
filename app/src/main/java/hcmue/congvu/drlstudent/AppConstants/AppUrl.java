@@ -17,4 +17,7 @@ public abstract class AppUrl {
     public static final String URL_GET_CURRENT_CLASS_DETAIL     = URL_APP_BASE + "getdatacurrentclassdetail.php";
     public static final String URL_CHECK_USERNAME_ADD_CLASS     = URL_APP_BASE + "checkusernameaddclass.php";
     public static final String URL_SAVE_CLASS_LIST              = URL_APP_BASE + "saveclasslist.php";
+    public static final String URL_CHECK_PASSWORD               = URL_APP_BASE + "checkpassword.php";
+    public static final String URL_UPADATE_PASSWORD             = URL_APP_BASE + "updatepassword.php";
+    public static final String URL_CREATE_CLASS_DETAIL          = URL_APP_BASE + "createclassdetail.php";
 }

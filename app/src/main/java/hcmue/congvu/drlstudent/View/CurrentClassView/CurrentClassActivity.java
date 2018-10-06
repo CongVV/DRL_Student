@@ -48,11 +48,16 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
         listViewClass.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ClassItem clickedItem = (ClassItem) parent.getItemAtPosition(position);
                 Intent intentClassDetail = new Intent(CurrentClassActivity.this, CurrentClassDetailActivity.class);
                 intentClassDetail.putExtra("userId", userId);
                 intentClassDetail.putExtra("avatar", avatar);
+                intentClassDetail.putExtra("idClass", arrayClass.get(position).getmIdClass());
+                intentClassDetail.putExtra("isAdmin", arrayClass.get(position).ismIsAdmin());
+                intentClassDetail.putExtra("typeUserClass", arrayClass.get(position).getmTypeUserClass());
+
                 //intentClassDetail.putExtra("idCurrentClassDetail", arrayClass.get(position).getmIdClass());
-                intentClassDetail.putExtra("idCurrentClassDetail", arrayClass.get(position).getmIdClass());
+                //intentClassDetail.putExtra("idCurrentClassDetail", arrayClass.get(position).getmIdClass());
                 startActivity(intentClassDetail);
                 //Toast.makeText(CurrentClassActivity.this, arrayClass.get(position).getmClassName(), Toast.LENGTH_SHORT).show();
 
@@ -73,6 +78,8 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
                 classItem.setmClassName(jsonObject.getString("className"));
                 classItem.setmNumberStudent(jsonObject.getInt("numberStudent"));
                 classItem.setmClassImg(jsonObject.getString("classImage"));
+                classItem.setmIsAdmin(jsonObject.getBoolean("isAdmin"));
+                classItem.setmTypeUserClass(jsonObject.getInt("idclassUserType"));
                 arrayClass.add(classItem);
             } catch (JSONException e){
                 e.printStackTrace();

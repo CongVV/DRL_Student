@@ -9,5 +9,6 @@ import hcmue.congvu.drlstudent.AppConstants.AppUrl;
  */
 public interface ViewCurrentClassDetail{
     void setListViewClassDetail(JSONArray jsonArray);
+    void resutlCreateClassDetail(int value);
 }
 

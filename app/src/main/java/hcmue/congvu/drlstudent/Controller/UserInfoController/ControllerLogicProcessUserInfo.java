@@ -141,4 +141,72 @@ public class ControllerLogicProcessUserInfo extends AppUrl implements Controller
         };
         requestQueue.add(stringRequest);
     }
+
+    @Override
+    public void checkCurrentPassword(final int userId, final String currentPassword) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_CHECK_PASSWORD,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.i("tagPass", response);
+                        if(response.equals("true")){
+                            viewProcessUserInfo.resultCheckPassword("true");
+                        }
+                        else {
+                            viewProcessUserInfo.resultCheckPassword("false");
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley", error.toString());
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("userId", String.valueOf(userId));
+                params.put("currentPassword", currentPassword);
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void updatePassword(final int userId, final String newPassword) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_UPADATE_PASSWORD,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.i("tagPassUpdate", response);
+                        if(response.equals("true")){
+                            viewProcessUserInfo.updatePassword("true");
+                        }
+                        else {
+                            viewProcessUserInfo.resultCheckPassword("false");
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley", error.toString());
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("userId", String.valueOf(userId));
+                params.put("newPassword", newPassword);
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
 }

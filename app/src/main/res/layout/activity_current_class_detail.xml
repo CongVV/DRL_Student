@@ -1,19 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.CurrentClassDetailView.CurrentClassDetailActivity">
+    tools:context=".View.CurrentClassDetailView.CurrentClassDetailActivity"
+    android:background="@drawable/login_bg">
+
+    <LinearLayout
+        android:id="@+id/linearListTerm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen">
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_current_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toRightOf="@id/imgLogo"
+            android:fontFamily="sans-serif"
+            android:text="Danh Sách Học Kỳ"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listViewClassCurrentDetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_below="@id/linearListTerm"
         android:numColumns="auto_fit"
         android:gravity="center"
         android:columnWidth="100dp">
 
     </ListView>
 
-</LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navi_current_class_detail"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/top_menu_class"
+        android:background="?android:attr/windowBackground">
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentClassDetail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

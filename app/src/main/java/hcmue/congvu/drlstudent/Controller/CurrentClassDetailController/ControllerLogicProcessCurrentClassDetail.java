@@ -39,6 +39,7 @@ public class ControllerLogicProcessCurrentClassDetail extends AppUrl implements 
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.i("classREs", response);
                         try {
                             JSONArray jsonArray = new JSONArray(response);
                             viewCurrentClassDetail.setListViewClassDetail(jsonArray);
@@ -63,6 +64,43 @@ public class ControllerLogicProcessCurrentClassDetail extends AppUrl implements 
                 Map<String, String> params = new HashMap<>();
                 params.put("idUser",String.valueOf(idUser));
                 params.put("idClass",String.valueOf(idCurrenClassDetail));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void createCurrentClassDetail(final int idUser, final int idClass, final int yearStart, final int yearEnd, final int yearTerm) {
+        final RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_CREATE_CLASS_DETAIL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if(response.equals("success")){
+                            viewCurrentClassDetail.resutlCreateClassDetail(1);
+                        }
+                        else {
+                            viewCurrentClassDetail.resutlCreateClassDetail(0);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley",error.toString());
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idUser",String.valueOf(idUser));
+                params.put("idClass",String.valueOf(idClass));
+                params.put("yearStart",String.valueOf(yearStart));
+                params.put("yearEnd",String.valueOf(yearEnd));
+                params.put("yearTerm",String.valueOf(yearTerm));
                 return params;
             }
         };

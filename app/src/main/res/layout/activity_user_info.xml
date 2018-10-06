@@ -333,6 +333,15 @@ tools:context=".View.UserInfoView.UserInfoActivity">
         android:fontFamily="sans-serif"
         android:background="@color/transparent"/>
 
+    <ProgressBar
+        android:id="@+id/progressBarUpdateUserInfo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
 
 </RelativeLayout>
 

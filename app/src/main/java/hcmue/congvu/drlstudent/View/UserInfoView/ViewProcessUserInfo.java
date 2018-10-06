@@ -12,4 +12,6 @@ public interface ViewProcessUserInfo {
     void setSpinnerSchool(JSONArray listSchool);
     void updateFail();
     void updateSuccessful();
+    void resultCheckPassword(String result);
+    void updatePassword(String result);
 }

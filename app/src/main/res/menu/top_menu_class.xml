@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/item_nav_back"
-        android:icon="@drawable/ic_back_navigation_black"
-        android:title="Trở về"/>
+        android:id="@+id/item_nav_add"
+        android:icon="@drawable/ic_plus_class_detail_24dp"
+        android:title="Thêm"/>
 
     <item
-        android:id="@+id/item_nav_finish"
-        android:icon="@drawable/ic_beenhere_black_24dp"
-        android:title="Hoàn tất"/>
-
-    <item
-        android:id="@+id/item_nav_finish2"
-        android:icon="@drawable/ic_beenhere_black_24dp"
-        android:title="Hoàn tất"/>
-
-    <item
-        android:id="@+id/item_nav_finish3"
-        android:icon="@drawable/ic_beenhere_black_24dp"
-        android:title="Hoàn tất"/>
+        android:id="@+id/item_nav_delete"
+        android:icon="@drawable/ic_delete_forever_black_24dp"
+        android:title="Xóa"/>
 </menu>
