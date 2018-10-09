@@ -51,6 +51,19 @@
 
     </ListView>
 
+    <TextView
+        android:id="@+id/tvClassDetailEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="160dp"
+        android:text="(Danh Sách Rỗng)"
+        android:visibility="gone"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"/>
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navi_current_class_detail"

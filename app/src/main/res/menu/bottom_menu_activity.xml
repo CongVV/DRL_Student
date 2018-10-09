@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_activity_current"
+        android:icon="@drawable/ic_activity_24dp"
+        android:title="Hoạt Động"/>
+
+    <item
+        android:id="@+id/item_status_class_list"
+        android:icon="@drawable/ic_list_class_24dp"
+        android:title="Danh Sách"/>
+
+    <item
+        android:id="@+id/item_activity_create"
+        android:icon="@drawable/ic_new_activity_24dp"
+        android:title="Tạo Hoạt Động"/>
+</menu>

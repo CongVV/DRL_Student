@@ -50,6 +50,9 @@
         <activity android:name=".View.CurrentClassDetailView.CurrentClassDetailActivity"
             android:screenOrientation="portrait"></activity>
 
+        <activity android:name=".View.ActivityClassDetailView.ActivityClassDetailActivity"
+            android:screenOrientation="portrait"></activity>
+
 
     </application>
 

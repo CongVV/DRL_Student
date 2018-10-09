@@ -806,6 +806,7 @@ drawable home_sync_ani_04
 drawable home_sync_ani_05
 drawable home_sync_ani_06
 drawable ic_account_circle_black_24dp
+drawable ic_activity_24dp
 drawable ic_analysis_24dp
 drawable ic_back_navigation_black
 drawable ic_beenhere_black_24dp
@@ -813,6 +814,8 @@ drawable ic_current_class_24dp
 drawable ic_delete_forever_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_list_class_24dp
+drawable ic_new_activity_24dp
 drawable ic_new_class_24dp
 drawable ic_next_navigation_black
 drawable ic_plus_class_detail_24dp
@@ -942,6 +945,7 @@ id fill_horizontal
 id fill_vertical
 id fixed
 id forever
+id fragment_content
 id ghost_view
 id gone
 id gridViewHome
@@ -960,12 +964,15 @@ id impProcess
 id info
 id invisible
 id italic
+id item_activity_create
+id item_activity_current
 id item_logout
 id item_nav_add
 id item_nav_back
 id item_nav_delete
 id item_nav_finish
 id item_nav_next
+id item_status_class_list
 id item_touch_helper_previous_elevation
 id item_user
 id largeLabel
@@ -991,6 +998,7 @@ id message
 id middle
 id mini
 id multiply
+id navi_activity_class_detail
 id navi_current_class_detail
 id navigation_header_container
 id never
@@ -1090,10 +1098,12 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id tvBook
+id tvClassDetailEmpty
 id tvClassDetailName
 id tvClassName
 id tvClassNumberStudent
 id tvCorrect
+id tvEmpty
 id tvIconHome
 id tvStyleStudent
 id tvTool
@@ -1152,6 +1162,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_activity_class
 layout activity_create_class
 layout activity_create_class_second
 layout activity_current_class
@@ -1181,6 +1192,9 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dialog_create_class_term
 layout dialog_reset_pass
+layout fragment_activity
+layout fragment_create_activity
+layout fragment_list
 layout home_item
 layout notification_action
 layout notification_action_tombstone
@@ -1203,6 +1217,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu botom_menu
+menu bottom_menu_activity
 menu bottom_menu_second
 menu home_menu
 menu top_menu_class

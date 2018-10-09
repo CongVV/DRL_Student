@@ -1,5 +1,6 @@
 package hcmue.congvu.drlstudent.View.CurrentClassDetailView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,8 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -24,12 +27,14 @@ import hcmue.congvu.drlstudent.Controller.CurrentClassDetailController.Controlle
 import hcmue.congvu.drlstudent.Model.CurrentClassDetailModel.ClassDetailAdapter;
 import hcmue.congvu.drlstudent.Model.CurrentClassDetailModel.ClassDetailItem;
 import hcmue.congvu.drlstudent.R;
+import hcmue.congvu.drlstudent.View.ActivityClassDetailView.ActivityClassDetailActivity;
 
 /**
  * Created by CongVu on 24/09/2018.
  */
 public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail, CreateClassTermDialog.CreateClassTermDialogListener {
     ListView listViewClassDetail;
+    TextView tvClassDetailEmpty;
     ArrayList<ClassDetailItem> arrayClassDetail;
     int userId;
     int idClass;
@@ -46,12 +51,19 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
         setContentView(R.layout.activity_current_class_detail);
 
         Bundle bundle = this.getIntent().getExtras();
-        userId = bundle.getInt("userId");
-        avatar = bundle.getString("avatar");
-        idClass = bundle.getInt("idClass");
-        isAdmin = bundle.getBoolean("isAdmin");
-        typeStudent = bundle.getInt("typeUserClass");
+        if(bundle!=null){
+            userId = bundle.getInt("userId");
+            avatar = bundle.getString("avatar");
+            idClass = bundle.getInt("idClass");
+            isAdmin = bundle.getBoolean("isAdmin");
+            typeStudent = bundle.getInt("typeUserClass");
+        }
+        else {
+            Toast.makeText(this, "Lỗi Mạng!", Toast.LENGTH_LONG).show();
+        }
 
+
+        tvClassDetailEmpty = (TextView) findViewById(R.id.tvClassDetailEmpty);
         listViewClassDetail = (ListView) findViewById(R.id.listViewClassCurrentDetail);
         bottomNavigationItemView = (android.support.design.widget.BottomNavigationView) findViewById(R.id.navi_current_class_detail);
         linearListTerm = (LinearLayout) findViewById(R.id.linearListTerm);
@@ -68,32 +80,52 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
         bottomNavigationItemView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         controllerLogicProcessCurrentClassDetail.getCurrentClassDetailList(userId, idClass);
 
-
+        listViewClassDetail.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(CurrentClassDetailActivity.this, ActivityClassDetailActivity.class);
+                intent.putExtra("userId", userId);
+                intent.putExtra("avatar", avatar);
+                intent.putExtra("idClass", idClass);
+                intent.putExtra("idClassDetail", arrayClassDetail.get(position).getmIdClassDetail());
+                intent.putExtra("isAdmin", isAdmin);
+                intent.putExtra("typeStudent", typeStudent);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
     public void setListViewClassDetail(JSONArray jsonArray) {
-        arrayClassDetail = new ArrayList<ClassDetailItem>();
-        for (int i=0; i<jsonArray.length(); i++){
-            try{
-                JSONObject jsonObject = jsonArray.getJSONObject(i);
-                ClassDetailItem classDetailItem = new ClassDetailItem();
-                classDetailItem.setmIdClassDetail(jsonObject.getInt("idClass"));
-                classDetailItem.setmTerm(jsonObject.getInt("term"));
-                classDetailItem.setmYearStart(jsonObject.getInt("yearStart"));
-                classDetailItem.setmYearEnd(jsonObject.getInt("yearEnd"));
-                arrayClassDetail.add(classDetailItem);
-            } catch (JSONException e){
-                e.printStackTrace();
-            }
+        if(jsonArray.length() == 0){
+            tvClassDetailEmpty.setVisibility(View.VISIBLE);
+            listViewClassDetail.setVisibility(View.GONE);
         }
-        ClassDetailAdapter adapbter = new ClassDetailAdapter(
-                CurrentClassDetailActivity.this,
-                R.layout.current_class_detail_row,
-                arrayClassDetail
-        );
+        else{
+            tvClassDetailEmpty.setVisibility(View.GONE);
+            listViewClassDetail.setVisibility(View.VISIBLE);
+            arrayClassDetail = new ArrayList<ClassDetailItem>();
+            for (int i=0; i<jsonArray.length(); i++){
+                try{
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    ClassDetailItem classDetailItem = new ClassDetailItem();
+                    classDetailItem.setmIdClassDetail(jsonObject.getInt("idClass"));
+                    classDetailItem.setmTerm(jsonObject.getInt("term"));
+                    classDetailItem.setmYearStart(jsonObject.getInt("yearStart"));
+                    classDetailItem.setmYearEnd(jsonObject.getInt("yearEnd"));
+                    arrayClassDetail.add(classDetailItem);
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+            ClassDetailAdapter adapbter = new ClassDetailAdapter(
+                    CurrentClassDetailActivity.this,
+                    R.layout.current_class_detail_row,
+                    arrayClassDetail
+            );
 
-        listViewClassDetail.setAdapter(adapbter);
+            listViewClassDetail.setAdapter(adapbter);
+        }
     }
 
     @Override
@@ -111,7 +143,6 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
             = new android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener(){
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Toast.makeText(CurrentClassDetailActivity.this, "Vào đây rồi nè!", Toast.LENGTH_SHORT).show();
             switch (item.getItemId()){
                 case R.id.item_nav_add:
                     openDialog();

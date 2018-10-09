@@ -51,6 +51,18 @@
 
     </ListView>
 
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="(Danh Sách Rỗng)"
+        android:textColor="@color/colorBlack"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"/>
+
     <ProgressBar
         android:id="@+id/progressBarCurrentClass"
         android:layout_width="100dp"

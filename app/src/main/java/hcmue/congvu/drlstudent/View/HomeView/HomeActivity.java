@@ -96,7 +96,7 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                         startActivity(intentUserInfo);
                         break;
                 }
-                Toast.makeText(HomeActivity.this, ""+position, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(HomeActivity.this, ""+position, Toast.LENGTH_SHORT).show();
             }
         });
     }
