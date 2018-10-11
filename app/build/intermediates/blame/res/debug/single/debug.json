@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color-v23\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_activity_24dp.png.flat",
@@ -20,12 +20,12 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_new_class_24dp.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -48,12 +48,16 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color\\abc_tint_spinner.xml"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_activity_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_activity_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_popup_menu_item_layout.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_activity_24dp.png.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_activity_24dp.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_student_activity_info.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\fragment_student_activity_info.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -64,16 +68,16 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -88,12 +92,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_create_activity.xml.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\fragment_create_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_create_activity.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\fragment_create_activity.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -118,6 +122,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_student_info_24dp.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_student_info_24dp.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
@@ -148,12 +156,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_item_layout.xml.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\abc_action_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\drawable-xhdpi-v4\\design_ic_visibility.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_menu_item_layout.xml.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -200,12 +208,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_next_navigation_black.png.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_next_navigation_black.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_next_navigation_black.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_next_navigation_black.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -220,12 +228,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_correct.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\correct.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -256,12 +264,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_plus_class_detail_24dp.xml.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_plus_class_detail_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -316,12 +324,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_item.xml.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\home_item.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_current_class_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_current_class_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_home_item.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\home_item.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
@@ -332,16 +340,16 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -360,12 +368,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\anim\\abc_tooltip_enter.xml"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_bottom_navigation_item_background.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\drawable\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -412,24 +420,20 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\096efbfef347b1d9b4db5876cb2025ad\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_colored_material.xml.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable\\abc_btn_colored_material.xml"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_reset_pass.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\dialog_reset_pass.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_reset_pass.xml.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\dialog_reset_pass.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_activity_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_activity_24dp.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_new_class_24dp.png.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_new_class_24dp.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_colored_material.xml.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -438,6 +442,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_new_class_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_new_class_24dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -456,16 +464,16 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\096efbfef347b1d9b4db5876cb2025ad\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_singlechoice_material.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\096efbfef347b1d9b4db5876cb2025ad\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -498,6 +506,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_management.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\fragment_management.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -534,6 +546,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_student_info_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_student_info_24dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
@@ -584,6 +600,10 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_current_class_24dp.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_student_info_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_student_info_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_text_material.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color-v23\\abc_btn_colored_text_material.xml"
     },
@@ -598,6 +618,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\096efbfef347b1d9b4db5876cb2025ad\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_management_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_management_24dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_start_bg.xml.flat",
@@ -644,12 +668,12 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\male_avatar.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_analysis_24dp.xml.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_analysis_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_icon.xml.flat",
@@ -836,12 +860,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\b44f0e2a81a18cb7fe65823ea2a87f9b\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_new_activity_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_new_activity_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\b44f0e2a81a18cb7fe65823ea2a87f9b\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_vector_test.xml.flat",
@@ -872,12 +896,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_list_class_24dp.xml.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_list_class_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_delete_forever_black_24dp.png.flat",
@@ -900,12 +924,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_new_activity_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_new_activity_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_abc_dialog_material_background.xml.flat",
@@ -988,8 +1012,16 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_management_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_management_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_management_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_management_24dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -1168,6 +1200,10 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_student_info_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_student_info_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color\\abc_tint_seek_thumb.xml"
     },
@@ -1202,6 +1238,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_password.xml.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\activity_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_management_24dp.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_management_24dp.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -1348,6 +1388,10 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_management_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_management_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
@@ -1398,6 +1442,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_student_info_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_student_info_24dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
@@ -1704,6 +1752,10 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_management_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_management_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_tooltip.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\abc_tooltip.xml"
     },
@@ -1716,12 +1768,12 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_beenhere_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_analysis_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_analysis_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_delete_forever_black_24dp.png.flat",
@@ -1816,12 +1868,12 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_list_class_24dp.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_female_avatar.png.flat",
-        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\female_avatar.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_user_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_user_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_female_avatar.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\female_avatar.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_launcher.png.flat",
@@ -1952,6 +2004,10 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\color\\design_tint_password_toggle.xml"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_student_info_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_student_info_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
@@ -2040,12 +2096,12 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_new_activity_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_new_activity_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -2316,6 +2372,10 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_current_class_24dp.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_student_info_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_student_info_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_beenhere_black_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_beenhere_black_24dp.png"
     },
@@ -2326,6 +2386,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_management_24dp.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_management_24dp.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",

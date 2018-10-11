@@ -496,6 +496,22 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\values-v23_values-v23.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\values-iw_values-iw.arsc.flat",
             "map": [
                 {
@@ -523,22 +539,6 @@
                         "startOffsets": "105,209,308,416,500,600,714,792,870,951,1053,1157,1255,1358,1459,1559,1711,1807",
                         "endColumns": "103,98,107,83,99,113,77,77,80,101,103,97,102,100,99,151,95,80",
                         "endOffsets": "204,303,411,495,595,709,787,865,946,1048,1152,1250,1353,1454,1554,1706,1802,1883"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\values-v23_values-v23.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
-                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
-                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
-                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
                     }
                 }
             ]

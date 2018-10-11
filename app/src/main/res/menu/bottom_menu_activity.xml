@@ -11,6 +11,16 @@
         android:title="Danh Sách"/>
 
     <item
+        android:id="@+id/item_student_info"
+        android:icon="@drawable/ic_student_info_24dp"
+        android:title="Cá Nhân"/>
+
+    <item
+        android:id="@+id/item_management"
+        android:icon="@drawable/ic_management_24dp"
+        android:title="Quản Lý"/>
+
+    <item
         android:id="@+id/item_activity_create"
         android:icon="@drawable/ic_new_activity_24dp"
         android:title="Tạo Hoạt Động"/>
