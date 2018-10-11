@@ -804,6 +804,10 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_class_activity_row.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\class_activity_row.xml"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
@@ -1014,6 +1018,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_management_24dp.png.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_management_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_datetime_bg.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\datetime_bg.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_default.xml.flat",
@@ -1370,6 +1378,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\fd19606f3ad4c1f8da2854836d0784f8\\res\\drawable-hdpi-v4\\design_ic_visibility.png"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_content_bg.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\content_bg.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_in.xml.flat",

@@ -42,7 +42,6 @@ public class ControllerLogicProcessCurrentClass extends AppUrl implements Contro
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.i("curentClass", response);
                         try {
                             JSONArray jsonArray = new JSONArray(response);
                             viewProcessCurrentClass.setListViewClass(jsonArray);

@@ -39,7 +39,6 @@ public class ControllerLogicProcessCurrentClassDetail extends AppUrl implements 
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.i("classREs", response);
                         try {
                             JSONArray jsonArray = new JSONArray(response);
                             viewCurrentClassDetail.setListViewClassDetail(jsonArray);

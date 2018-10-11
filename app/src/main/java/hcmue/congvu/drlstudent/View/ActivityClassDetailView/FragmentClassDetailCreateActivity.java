@@ -47,7 +47,7 @@ public class FragmentClassDetailCreateActivity extends Fragment {
     TimePickerDialog.OnTimeSetListener timePickerDialogStart, timePickerDialogEnd;
     Button btnDatePickerStart, btnDatePickerEnd, btnTimePickerStart, btnTimePickerEnd, btnCreateActivity;
     String dStart, dEnd, tStart, tEnd;
-    int idActivityGroup, idActivityLevel, idUser, idClassDetail;
+    int idActivityGroup, idActivityLevel, idUser, idClass, idClassDetail;
     EditText edtContent, edtScores;
 
 
@@ -58,6 +58,7 @@ public class FragmentClassDetailCreateActivity extends Fragment {
         Bundle bundle = getArguments();
         if(bundle != null){
             idUser = bundle.getInt("idUser");
+            idClass = bundle.getInt("idClass");
             idClassDetail = bundle.getInt("idClassDetail");
         }
         View view = inflater.inflate(R.layout.fragment_create_activity, container, false);
@@ -177,7 +178,7 @@ public class FragmentClassDetailCreateActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
-                act.createActivityClass(idUser, idClassDetail, idActivityGroup, idActivityLevel,
+                act.createActivityClass(idUser, idClass, idClassDetail, idActivityGroup, idActivityLevel,
                                                                 dStart+" "+tStart, dEnd+" "+tEnd,
                                                                 edtContent.getText().toString(),
                                                                 edtScores.getText().toString());

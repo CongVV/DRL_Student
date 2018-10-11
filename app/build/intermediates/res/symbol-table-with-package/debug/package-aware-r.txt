@@ -790,7 +790,9 @@ drawable btn_back
 drawable btn_bg
 drawable btn_delete
 drawable btn_next
+drawable content_bg
 drawable correct
+drawable datetime_bg
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -889,6 +891,7 @@ id btnDeleteStudent
 id btn_Add_Student
 id btn_avatar
 id btn_birthday
+id btn_confirm
 id btn_create_activity
 id btn_forgot_pass
 id btn_home_activity
@@ -998,6 +1001,7 @@ id linear_system
 id linlay1
 id listMode
 id listStudentOfClass
+id listViewActivityClass
 id listViewClassCurrent
 id listViewClassCurrentDetail
 id list_item
@@ -1121,8 +1125,10 @@ id tvIconHome
 id tvStyleStudent
 id tvTool
 id tvUsernameStudent
+id tv_content
 id tv_create_class
 id tv_current_class
+id tv_date_time
 id tv_email
 id tv_login
 id tv_password
@@ -1187,6 +1193,7 @@ layout activity_sign_up
 layout activity_start
 layout activity_user_info
 layout add_student_row
+layout class_activity_row
 layout current_class_detail_row
 layout current_class_row
 layout design_bottom_navigation_item

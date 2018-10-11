@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,11 +24,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import hcmue.congvu.drlstudent.Controller.ActivityClassDetailController.ControllerLogicProcessActivityClassDetail;
+import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityClassItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelItem;
+import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassAdapter;
+import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassItem;
 import hcmue.congvu.drlstudent.R;
+import hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity;
 
 /**
  * Created by CongVu on 06/10/2018.
@@ -48,10 +53,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
     public ControllerLogicProcessActivityClassDetail controllerLogicProcessActivityClassDetail = new ControllerLogicProcessActivityClassDetail(this, this);
     public ArrayList<ActivityGroupItem> mActivityGroupList = new ArrayList<>();
     public ArrayList<ActivityLevelItem> mActivityLevelList = new ArrayList<>();
-    int idAcGroup, idAcLevel;
 
-    ActivityGroupAdapter activityGroupAdapter;
-    ActivityLevelAdapter activityLevelAdapter;
     //JSONArray jActivityGroupList = new JSONArray();
     //JSONArray jActivityLevelList = new JSONArray();
 
@@ -134,6 +136,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
 
         Bundle bundle = new Bundle();
         bundle.putInt("idUser", userId);
+        bundle.putInt("idClass", idClass);
         bundle.putInt("idClassDetail", idClassDetail);
         fragmentClassDetailCreateActivity.setArguments(bundle);
 
@@ -196,21 +199,26 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
     public void openFragmentStudentActivityInfo(){
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-                    /*fragmentTransaction.remove(fragmentClassDetailActivity);
-                    fragmentTransaction.remove(fragmentClassDetailCreateActivity);
-                    fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailList);*/
         fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailStudentActivityInfo);
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("idUser", userId);
+        bundle.putInt("idClass", idClass);
+        bundle.putInt("idClassDetail", idClassDetail);
+        fragmentClassDetailStudentActivityInfo.setArguments(bundle);
         fragmentTransaction.commit();
+
     }
 
     public void openFragmentActivity(){
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-                    /*fragmentTransaction.remove(fragmentClassDetailList);
-                    fragmentTransaction.remove(fragmentClassDetailCreateActivity);
-                    fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailActivity);
-*/
-        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailActivity);
+        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailActivity, "activityClass");
+        Bundle bundle = new Bundle();
+        bundle.putInt("idUser", userId);
+        bundle.putInt("idClass", idClass);
+        bundle.putInt("idClassDetail", idClassDetail);
+        fragmentClassDetailActivity.setArguments(bundle);
         fragmentTransaction.commit();
     }
 
@@ -220,7 +228,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                     /*fragmentTransaction.remove(fragmentClassDetailActivity);
                     fragmentTransaction.remove(fragmentClassDetailCreateActivity);
                     fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailList);*/
-        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailList);
+        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailList, "classList");
         fragmentTransaction.commit();
     }
 
@@ -301,7 +309,21 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         }
     }
 
-    public void createActivityClass(int idUser, int idClassDetail, int idActivityGroup, int idActivityLevel, String s, String s1, String s2, String s3) {
-        controllerLogicProcessActivityClassDetail.createAcitvityClass(idUser, idClassDetail, idActivityGroup, idActivityLevel, s, s1, s2, s3);
+    @Override
+    public void setActivityClass(JSONArray jsonArray) {
+        FragmentClassDetailActivity fragment = (FragmentClassDetailActivity) getFragmentManager().findFragmentByTag("activityClass");
+        if(jsonArray.length()==0){
+            fragment.tvEmpty.setVisibility(View.VISIBLE);
+            fragment.lvActivityClass.setVisibility(View.GONE);
+        }
+        else {
+            fragment.tvEmpty.setVisibility(View.GONE);
+            fragment.lvActivityClass.setVisibility(View.VISIBLE);
+            fragment.setDataActivityClass(jsonArray);
+        }
+    }
+
+    public void createActivityClass(int idUser, int idClass, int idClassDetail, int idActivityGroup, int idActivityLevel, String s, String s1, String s2, String s3) {
+        controllerLogicProcessActivityClassDetail.createAcitvityClass(idUser, idClass, idClassDetail, idActivityGroup, idActivityLevel, s, s1, s2, s3);
     }
 }

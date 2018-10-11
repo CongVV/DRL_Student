@@ -23,4 +23,5 @@ public abstract class AppUrl {
     public static final String URL_GET_ACTIVITY_GROUP_LIST          = URL_APP_BASE + "getdataactivitygrouplist.php";
     public static final String URL_GET_ACTIVITY_LEVEL_LIST          = URL_APP_BASE + "getdataactivitylevellist.php";
     public static final String URL_CREATE_ACTIVITY_CLASS            = URL_APP_BASE + "createactivityclass.php";
+    public static final String URL_GET_ACTIVITY_CLASS               = URL_APP_BASE + "getactivityclass.php";
 }
