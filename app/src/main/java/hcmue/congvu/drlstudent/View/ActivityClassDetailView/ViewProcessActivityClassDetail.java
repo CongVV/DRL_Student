@@ -10,4 +10,6 @@ public interface ViewProcessActivityClassDetail {
     void setActivityLevelList(JSONArray jsonArray);
     void resultCreateActivityClass(Boolean result);
     void setActivityClass(JSONArray jsonArray);
+    void setActivityClassList(JSONArray jsonArray);
+    void setActivityStudentInfo(JSONArray jsonArray);
 }

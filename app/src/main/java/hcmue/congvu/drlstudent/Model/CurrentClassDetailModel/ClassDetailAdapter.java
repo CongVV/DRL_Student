@@ -1,7 +1,9 @@
 package hcmue.congvu.drlstudent.Model.CurrentClassDetailModel;
 
 import android.animation.LayoutTransition;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ public class ClassDetailAdapter extends BaseAdapter {
     Context context;
     int layout;
     List<ClassDetailItem> classDetailItemList;
+    public ConfirmDeleteClassDetailListener confirm;
 
     public ClassDetailAdapter(Context context, int layout, List<ClassDetailItem> classDetailItemslist){
         this.context = context;
@@ -43,17 +46,61 @@ public class ClassDetailAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout, null);
 
         ImageView imgClassDetail = (ImageView) convertView.findViewById(R.id.imgViewClass);
         TextView tvClassDetailName = (TextView) convertView.findViewById(R.id.tvClassDetailName);
+        TextView tvDeleteClassDetail = (TextView) convertView.findViewById(R.id.tvDeleteClassDetail);
 
-        imgClassDetail.setImageResource(R.drawable.correct);
+        imgClassDetail.setImageResource(R.drawable.classdetail);
         tvClassDetailName.setText(String.valueOf(classDetailItemList.get(position).getmYearStart()) + " - " +
                 String.valueOf(classDetailItemList.get(position).getmYearEnd()) + " (Học kỳ: " +
-                String.valueOf(classDetailItemList.get(position).getmTerm()) + " )");
+                String.valueOf(classDetailItemList.get(position).getmTerm()) + ")");
+        tvDeleteClassDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(classDetailItemList.get(position).ismIsAdmin()){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setMessage("Bạn có muốn xóa???");
+
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //Toast.makeText(context, "Xóa nè!!!", Toast.LENGTH_SHORT).show();
+                            confirm.deleteClassDetail(classDetailItemList.get(position).getmIdClassDetail());
+                        }
+                    });
+                    builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+                else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setMessage("Bạn không có quyền xóa!");
+                    builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
+            }
+        });
         return convertView;
+    }
+
+    public interface ConfirmDeleteClassDetailListener{
+        void deleteClassDetail(int idClassDetail);
     }
 }

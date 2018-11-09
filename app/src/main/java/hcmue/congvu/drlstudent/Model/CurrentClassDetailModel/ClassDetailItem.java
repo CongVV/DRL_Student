@@ -8,16 +8,19 @@ public class ClassDetailItem {
     int mYearEnd;
     int mTerm;
     int mIdClassDetail;
+    boolean mIsAdmin;
 
-    public ClassDetailItem() {
-    }
-
-    public ClassDetailItem(int mYearStart, int mYearEnd, int mTerm, int mIdClassDetail) {
+    public ClassDetailItem(int mYearStart, int mYearEnd, int mTerm, int mIdClassDetail, boolean mIsAdmin) {
         this.mYearStart = mYearStart;
         this.mYearEnd = mYearEnd;
         this.mTerm = mTerm;
         this.mIdClassDetail = mIdClassDetail;
+        this.mIsAdmin = mIsAdmin;
     }
+
+    public ClassDetailItem() {
+    }
+
 
     public int getmYearStart() {
         return mYearStart;
@@ -50,4 +53,13 @@ public class ClassDetailItem {
     public void setmIdClassDetail(int mIdClassDetail) {
         this.mIdClassDetail = mIdClassDetail;
     }
+
+    public boolean ismIsAdmin() {
+        return mIsAdmin;
+    }
+
+    public void setmIsAdmin(boolean mIsAdmin) {
+        this.mIsAdmin = mIsAdmin;
+    }
+
 }

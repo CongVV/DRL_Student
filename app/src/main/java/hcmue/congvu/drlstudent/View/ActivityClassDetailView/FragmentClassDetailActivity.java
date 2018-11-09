@@ -40,8 +40,8 @@ public class FragmentClassDetailActivity extends Fragment {
         View view = inflater.inflate(R.layout.fragment_activity, container, false);
         lvActivityClass = view.findViewById(R.id.listViewActivityClass);
         tvEmpty = view.findViewById(R.id.tvEmpty);
-        ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
-        act.controllerLogicProcessActivityClassDetail.getActivityClass(1,1,1);
+        //ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
+        //act.controllerLogicProcessActivityClassDetail.getActivityClass(idUser,idClass,idClassDetail);
         lvActivityClass.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -52,19 +52,8 @@ public class FragmentClassDetailActivity extends Fragment {
         return view;
     }
 
-    public void setDataActivityClass(JSONArray jsonArray){
-        ArrayList<ActivityClassItem> arrActivityClass = new ArrayList<>();
-        for (int i=0; i<jsonArray.length(); i++){
-            try{
-                JSONObject jsonObject = jsonArray.getJSONObject(i);
-                ActivityClassItem activityClassItem = new ActivityClassItem();
-                activityClassItem.setmId(jsonObject.getInt("idActivity"));
-                arrActivityClass.add(activityClassItem);
-            } catch (JSONException e){
-                e.printStackTrace();
-            }
-        }
-        ActivityClassAdapter adapbter = new ActivityClassAdapter(getActivity(), arrActivityClass);
-        lvActivityClass.setAdapter(adapbter);
+    public void setDataActivityClass(ArrayList<ActivityClassItem> arrActivityClass){
+        ActivityClassAdapter adapter = new ActivityClassAdapter(getActivity(), arrActivityClass);
+        lvActivityClass.setAdapter(adapter);
     }
 }

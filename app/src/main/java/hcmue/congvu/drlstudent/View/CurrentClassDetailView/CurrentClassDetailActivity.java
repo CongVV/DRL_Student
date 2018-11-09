@@ -32,7 +32,7 @@ import hcmue.congvu.drlstudent.View.ActivityClassDetailView.ActivityClassDetailA
 /**
  * Created by CongVu on 24/09/2018.
  */
-public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail, CreateClassTermDialog.CreateClassTermDialogListener {
+public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail, CreateClassTermDialog.CreateClassTermDialogListener, ClassDetailAdapter.ConfirmDeleteClassDetailListener {
     ListView listViewClassDetail;
     TextView tvClassDetailEmpty;
     ArrayList<ClassDetailItem> arrayClassDetail;
@@ -113,6 +113,7 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
                     classDetailItem.setmTerm(jsonObject.getInt("term"));
                     classDetailItem.setmYearStart(jsonObject.getInt("yearStart"));
                     classDetailItem.setmYearEnd(jsonObject.getInt("yearEnd"));
+                    classDetailItem.setmIsAdmin(isAdmin);
                     arrayClassDetail.add(classDetailItem);
                 } catch (JSONException e){
                     e.printStackTrace();
@@ -123,6 +124,7 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
                     R.layout.current_class_detail_row,
                     arrayClassDetail
             );
+            adapbter.confirm = this;
 
             listViewClassDetail.setAdapter(adapbter);
         }
@@ -133,6 +135,9 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
         if(value == 1){
             Toast.makeText(this, "Tạo Học Kỳ Mới Thành Công!", Toast.LENGTH_LONG).show();
             controllerLogicProcessCurrentClassDetail.getCurrentClassDetailList(userId, idClass);
+        }
+        else if(value == 2){
+            Toast.makeText(this, "Lỗi! Bạn Tạo Hơn 8 Học Kỳ!", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "Lỗi Mạng! Tạo Học Kỳ Mới Thất Bại!", Toast.LENGTH_LONG).show();
@@ -147,7 +152,8 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
                 case R.id.item_nav_add:
                     openDialog();
                     break;
-                case R.id.item_nav_delete:
+                case R.id.item_nav_management_class:
+                    Toast.makeText(CurrentClassDetailActivity.this, "Quản lý lớp nè!!!", Toast.LENGTH_SHORT).show();
                     break;
             }
             return true;
@@ -163,5 +169,10 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
     @Override
     public void applyCreateClassTerm(int yearStart, int yearEnd, int yearTerm) {
         controllerLogicProcessCurrentClassDetail.createCurrentClassDetail(userId, idClass, yearStart, yearEnd, yearTerm);
+    }
+
+    @Override
+    public void deleteClassDetail(int idClassDetail) {
+        Toast.makeText(this, "Xóa nha!!!", Toast.LENGTH_SHORT).show();
     }
 }

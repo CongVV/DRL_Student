@@ -5,20 +5,21 @@ INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidMa
 INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-59:12
 INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-59:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\fd19606f3ad4c1f8da2854836d0784f8\AndroidManifest.xml:17:1-22:12
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\9cd514fc923f6e4a531d6b18e50578b3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\f7ae48b57c2159893eb6f968faf9d293\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\f33e78e47c7b3e9952d6850a0aa25b79\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\glide-4.7.1.aar\d1e59d9632cf16e159f4eb650c925b9b\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e73698035b58731545714b4728e35be4\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3ec063b60316dcee5c8810bba1c2d41f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\15e24153caac6a4ea0e3b8d60d9a2cd9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\e3f2659c93a93bf6333ff1656fc46bb3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\af2b82eb1ed2cf8396de61d2ddf18589\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\1829ce0cfaf10da96b69431fb6d3659f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\15e24153caac6a4ea0e3b8d60d9a2cd9\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c175b3aad88a037e2ddd679c24a733db\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\c120dc856462c1443a48706860f57491\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1030fe7ce49eb6fa84f06e9f0943d4d1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\e3f2659c93a93bf6333ff1656fc46bb3\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\1829ce0cfaf10da96b69431fb6d3659f\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\b44f0e2a81a18cb7fe65823ea2a87f9b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1030fe7ce49eb6fa84f06e9f0943d4d1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\096efbfef347b1d9b4db5876cb2025ad\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6c77774d444cf47eea8e6611f870e5fc\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3a883e5c4f8b81fb374808077198b38d\AndroidManifest.xml:17:1-22:12
@@ -51,6 +52,8 @@ ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManif
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:6:22-77
 application
 ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:8:5-57:19
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:11:5-53
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:11:5-53
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\f7ae48b57c2159893eb6f968faf9d293\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\f7ae48b57c2159893eb6f968faf9d293\AndroidManifest.xml:9:5-20
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\volley-1.1.1.aar\f33e78e47c7b3e9952d6850a0aa25b79\AndroidManifest.xml:9:5-20
@@ -155,6 +158,8 @@ INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidMa
 INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\fd19606f3ad4c1f8da2854836d0784f8\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\fd19606f3ad4c1f8da2854836d0784f8\AndroidManifest.xml:20:5-44
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:7:5-9:41
+MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\9cd514fc923f6e4a531d6b18e50578b3\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\9cd514fc923f6e4a531d6b18e50578b3\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\f7ae48b57c2159893eb6f968faf9d293\AndroidManifest.xml:5:5-7:41
@@ -167,22 +172,22 @@ MERGED from [com.android.support:support-v4:27.1.1] C:\Users\congv\.gradle\cache
 MERGED from [com.android.support:support-v4:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\e73698035b58731545714b4728e35be4\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3ec063b60316dcee5c8810bba1c2d41f\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\3ec063b60316dcee5c8810bba1c2d41f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\15e24153caac6a4ea0e3b8d60d9a2cd9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\15e24153caac6a4ea0e3b8d60d9a2cd9\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\e3f2659c93a93bf6333ff1656fc46bb3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\e3f2659c93a93bf6333ff1656fc46bb3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\af2b82eb1ed2cf8396de61d2ddf18589\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\af2b82eb1ed2cf8396de61d2ddf18589\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\1829ce0cfaf10da96b69431fb6d3659f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\1829ce0cfaf10da96b69431fb6d3659f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\15e24153caac6a4ea0e3b8d60d9a2cd9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\15e24153caac6a4ea0e3b8d60d9a2cd9\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c175b3aad88a037e2ddd679c24a733db\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\c175b3aad88a037e2ddd679c24a733db\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\c120dc856462c1443a48706860f57491\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\c120dc856462c1443a48706860f57491\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1030fe7ce49eb6fa84f06e9f0943d4d1\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1030fe7ce49eb6fa84f06e9f0943d4d1\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\e3f2659c93a93bf6333ff1656fc46bb3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.7.1.aar\e3f2659c93a93bf6333ff1656fc46bb3\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:transition:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\1829ce0cfaf10da96b69431fb6d3659f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\1829ce0cfaf10da96b69431fb6d3659f\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\b44f0e2a81a18cb7fe65823ea2a87f9b\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\b44f0e2a81a18cb7fe65823ea2a87f9b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1030fe7ce49eb6fa84f06e9f0943d4d1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\1030fe7ce49eb6fa84f06e9f0943d4d1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\096efbfef347b1d9b4db5876cb2025ad\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-compat:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\096efbfef347b1d9b4db5876cb2025ad\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\6c77774d444cf47eea8e6611f870e5fc\AndroidManifest.xml:20:5-44

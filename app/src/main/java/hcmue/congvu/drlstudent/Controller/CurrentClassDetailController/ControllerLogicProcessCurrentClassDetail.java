@@ -79,6 +79,9 @@ public class ControllerLogicProcessCurrentClassDetail extends AppUrl implements 
                         if(response.equals("success")){
                             viewCurrentClassDetail.resutlCreateClassDetail(1);
                         }
+                        else if(response.equals("full")){
+                            viewCurrentClassDetail.resutlCreateClassDetail(2);
+                        }
                         else {
                             viewCurrentClassDetail.resutlCreateClassDetail(0);
                         }

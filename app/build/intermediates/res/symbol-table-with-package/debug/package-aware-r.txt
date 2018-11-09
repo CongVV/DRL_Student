@@ -370,6 +370,9 @@ attr tabPaddingTop
 attr tabSelectedTextColor
 attr tabTextAppearance
 attr tabTextColor
+attr tableView_columnCount
+attr tableView_headerColor
+attr tableView_headerElevation
 attr textAllCaps
 attr textAppearanceLargePopupMenu
 attr textAppearanceListItem
@@ -790,6 +793,7 @@ drawable btn_back
 drawable btn_bg
 drawable btn_delete
 drawable btn_next
+drawable classdetail
 drawable content_bg
 drawable correct
 drawable datetime_bg
@@ -847,6 +851,8 @@ drawable notify_panel_notification_icon_bg
 drawable process
 drawable spinner_bg
 drawable start_bg
+drawable table_data
+drawable table_header
 drawable tool
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -891,7 +897,6 @@ id btnDeleteStudent
 id btn_Add_Student
 id btn_avatar
 id btn_birthday
-id btn_confirm
 id btn_create_activity
 id btn_forgot_pass
 id btn_home_activity
@@ -967,6 +972,7 @@ id ifRoom
 id image
 id imgIconHome
 id imgLogo
+id imgStatusActivity
 id imgViewClass
 id imgView_avatar
 id img_drl
@@ -980,8 +986,8 @@ id item_logout
 id item_management
 id item_nav_add
 id item_nav_back
-id item_nav_delete
 id item_nav_finish
+id item_nav_management_class
 id item_nav_next
 id item_status_class_list
 id item_student_info
@@ -1005,6 +1011,7 @@ id listViewActivityClass
 id listViewClassCurrent
 id listViewClassCurrentDetail
 id list_item
+id lvStudentActivityInfo
 id masked
 id media_actions
 id message
@@ -1073,6 +1080,7 @@ id smallLabel
 id snackbar_action
 id snackbar_text
 id snap
+id sort_view
 id spacer
 id spinnerStyleStudent
 id spinner_activity_group
@@ -1092,7 +1100,10 @@ id status_bar_latest_event_content
 id submenuarrow
 id submit_area
 id tabMode
+id table_data_view
+id table_header_view
 id tag_transition_group
+id tb_activity_class_list
 id text
 id text2
 id textSpacerNoButtons
@@ -1119,12 +1130,19 @@ id tvClassDetailEmpty
 id tvClassDetailName
 id tvClassName
 id tvClassNumberStudent
+id tvContentActivity
 id tvCorrect
+id tvDelete
+id tvDeleteClass
+id tvDeleteClassDetail
 id tvEmpty
 id tvIconHome
+id tvScoresActivity
 id tvStyleStudent
 id tvTool
+id tvTotalScores
 id tvUsernameStudent
+id tv_confirm
 id tv_content
 id tv_create_class
 id tv_current_class
@@ -1211,6 +1229,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout dialog_create_class_term
+layout dialog_delete
 layout dialog_reset_pass
 layout fragment_activity
 layout fragment_create_activity
@@ -1218,6 +1237,7 @@ layout fragment_list
 layout fragment_management
 layout fragment_student_activity_info
 layout home_item
+layout list_activity_class_row
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1237,14 +1257,22 @@ layout school_spinner_row
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout sortable_header
+layout student_activity_info_row
 layout support_simple_spinner_dropdown_item
 menu botom_menu
 menu bottom_menu_activity
 menu bottom_menu_second
 menu home_menu
 menu top_menu_class
+mipmap ic_dark_sortable
+mipmap ic_dark_sorted_asc
+mipmap ic_dark_sorted_desc
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_light_sortable
+mipmap ic_light_sorted_asc
+mipmap ic_light_sorted_desc
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1278,12 +1306,15 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string character_counter_pattern
+string default_cell
+string default_header
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
+string sortable_indicator_content_description
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -1717,6 +1748,7 @@ styleable Spinner android_entries android_popupBackground android_prompt android
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable TabItem android_icon android_layout android_text
 styleable TabLayout tabBackground tabContentStart tabGravity tabIndicatorColor tabIndicatorHeight tabMaxWidth tabMinWidth tabMode tabPadding tabPaddingBottom tabPaddingEnd tabPaddingStart tabPaddingTop tabSelectedTextColor tabTextAppearance tabTextColor
+styleable TableView tableView_columnCount tableView_headerColor tableView_headerElevation
 styleable TextAppearance android_textSize android_typeface android_textStyle android_textColor android_textColorHint android_textColorLink android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily fontFamily textAllCaps
 styleable TextInputLayout android_textColorHint android_hint counterEnabled counterMaxLength counterOverflowTextAppearance counterTextAppearance errorEnabled errorTextAppearance hintAnimationEnabled hintEnabled hintTextAppearance passwordToggleContentDescription passwordToggleDrawable passwordToggleEnabled passwordToggleTint passwordToggleTintMode
 styleable Toolbar android_gravity android_minHeight buttonGravity collapseContentDescription collapseIcon contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation logo logoDescription maxButtonHeight navigationContentDescription navigationIcon popupTheme subtitle subtitleTextAppearance subtitleTextColor title titleMargin titleMarginBottom titleMarginEnd titleMarginStart titleMarginTop titleMargins titleTextAppearance titleTextColor

@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
     android:background="@drawable/login_bg">
     <ImageView
         android:id="@+id/imgViewClass"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_account_circle_black_24dp"
-        android:layout_centerVertical="true"/>
+        android:src="@drawable/ic_account_circle_black_24dp"/>
 
 
     <TextView
         android:id="@+id/tvClassDetailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
-        android:layout_centerVertical="true"
-        android:paddingLeft="60dp"
+        android:layout_gravity="center"
         android:text="SP Tin K41B"/>
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDeleteClassDetail"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:layout_gravity="center"
+        android:text="XÓA"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_delete"/>
+</LinearLayout>

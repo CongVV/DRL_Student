@@ -129,9 +129,85 @@ public class ControllerLogicProcessActivityClassDetail extends AppUrl implements
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        //Log.i("respun", response);
                         try {
                             JSONArray jsonArray = new JSONArray(response);
                             viewProcessActivityClassDetail.setActivityClass(jsonArray);
+                        } catch (JSONException e) {
+                            Log.e("errVolley",e.toString());
+                            //Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show();
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                        Log.e("err",error.toString());
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idUser",String.valueOf(idUser));
+                params.put("idClass",String.valueOf(idClass));
+                params.put("idClassDetail",String.valueOf(idClassDetail));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void getActivityClassList(final int idClass, final int idClassDetail) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_GET_ACTIVITY_CLASS_LIST,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        //Log.i("respun", response);
+                        try {
+                            JSONArray jsonArray = new JSONArray(response);
+                            viewProcessActivityClassDetail.setActivityClassList(jsonArray);
+                        } catch (JSONException e) {
+                            Log.e("errVolley",e.toString());
+                            //Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show();
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                        Log.e("err",error.toString());
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idClass",String.valueOf(idClass));
+                params.put("idClassDetail",String.valueOf(idClassDetail));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void getActivityStudentInfo(final int idUser, final int idClass, final int idClassDetail) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_GET_ACTIVITY_STUDENT_INFO,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.i("respun", response);
+                        try {
+                            JSONArray jsonArray = new JSONArray(response);
+                            viewProcessActivityClassDetail.setActivityStudentInfo(jsonArray);
                         } catch (JSONException e) {
                             Log.e("errVolley",e.toString());
                             //Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show();

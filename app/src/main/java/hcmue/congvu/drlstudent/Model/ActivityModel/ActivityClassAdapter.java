@@ -42,12 +42,13 @@ public class ActivityClassAdapter extends ArrayAdapter<ActivityClassItem> {
 
         TextView tvContent = convertView.findViewById(R.id.tv_content);
         TextView tvDateTime = convertView.findViewById(R.id.tv_date_time);
-        Button btnConfirm = convertView.findViewById(R.id.btn_confirm);
+        //TextView tvConfirm = convertView.findViewById(R.id.tv_confirm);
+
         ActivityClassItem activityClassItem = getItem(position);
 
         if(activityClassItem != null) {
             tvContent.setText(activityClassItem.getmContent());
-            tvDateTime.setText(activityClassItem.getmDateTimeStart() + "-->>" + activityClassItem.getmDateTimeEnd());
+            tvDateTime.setText("> Start: " + activityClassItem.getmDateTimeStart() + "\n" +"> End:  " + activityClassItem.getmDateTimeEnd());
         }
 
         return convertView;

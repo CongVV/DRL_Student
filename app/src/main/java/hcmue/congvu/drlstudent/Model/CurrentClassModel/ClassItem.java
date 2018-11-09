@@ -7,18 +7,16 @@ public class ClassItem {
     private String mClassName;
     private int mIdClass;
     private int mNumberStudent;
-    private String mClassImg;
     private boolean mIsAdmin;
     private int mTypeUserClass;
 
     public ClassItem() {
     }
 
-    public ClassItem(String mClassName, int mIdClass, int mNumberStudent, String mClassImg, boolean mIsAdmin, int mTypeUserClass) {
+    public ClassItem(String mClassName, int mIdClass, int mNumberStudent, boolean mIsAdmin, int mTypeUserClass) {
         this.mClassName = mClassName;
         this.mIdClass = mIdClass;
         this.mNumberStudent = mNumberStudent;
-        this.mClassImg = mClassImg;
         this.mIsAdmin = mIsAdmin;
         this.mTypeUserClass = mTypeUserClass;
     }
@@ -45,14 +43,6 @@ public class ClassItem {
 
     public void setmNumberStudent(int mNumberStudent) {
         this.mNumberStudent = mNumberStudent;
-    }
-
-    public String getmClassImg() {
-        return mClassImg;
-    }
-
-    public void setmClassImg(String mClassImg) {
-        this.mClassImg = mClassImg;
     }
 
     public boolean ismIsAdmin() {

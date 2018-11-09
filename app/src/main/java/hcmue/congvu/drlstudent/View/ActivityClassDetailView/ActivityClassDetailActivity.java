@@ -29,6 +29,7 @@ import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelItem;
+import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityStudentInfoItem;
 import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassAdapter;
 import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassItem;
 import hcmue.congvu.drlstudent.R;
@@ -39,14 +40,15 @@ import hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity;
  */
 public class ActivityClassDetailActivity extends AppCompatActivity implements ViewProcessActivityClassDetail {
     BottomNavigationView bottomNavigationView;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-    FragmentClassDetailActivity fragmentClassDetailActivity;
-    FragmentClassDetailList fragmentClassDetailList;
-    FragmentClassDetailCreateActivity fragmentClassDetailCreateActivity;
-    FragmentClassDetailManagement fragmentClassDetailManagement;
-    FragmentClassDetailStudentActivityInfo fragmentClassDetailStudentActivityInfo;
+    public FragmentManager fragmentManager;
+    public FragmentTransaction fragmentTransaction;
+    public FragmentClassDetailActivity fragmentClassDetailActivity;
+    public FragmentClassDetailList fragmentClassDetailList;
+    public FragmentClassDetailCreateActivity fragmentClassDetailCreateActivity;
+    public FragmentClassDetailManagement fragmentClassDetailManagement;
+    public FragmentClassDetailStudentActivityInfo fragmentClassDetailStudentActivityInfo;
     int userId, idClass, idClassDetail, typeStudent;
+    public int totalScores=0;
     boolean isAdmin;
     String avatar;
     private int idActivityGroup, idActivityLevel;
@@ -85,14 +87,16 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
 
         fragmentManager = getFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
+        //fragmentTransaction = fragmentManager.beginTransaction();
         fragmentClassDetailActivity             = new FragmentClassDetailActivity();
         fragmentClassDetailList                 = new FragmentClassDetailList();
         fragmentClassDetailManagement           = new FragmentClassDetailManagement();
         fragmentClassDetailStudentActivityInfo  = new FragmentClassDetailStudentActivityInfo();
-        fragmentClassDetailCreateActivity = new FragmentClassDetailCreateActivity();
-        fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailActivity);
-        fragmentTransaction.commit();
+        fragmentClassDetailCreateActivity       = new FragmentClassDetailCreateActivity();
+        fragmentClassDetailList.context = this;
+        //fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailActivity);
+        //fragmentTransaction.commit();
+        openFragmentActivity();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -192,14 +196,14 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                     /*fragmentTransaction.remove(fragmentClassDetailActivity);
                     fragmentTransaction.remove(fragmentClassDetailCreateActivity);
                     fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailList);*/
-        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailManagement);
+        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailManagement, "activityManagement");
         fragmentTransaction.commit();
     }
 
     public void openFragmentStudentActivityInfo(){
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailStudentActivityInfo);
+        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailStudentActivityInfo, "activityStudentInfo");
 
         Bundle bundle = new Bundle();
         bundle.putInt("idUser", userId);
@@ -207,7 +211,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         bundle.putInt("idClassDetail", idClassDetail);
         fragmentClassDetailStudentActivityInfo.setArguments(bundle);
         fragmentTransaction.commit();
-
+        controllerLogicProcessActivityClassDetail.getActivityStudentInfo(userId, idClass, idClassDetail);
     }
 
     public void openFragmentActivity(){
@@ -220,16 +224,16 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         bundle.putInt("idClassDetail", idClassDetail);
         fragmentClassDetailActivity.setArguments(bundle);
         fragmentTransaction.commit();
+        controllerLogicProcessActivityClassDetail.getActivityClass(userId, idClass, idClassDetail);
     }
 
     public void openFragmentClassList(){
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-                    /*fragmentTransaction.remove(fragmentClassDetailActivity);
-                    fragmentTransaction.remove(fragmentClassDetailCreateActivity);
-                    fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailList);*/
         fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailList, "classList");
         fragmentTransaction.commit();
+
+        controllerLogicProcessActivityClassDetail.getActivityClassList(idClass, idClassDetail);
     }
 
     @Override
@@ -282,21 +286,6 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
             }
         }
         fragment.setLevelList(mActivityLevelList);
-        /*idAcGroup = mActivityLevelList.get(0).getmId();
-        activityLevelAdapter = new ActivityLevelAdapter(this, mActivityLevelList);
-        fragment.spinnerActivityLevel.setAdapter(activityLevelAdapter);
-        fragment.spinnerActivityLevel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ActivityLevelItem item = (ActivityLevelItem) mActivityLevelList.get(position);
-                idAcLevel = item.getmId();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });*/
     }
 
     @Override
@@ -319,8 +308,71 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         else {
             fragment.tvEmpty.setVisibility(View.GONE);
             fragment.lvActivityClass.setVisibility(View.VISIBLE);
-            fragment.setDataActivityClass(jsonArray);
+            ArrayList<ActivityClassItem> arrActivityClass = new ArrayList<>();
+            for (int i=0; i<jsonArray.length(); i++){
+                try{
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    ActivityClassItem activityClassItem = new ActivityClassItem();
+                    activityClassItem.setmId(jsonObject.getInt("idActivityClass"));
+                    activityClassItem.setmIdGroup(jsonObject.getInt("idGroup"));
+                    activityClassItem.setmIdLevel(jsonObject.getInt("idLevel"));
+                    activityClassItem.setmScores(jsonObject.getInt("scores"));
+                    activityClassItem.setmContent(jsonObject.getString("content"));
+                    activityClassItem.setmDateTimeStart(jsonObject.getString("dateTimeStart"));
+                    activityClassItem.setmDateTimeEnd(jsonObject.getString("dateTimeEnd"));
+                    arrActivityClass.add(activityClassItem);
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+            fragment.setDataActivityClass(arrActivityClass);
         }
+    }
+
+    @Override
+    public void setActivityClassList(JSONArray jsonArray) {
+        FragmentClassDetailList fragment = (FragmentClassDetailList) getFragmentManager().findFragmentByTag("classList");
+        String [][] dataClassListArray = new String[jsonArray.length()][3];
+        for(int i=0; i<jsonArray.length(); i++){
+            try {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                dataClassListArray[i][0] = jsonObject.getString("username");
+                dataClassListArray[i][1] = jsonObject.getString("fullname");
+                dataClassListArray[i][2] = jsonObject.getString("scores");
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        fragment.setDataClassList(dataClassListArray);
+    }
+
+    @Override
+    public void setActivityStudentInfo(JSONArray jsonArray) {
+        FragmentClassDetailStudentActivityInfo fragment = (FragmentClassDetailStudentActivityInfo) getFragmentManager().findFragmentByTag("activityStudentInfo");
+        int scores = 0;
+        ArrayList<ActivityStudentInfoItem> arrActivitySudentInfo = new ArrayList<>();
+        for(int i=0; i<jsonArray.length(); i++){
+            try {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                ActivityStudentInfoItem item = new ActivityStudentInfoItem();
+                item.setmContentActivity(jsonObject.getString("content"));
+                item.setmScores(jsonObject.getInt("scores"));
+                item.setmStatus(jsonObject.getInt("status"));
+                if(item.getmStatus() == 1){
+                    totalScores = totalScores + item.getmScores();
+                    scores+=item.getmScores();
+                    Log.i("sco", item.getmScores()+"");
+                }
+                arrActivitySudentInfo.add(item);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        fragment.totalScores = scores;
+        fragment.tvTotalScores.setText(String.valueOf(scores) + " Điểm");
+        Log.i("scoFinal", scores+"");
+        fragment.setDataActivityStudentInfo(arrActivitySudentInfo);
     }
 
     public void createActivityClass(int idUser, int idClass, int idClassDetail, int idActivityGroup, int idActivityLevel, String s, String s1, String s2, String s3) {

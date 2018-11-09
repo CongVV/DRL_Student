@@ -72,6 +72,21 @@ public class FragmentClassDetailCreateActivity extends Fragment {
         edtScores = view.findViewById(R.id.edt_scores);
         btnCreateActivity = view.findViewById(R.id.btn_create_activity);
 
+        Calendar cal = Calendar.getInstance();
+        int y = cal.get(Calendar.YEAR);
+        int m = cal.get(Calendar.MONTH);
+        int d = cal.get(Calendar.DAY_OF_MONTH);
+        dStart = y + "-" + m + "-" + d;
+        dEnd = y + "-" + m + "-" + d;
+        btnDatePickerStart.setText(d + "/" + m + "/" + y);
+        btnDatePickerEnd.setText(d + "/" + m + "/" + y);
+
+        int h   = cal.get(Calendar.HOUR_OF_DAY);
+        int mi  = cal.get(Calendar.MINUTE);
+        tStart = tEnd = h + ":" + mi;
+        btnTimePickerStart.setText(tStart);
+        btnTimePickerEnd.setText(tEnd);
+
         datePickerDialogStart = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -184,46 +199,6 @@ public class FragmentClassDetailCreateActivity extends Fragment {
                                                                 edtScores.getText().toString());
             }
         });
-
-        /*Bundle bundle = getArguments();
-        if(bundle != null){
-            Log.i("listAc", bundle.getString("listActivityGroup"));
-            //Toast.makeText(context, bundle.getString("listActivityGroup"), Toast.LENGTH_SHORT).show();
-            try {
-                jActivityGroupList = new JSONArray(bundle.getString("listActivityGroup"));
-                jActivityLevelList = new JSONArray(bundle.getString("listActivityLevel"));
-                for(int i=0; i<jActivityGroupList.length(); i++){
-                    try {
-                        JSONObject jsonObject = jActivityGroupList.getJSONObject(i);
-                        ActivityGroupItem activityGroupItem = new ActivityGroupItem();
-                        activityGroupItem.setmId(jsonObject.getInt("id"));
-                        activityGroupItem.setmName(jsonObject.getString("name"));
-                        mActivityGroupList.add(activityGroupItem);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                for(int i=0; i<jActivityLevelList.length(); i++){
-                    try {
-                        JSONObject jsonObject = jActivityLevelList.getJSONObject(i);
-                        ActivityLevelItem activityLevelItem = new ActivityLevelItem();
-                        activityLevelItem.setmId(jsonObject.getInt("id"));
-                        activityLevelItem.setmName(jsonObject.getString("name"));
-                        mActivityLevelList.add(activityLevelItem);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                activityGroupAdapter = new ActivityGroupAdapter(context, mActivityGroupList);
-                spinnerActivityGroup.setAdapter(activityGroupAdapter);
-                activityLevelAdapter = new ActivityLevelAdapter(context, mActivityLevelList);
-                spinnerActivityLevel.setAdapter(activityLevelAdapter);
-
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }*/
         return view;
     }
 

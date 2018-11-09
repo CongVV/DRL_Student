@@ -28,13 +28,14 @@ import hcmue.congvu.drlstudent.View.HomeView.HomeActivity;
 /**
  * Created by CongVu on 31/08/2018.
  */
-public class CurrentClassActivity extends AppCompatActivity implements ViewProcessCurrentClass{
+public class CurrentClassActivity extends AppCompatActivity implements ViewProcessCurrentClass, ClassAdapter.ConfirmDeleteClassListener{
     private ListView listViewClass;
     private TextView tvClassList;
     private ArrayList<ClassItem> arrayClass;
     private ControllerLogicProcessCurrentClass controllerLogicProcessCurrentClass = new ControllerLogicProcessCurrentClass(this, this);
     private int userId;
     String avatar;
+    ClassAdapter adapbter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -63,10 +64,10 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
                 //intentClassDetail.putExtra("idCurrentClassDetail", arrayClass.get(position).getmIdClass());
                 startActivity(intentClassDetail);
                 //Toast.makeText(CurrentClassActivity.this, arrayClass.get(position).getmClassName(), Toast.LENGTH_SHORT).show();
-
-
             }
         });
+
+
 
     }
 
@@ -87,7 +88,6 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
                     classItem.setmIdClass(jsonObject.getInt("idClass"));
                     classItem.setmClassName(jsonObject.getString("className"));
                     classItem.setmNumberStudent(jsonObject.getInt("numberStudent"));
-                    classItem.setmClassImg(jsonObject.getString("classImage"));
                     classItem.setmIsAdmin(jsonObject.getBoolean("isAdmin"));
                     classItem.setmTypeUserClass(jsonObject.getInt("idclassUserType"));
                     arrayClass.add(classItem);
@@ -95,11 +95,12 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
                     e.printStackTrace();
                 }
             }
-            ClassAdapter adapbter = new ClassAdapter(
+            adapbter = new ClassAdapter(
                     CurrentClassActivity.this,
                     R.layout.current_class_row,
                     arrayClass
             );
+            adapbter.confirm = this;
             listViewClass.setAdapter(adapbter);
         }
     }
@@ -112,5 +113,10 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
         intentHome.putExtra("avatar", avatar);
         startActivity(intentHome);
         finish();
+    }
+
+    @Override
+    public void deleteClass(int idClass) {
+        Toast.makeText(this, "Tao xóa thật đấy! Không đùa đâu! :D", Toast.LENGTH_SHORT).show();
     }
 }

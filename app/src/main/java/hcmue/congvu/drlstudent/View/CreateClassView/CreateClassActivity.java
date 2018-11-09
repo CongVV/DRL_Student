@@ -160,7 +160,6 @@ public class CreateClassActivity extends AppCompatActivity implements ViewProces
                 idSchool = clickedItem.getmIdSchool();
                 //String clickedSchoolName = clickedItem.getmSchoolName();
                 //Toast.makeText(SignUpActivity.this, clickedSchoolName + " selected", Toast.LENGTH_SHORT).show();
-
             }
 
             @Override
