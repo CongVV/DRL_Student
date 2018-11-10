@@ -22,7 +22,7 @@ import hcmue.congvu.drlstudent.R;
 public class FragmentClassDetailStudentActivityInfo extends Fragment {
     ListView lvActivityStudentInfo;
     TextView tvTotalScores;
-    public int totalScores=0;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

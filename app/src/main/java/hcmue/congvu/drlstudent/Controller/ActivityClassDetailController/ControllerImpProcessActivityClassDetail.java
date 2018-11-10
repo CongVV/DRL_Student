@@ -11,4 +11,5 @@ public interface ControllerImpProcessActivityClassDetail {
     void getActivityClass(int idUser, int idClass, int idClassDetail);
     void getActivityClassList(int idClass, int idClassDetail);
     void getActivityStudentInfo(int idUser, int idClass, int idClassDetail);
+    void getActivityManagement(int idClass, int idClassDetail);
 }

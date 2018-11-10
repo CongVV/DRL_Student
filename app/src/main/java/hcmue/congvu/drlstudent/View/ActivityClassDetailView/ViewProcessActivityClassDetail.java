@@ -12,4 +12,5 @@ public interface ViewProcessActivityClassDetail {
     void setActivityClass(JSONArray jsonArray);
     void setActivityClassList(JSONArray jsonArray);
     void setActivityStudentInfo(JSONArray jsonArray);
+    void setActivityManagement(JSONArray jsonArray);
 }

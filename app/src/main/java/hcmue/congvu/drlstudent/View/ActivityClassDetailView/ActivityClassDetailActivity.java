@@ -29,6 +29,7 @@ import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelItem;
+import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityManagementItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityStudentInfoItem;
 import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassAdapter;
 import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassItem;
@@ -198,6 +199,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                     fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailList);*/
         fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailManagement, "activityManagement");
         fragmentTransaction.commit();
+        controllerLogicProcessActivityClassDetail.getActivityManagement(idClass, idClassDetail);
     }
 
     public void openFragmentStudentActivityInfo(){
@@ -362,17 +364,41 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                 if(item.getmStatus() == 1){
                     totalScores = totalScores + item.getmScores();
                     scores+=item.getmScores();
-                    Log.i("sco", item.getmScores()+"");
+                    //Log.i("sco", item.getmScores()+"");
                 }
                 arrActivitySudentInfo.add(item);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
-        fragment.totalScores = scores;
+
         fragment.tvTotalScores.setText(String.valueOf(scores) + " Điểm");
         Log.i("scoFinal", scores+"");
         fragment.setDataActivityStudentInfo(arrActivitySudentInfo);
+    }
+
+    @Override
+    public void setActivityManagement(JSONArray jsonArray) {
+        FragmentClassDetailManagement fragment = (FragmentClassDetailManagement) getFragmentManager().findFragmentByTag("activityManagement");
+        int totalRequest = 0;
+        ArrayList<ActivityManagementItem> arrActivityManagement = new ArrayList<>();
+        for(int i=0; i<jsonArray.length(); i++){
+            try {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                ActivityManagementItem item = new ActivityManagementItem();
+                item.setmFullname(jsonObject.getString("fullname"));
+                item.setmUsername(jsonObject.getString("username"));
+                item.setmActivityname(jsonObject.getString("activity"));
+                totalRequest++;
+                arrActivityManagement.add(item);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        fragment.tvTotalActivityRequest.setText(String.valueOf(totalRequest) + " Yêu Cầu");
+        Log.i("requestFinal", totalRequest+"");
+        fragment.setDataActivityManagement(arrActivityManagement);
     }
 
     public void createActivityClass(int idUser, int idClass, int idClassDetail, int idActivityGroup, int idActivityLevel, String s, String s1, String s2, String s3) {

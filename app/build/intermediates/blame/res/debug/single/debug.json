@@ -1296,6 +1296,10 @@
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_management_activity_row.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\management_activity_row.xml"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },

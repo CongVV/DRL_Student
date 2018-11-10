@@ -1011,6 +1011,7 @@ id listViewActivityClass
 id listViewClassCurrent
 id listViewClassCurrentDetail
 id list_item
+id lvManagementActivity
 id lvStudentActivityInfo
 id masked
 id media_actions
@@ -1125,7 +1126,10 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvAccept
+id tvActivityname
 id tvBook
+id tvCancel
 id tvClassDetailEmpty
 id tvClassDetailName
 id tvClassName
@@ -1136,10 +1140,12 @@ id tvDelete
 id tvDeleteClass
 id tvDeleteClassDetail
 id tvEmpty
+id tvFullname
 id tvIconHome
 id tvScoresActivity
 id tvStyleStudent
 id tvTool
+id tvTotalActivityRequest
 id tvTotalScores
 id tvUsernameStudent
 id tv_confirm
@@ -1238,6 +1244,7 @@ layout fragment_management
 layout fragment_student_activity_info
 layout home_item
 layout list_activity_class_row
+layout management_activity_row
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

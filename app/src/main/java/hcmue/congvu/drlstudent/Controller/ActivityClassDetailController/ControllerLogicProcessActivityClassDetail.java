@@ -234,4 +234,38 @@ public class ControllerLogicProcessActivityClassDetail extends AppUrl implements
         };
         requestQueue.add(stringRequest);
     }
+
+    @Override
+    public void getActivityManagement(final int idClass, final int idClassDetail) {
+        final RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_GET_ACTIVITY_MANAGEMENT,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONArray jsonArray = new JSONArray(response);
+                            viewProcessActivityClassDetail.setActivityManagement(jsonArray);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley",error.toString());
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idClass",String.valueOf(idClass));
+                params.put("idClassDetail",String.valueOf(idClassDetail));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
 }

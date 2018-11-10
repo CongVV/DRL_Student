@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:background="@color/colorGreen">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"
+            android:text="Danh Sách Chờ Phê Duyệt:"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tvTotalActivityRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:textColor="@color/colorAccent"
+            android:text="10 Yêu Cầu"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/colorYellowLight">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/table_header"
+            android:text="Họ và Tên"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/table_header"
+            android:text="Hoạt Động"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/table_header"
+            android:text="Ok"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:background="@drawable/table_header"
+            android:text="Hủy"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvManagementActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>
