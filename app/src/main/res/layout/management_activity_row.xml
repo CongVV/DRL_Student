@@ -29,25 +29,19 @@
         android:id="@+id/tvAccept"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:padding="5dp"
         android:layout_weight="1.8"
         android:src="@drawable/correct"
         android:gravity="center_vertical"
-        android:paddingLeft="3dp"
-        android:textSize="12dp"
         android:background="@drawable/table_data"/>
 
     <ImageView
         android:id="@+id/tvCancel"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:padding="5dp"
         android:layout_weight="1.8"
         android:src="@drawable/book"
         android:gravity="center_vertical"
-        android:paddingLeft="3dp"
-        android:textSize="12dp"
         android:background="@drawable/table_data"/>
 </LinearLayout>

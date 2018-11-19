@@ -68,6 +68,38 @@ public class ControllerLogicProcessCurrentClass extends AppUrl implements Contro
             }
         };
         requestQueue.add(stringRequest);
+    }
 
+    @Override
+    public void deleteCurrentClass(final int idClass) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_DELETE_CURRENT_CLASS,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if(response.equals("success")){
+                            viewProcessCurrentClass.resultDeleteCurrentClass(true);
+                        }
+                        else{
+                            viewProcessCurrentClass.resultDeleteCurrentClass(false);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley",error.toString());
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idClass",String.valueOf(idClass));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
     }
 }

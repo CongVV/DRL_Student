@@ -28,17 +28,18 @@ import hcmue.congvu.drlstudent.Model.CurrentClassDetailModel.ClassDetailAdapter;
 import hcmue.congvu.drlstudent.Model.CurrentClassDetailModel.ClassDetailItem;
 import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.ActivityClassDetailView.ActivityClassDetailActivity;
+import hcmue.congvu.drlstudent.View.ManagementClassView.ManagementClassActivity;
 
 /**
  * Created by CongVu on 24/09/2018.
  */
-public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail, CreateClassTermDialog.CreateClassTermDialogListener, ClassDetailAdapter.ConfirmDeleteClassDetailListener {
+public class CurrentClassDetailActivity extends AppCompatActivity implements ViewCurrentClassDetail, CreateClassTermDialog.CreateClassTermDialogListener, ClassDetailAdapter.ConfirmDeleteClassDetailListener, AddClassMember.AddClassMemberListener {
     ListView listViewClassDetail;
     TextView tvClassDetailEmpty;
     ArrayList<ClassDetailItem> arrayClassDetail;
     int userId;
     int idClass;
-    int typeStudent;
+    int typeStudent, typeStudentAddNewMember;
     boolean isAdmin;
     android.support.design.widget.BottomNavigationView bottomNavigationItemView;
     LinearLayout linearListTerm;
@@ -144,26 +145,74 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
         }
     }
 
+    @Override
+    public void resultDeleteCurrentClassDetail(boolean result) {
+        if(result){
+            Toast.makeText(this, "Xóa Học Kỳ thành công!", Toast.LENGTH_SHORT).show();
+            controllerLogicProcessCurrentClassDetail.getCurrentClassDetailList(userId, idClass);
+        }
+        else{
+            Toast.makeText(this, "Xóa Học Kỳ thất bại!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void resultCheckUsername(int result) {
+        if(result==-1){
+            Toast.makeText(this, "Username này đã có trong lớp!", Toast.LENGTH_SHORT).show();
+        }
+        else if(result==-2){
+            Toast.makeText(this, "Username không tồn tại!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            //Toast.makeText(this, ""+idClass + "-" + result + "-" + typeStudentAddNewMember, Toast.LENGTH_SHORT).show();
+            controllerLogicProcessCurrentClassDetail.addNewClassMember(idClass, userId, result, typeStudentAddNewMember);
+        }
+    }
+
+    @Override
+    public void resultAddNewMember(boolean result) {
+        if(result){
+            Toast.makeText(this, "Thêm thành viên thành công!", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(this, "Lỗi! Thêm thành viên thất bại!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener
             = new android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener(){
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()){
                 case R.id.item_nav_add:
-                    openDialog();
+                    openDialogAddTerm();
                     break;
                 case R.id.item_nav_management_class:
-                    Toast.makeText(CurrentClassDetailActivity.this, "Quản lý lớp nè!!!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CurrentClassDetailActivity.this, ManagementClassActivity.class);
+                    intent.putExtra("idUser", userId);
+                    intent.putExtra("idClass", idClass);
+                    startActivity(intent);
+                    break;
+                case R.id.item_nav_add_member:
+                    openDialogAddMember();
                     break;
             }
             return true;
         }
     };
 
-    public void openDialog(){
+    public void openDialogAddTerm(){
         CreateClassTermDialog createClassTermDialog = new CreateClassTermDialog();
         createClassTermDialog.context = CurrentClassDetailActivity.this;
         createClassTermDialog.show(getSupportFragmentManager(), "Create Term Class");
+    }
+
+    public void openDialogAddMember(){
+        AddClassMember addClassMember = new AddClassMember();
+        addClassMember.context = CurrentClassDetailActivity.this;
+        addClassMember.show(getSupportFragmentManager(), "Add Class Member");
     }
 
     @Override
@@ -173,6 +222,12 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
 
     @Override
     public void deleteClassDetail(int idClassDetail) {
-        Toast.makeText(this, "Xóa nha!!!", Toast.LENGTH_SHORT).show();
+        controllerLogicProcessCurrentClassDetail.deleteCurrentClassDetail(idClassDetail);
+    }
+
+    @Override
+    public void applyAddClassMember(String username, int typeStudent) {
+        typeStudentAddNewMember = typeStudent;
+        controllerLogicProcessCurrentClassDetail.checkUsername(idClass, username);
     }
 }

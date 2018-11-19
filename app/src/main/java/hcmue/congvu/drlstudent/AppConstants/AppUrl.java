@@ -27,4 +27,9 @@ public abstract class AppUrl {
     public static final String URL_GET_ACTIVITY_CLASS_LIST          = URL_APP_BASE + "getactivityclasslist.php";
     public static final String URL_GET_ACTIVITY_STUDENT_INFO        = URL_APP_BASE + "getactivitystudentinfo.php";
     public static final String URL_GET_ACTIVITY_MANAGEMENT          = URL_APP_BASE + "getactivitymanagement.php";
+    public static final String URL_DELETE_CURRENT_CLASS             = URL_APP_BASE + "deletecurrentclass.php";
+    public static final String URL_DELETE_CURRENT_CLASS_DETAIL      = URL_APP_BASE + "deletecurrentclassdetail.php";
+    public static final String URL_CHECK_USERNAME_NEW_MEMBER        = URL_APP_BASE + "checkusernamenewmember.php";
+    public static final String URL_ADD_NEW_CLASS_MEMBER             = URL_APP_BASE + "addnewclassmember.php";
+    public static final String URL_GET_MANAGEMENT_CLASS_LIST        = URL_APP_BASE + "getmanagementstudentclasslist.php";
 }

@@ -106,6 +106,17 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
     }
 
     @Override
+    public void resultDeleteCurrentClass(boolean result) {
+        if(result){
+            Toast.makeText(this, "Xóa lớp thành công!", Toast.LENGTH_SHORT).show();
+            controllerLogicProcessCurrentClass.getCurrentClassList(userId);
+        }
+        else{
+            Toast.makeText(this, "Xóa lớp thất bại!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         Intent intentHome = new Intent(CurrentClassActivity.this, HomeActivity.class);
@@ -117,6 +128,6 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
 
     @Override
     public void deleteClass(int idClass) {
-        Toast.makeText(this, "Tao xóa thật đấy! Không đùa đâu! :D", Toast.LENGTH_SHORT).show();
+        controllerLogicProcessCurrentClass.deleteCurrentClass(idClass);
     }
 }

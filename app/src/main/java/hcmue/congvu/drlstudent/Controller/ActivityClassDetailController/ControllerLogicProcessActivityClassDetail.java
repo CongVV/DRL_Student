@@ -236,7 +236,7 @@ public class ControllerLogicProcessActivityClassDetail extends AppUrl implements
     }
 
     @Override
-    public void getActivityManagement(final int idClass, final int idClassDetail) {
+    public void getActivityManagement(final int idUser, final int idClass, final int idClassDetail) {
         final RequestQueue requestQueue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_GET_ACTIVITY_MANAGEMENT,
                 new Response.Listener<String>() {
@@ -261,6 +261,7 @@ public class ControllerLogicProcessActivityClassDetail extends AppUrl implements
             @Override
             protected Map<String, String> getParams(){
                 Map<String, String> params = new HashMap<>();
+                params.put("idUser",String.valueOf(idUser));
                 params.put("idClass",String.valueOf(idClass));
                 params.put("idClassDetail",String.valueOf(idClassDetail));
                 return params;

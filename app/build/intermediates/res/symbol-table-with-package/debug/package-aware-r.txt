@@ -825,6 +825,7 @@ drawable ic_management_24dp
 drawable ic_new_activity_24dp
 drawable ic_new_class_24dp
 drawable ic_next_navigation_black
+drawable ic_person_add_black_24dp
 drawable ic_plus_class_detail_24dp
 drawable ic_student_info_24dp
 drawable ic_user_24dp
@@ -984,7 +985,9 @@ id item_activity_create
 id item_activity_current
 id item_logout
 id item_management
+id item_management_class_list
 id item_nav_add
+id item_nav_add_member
 id item_nav_back
 id item_nav_finish
 id item_nav_management_class
@@ -992,6 +995,7 @@ id item_nav_next
 id item_status_class_list
 id item_student_info
 id item_touch_helper_previous_elevation
+id item_type_student
 id item_user
 id largeLabel
 id left
@@ -1011,6 +1015,7 @@ id listViewActivityClass
 id listViewClassCurrent
 id listViewClassCurrentDetail
 id list_item
+id lvClassListManagement
 id lvManagementActivity
 id lvStudentActivityInfo
 id masked
@@ -1020,6 +1025,7 @@ id middle
 id mini
 id multiply
 id navi_activity_class_detail
+id navi_activity_management_class
 id navi_current_class_detail
 id navigation_header_container
 id never
@@ -1035,10 +1041,12 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
+id progressBarActivityClass
 id progressBarCreateClass
 id progressBarCurrentClass
 id progressBarCurrentClassDetail
 id progressBarLogIn
+id progressBarManagementClass
 id progressBarSignUp
 id progressBarUpdateUserInfo
 id progress_circular
@@ -1139,6 +1147,7 @@ id tvCorrect
 id tvDelete
 id tvDeleteClass
 id tvDeleteClassDetail
+id tvDeleteStudent
 id tvEmpty
 id tvFullname
 id tvIconHome
@@ -1147,12 +1156,14 @@ id tvStyleStudent
 id tvTool
 id tvTotalActivityRequest
 id tvTotalScores
+id tvUsername
 id tvUsernameStudent
 id tv_confirm
 id tv_content
 id tv_create_class
 id tv_current_class
 id tv_date_time
+id tv_edit
 id tv_email
 id tv_login
 id tv_password
@@ -1213,11 +1224,13 @@ layout activity_current_class_detail
 layout activity_forgot_password
 layout activity_home
 layout activity_login
+layout activity_management_class
 layout activity_sign_up
 layout activity_start
 layout activity_user_info
 layout add_student_row
 layout class_activity_row
+layout class_list_management_row
 layout current_class_detail_row
 layout current_class_row
 layout design_bottom_navigation_item
@@ -1234,10 +1247,12 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dialog_add_class_member
 layout dialog_create_class_term
 layout dialog_delete
 layout dialog_reset_pass
 layout fragment_activity
+layout fragment_class_list_management
 layout fragment_create_activity
 layout fragment_list
 layout fragment_management
@@ -1269,6 +1284,7 @@ layout student_activity_info_row
 layout support_simple_spinner_dropdown_item
 menu botom_menu
 menu bottom_menu_activity
+menu bottom_menu_management
 menu bottom_menu_second
 menu home_menu
 menu top_menu_class

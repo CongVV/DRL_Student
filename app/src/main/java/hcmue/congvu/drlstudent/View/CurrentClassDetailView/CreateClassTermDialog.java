@@ -49,7 +49,7 @@ public class CreateClassTermDialog extends AppCompatDialogFragment {
             mYearList.add(yearItem);
             yearCurrent++;
         }
-
+        builder.setTitle("Thêm Học Kỳ Mới");
         builder.setView(view)
                 .setNegativeButton("HỦY", new DialogInterface.OnClickListener(){
                     @Override

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvUsernameStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Nhập Username"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:paddingTop="10dp"/>
+
+
+    <EditText
+        android:id="@+id/edtUsernameStudent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/et_bg"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:hint="Nhập Username"
+        android:singleLine="true"
+        android:textColorHint="@color/colorBlack"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvStyleStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Chức Vụ"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:paddingTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerStyleStudent"
+        android:background="@drawable/btn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="2"
+        android:entries="@array/type_student"
+        android:paddingTop="10dp"/>
+
+</LinearLayout>

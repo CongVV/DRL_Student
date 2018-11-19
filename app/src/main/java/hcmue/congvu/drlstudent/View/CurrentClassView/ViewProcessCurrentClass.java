@@ -7,4 +7,5 @@ import org.json.JSONArray;
  */
 public interface ViewProcessCurrentClass {
     void setListViewClass(JSONArray jsonArrayClass);
+    void resultDeleteCurrentClass(boolean result);
 }

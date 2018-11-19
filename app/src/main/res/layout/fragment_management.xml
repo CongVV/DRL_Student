@@ -28,7 +28,7 @@
             android:gravity="center"
             android:textStyle="bold|italic"
             android:textColor="@color/colorAccent"
-            android:text="10 Yêu Cầu"/>
+            android:text="0 Yêu Cầu"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

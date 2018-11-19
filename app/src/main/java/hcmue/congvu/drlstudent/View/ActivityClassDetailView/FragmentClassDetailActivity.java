@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,7 +24,7 @@ import hcmue.congvu.drlstudent.R;
 /**
  * Created by CongVu on 09/10/2018.
  */
-public class FragmentClassDetailActivity extends Fragment {
+public class FragmentClassDetailActivity extends Fragment implements ActivityClassAdapter.ConfirmActivityListener{
     ListView lvActivityClass;
     TextView tvEmpty;
     int idUser, idClass, idClassDetail;
@@ -54,6 +55,20 @@ public class FragmentClassDetailActivity extends Fragment {
 
     public void setDataActivityClass(ArrayList<ActivityClassItem> arrActivityClass){
         ActivityClassAdapter adapter = new ActivityClassAdapter(getActivity(), arrActivityClass);
+        adapter.idUser = idUser;
+        adapter.idClass = idClass;
+        adapter.idClassDetail = idClassDetail;
+        adapter.confirm = this;
         lvActivityClass.setAdapter(adapter);
+    }
+
+    @Override
+    public void checkActivity(int idUser, int idClass, int idClassDetail, int idActivity) {
+        Toast.makeText(getActivity(), "Confirm nè!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void editActivity(int idUser) {
+        Toast.makeText(getActivity(), "Edit Activity nha!", Toast.LENGTH_SHORT).show();
     }
 }

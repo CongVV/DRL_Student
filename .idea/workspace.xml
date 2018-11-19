@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="sco" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="respun" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
@@ -18,43 +18,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b39095-9cce-41d1-9037-a75ae7ae13fd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/management_activity_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerImpProcessManagementClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerLogicProcessManagementClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/AddClassMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/FragmentManagementClassList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/FragmentManagementTypeStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ManagementClassActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ViewProcessManagementClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_add_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_management_class.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/class_list_management_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_add_class_member.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_class_list_management.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_management.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_sign_up.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_sign_up.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/10.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/10.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/11.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/11.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/12.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/12.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/15.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/15.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/3.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/4.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/4.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/5.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/6.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/7.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/7.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/8.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/8.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/9.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/9.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/__content__.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/AppConstants/AppUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/AppConstants/AppUrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerImpProcessActivityClassDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerImpProcessActivityClassDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerLogicProcessActivityClassDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerLogicProcessActivityClassDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerImpProcessCurrentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerImpProcessCurrentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerLogicProcessCurrentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerLogicProcessCurrentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerImpProcessCurrentClassDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerImpProcessCurrentClassDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerLogicProcessCurrentClassDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerLogicProcessCurrentClassDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ActivityClassDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ActivityClassDetailActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailStudentActivityInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailStudentActivityInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CreateClassTermDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CreateClassTermDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/ViewCurrentClassDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/ViewCurrentClassDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/CurrentClassActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/CurrentClassActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/ViewProcessCurrentClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/ViewProcessCurrentClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_activity_class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_activity_class.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/class_activity_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/class_activity_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_create_class_term.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_create_class_term.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_management.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_management.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_activity_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_activity_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/management_activity_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/management_activity_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/top_menu_class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/top_menu_class.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,95 +113,83 @@
       <file leaf-file-name="CurrentClassDetailActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_management.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_management.xml">
+      <file leaf-file-name="CreateClassActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CreateClassView/CreateClassActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="79" column="45" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="45" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FragmentClassDetailManagement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailManagement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="73" column="62" selection-start-line="72" selection-start-column="28" selection-end-line="73" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityClassDetailActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ActivityClassDetailActivity.java">
+      <file leaf-file-name="ManagementClassActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ManagementClassActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="397" selection-start-line="397" selection-end-line="397" />
+            <state relative-caret-position="1275">
+              <caret line="75" column="86" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentManagementClassList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/FragmentManagementClassList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentClassDetailActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerImpProcessManagementClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerImpProcessManagementClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerLogicProcessManagementClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerLogicProcessManagementClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
               <folding>
-                <element signature="method#openFragmentCreateActivity#0;class#ActivityClassDetailActivity#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerLogicProcessCurrentClassDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerLogicProcessCurrentClassDetail.java">
+      <file leaf-file-name="StudentClassAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+            <state relative-caret-position="357">
+              <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerLogicProcessActivityClassDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerLogicProcessActivityClassDetail.java">
+      <file leaf-file-name="ActivityClassAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="246" column="92" selection-start-line="246" selection-start-column="92" selection-end-line="246" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewProcessActivityClassDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUrl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/AppConstants/AppUrl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="28" column="58" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerImpProcessCurrentClassDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerImpProcessCurrentClassDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="101" selection-start-line="7" selection-start-column="101" selection-end-line="7" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerImpProcessActivityClassDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerImpProcessActivityClassDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+            <state relative-caret-position="935">
+              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -191,21 +199,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="layoutResourceFile" />
-        <option value="resourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Interface" />
+        <option value="resourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>validate</find>
-      <find>createClass</find>
-      <find>.createClass</find>
-      <find>Toast</find>
-      <find>BottomNavigationView</find>
       <find>dialog</find>
       <find>ResetPassDialog</find>
       <find>newPass</find>
@@ -231,6 +234,11 @@
       <find>context</find>
       <find>createClassTermDialogListener</find>
       <find>getSupportFragmentManager</find>
+      <find>setActivityManagement</find>
+      <find>status</find>
+      <find>controllerLogicProcessCreateClass</find>
+      <find>act</find>
+      <find>fragment_con</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2507,65 +2515,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/SignUpView/SignUpActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/SignUpController/ControllerLogicProcessSignUp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerLogicProcessCurrentClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/content_bg.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/spinner_bg.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/datetime_bg.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_activity.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CreateClassView/CreateClassActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/current_class_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_delete.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CreateClassTermDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_create_class_term.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/current_class_detail_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassModel/ClassAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassDetailModel/ClassDetailItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailList.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassDetailModel/ClassDetailAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/table_data.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/table_header.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityLevelAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailCreateActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_activity_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/student_activity_info_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityStudentInfoItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/CurrentClassActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassModel/ClassItem.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_activity_class_row.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/class_activity_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/top_menu_class.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityStudentInfoAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailStudentActivityInfo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailManagement.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerImpProcessActivityClassDetail.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/management_activity_row.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailStudentActivityInfo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/class_activity_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerImpProcessCurrentClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/ViewProcessCurrentClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerLogicProcessCurrentClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/CurrentClassActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_management.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailManagement.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/AppConstants/AppUrl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_student_activity_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/top_menu_class.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CreateClassMember.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CreateClassTermDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_create_class_term.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_class_second.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_add_class_member.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/ViewCurrentClassDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/AddClassMember.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerImpProcessCurrentClassDetail.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerImpProcessActivityClassDetail.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerLogicProcessCurrentClassDetail.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerLogicProcessActivityClassDetail.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_activity_class.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_class_list_management.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_management_class.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_management.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/class_list_management_row.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassItem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerImpProcessManagementClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ViewProcessManagementClass.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ActivityClassDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/AppConstants/AppUrl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ManagementClassActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/FragmentManagementClassList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerLogicProcessManagementClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1320" />
-    <option name="height" value="784" />
+    <option name="x" value="62" />
+    <option name="width" value="1304" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2575,6 +2582,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2598,36 +2606,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="AppConstants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="ActivityClassDetailController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="CurrentClassDetailController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2636,7 +2614,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="ActivityModel" type="462c0819:PsiDirectoryNode" />
+              <item name="StudentModel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
@@ -2651,18 +2629,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="drlstudent" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="ActivityClassDetailView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="ManagementClassView" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DRL_Student" type="1abcf292:AndroidViewProjectNode" />
@@ -2672,7 +2639,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
@@ -2848,20 +2814,18 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49603173" weight="0.3297546" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="4" />
-      <window_info id="Build Variants" order="2" sideWeight="0.1754386" side_tool="true" visible="true" weight="0.2904762" />
+      <window_info id="Build Variants" order="2" sideWeight="0.15565032" side_tool="true" visible="true" weight="0.26984128" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.22777778" side_tool="true" visible="true" weight="0.38803682" />
-      <window_info anchor="right" id="Preview" order="9" weight="0.23412699" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.71190476" weight="0.2822086" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.29444444" side_tool="true" visible="true" weight="0.28067484" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.70555556" weight="0.28067484" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4952381" weight="0.3297546" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4936508" weight="0.3297546" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="8" sideWeight="0.7722222" visible="true" weight="0.38803682" />
+      <window_info anchor="bottom" id="Logcat" order="8" sideWeight="0.76031744" weight="0.41257668" />
       <window_info id="Captures" order="5" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8245614" visible="true" weight="0.2904762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8443497" visible="true" weight="0.26984128" />
       <window_info anchor="bottom" id="Build" order="9" sideWeight="0.88412696" weight="0.22546013" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4920635" weight="0.42484662" />
       <window_info anchor="right" id="Gradle" order="5" weight="0.1936508" />
       <window_info id="Structure" order="1" sideWeight="0.70615387" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
@@ -2870,12 +2834,14 @@
       <window_info id="Favorites" order="6" sideWeight="0.3501144" side_tool="true" weight="0.33968255" />
       <window_info anchor="right" id="Assistant" order="10" weight="0.32936507" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" x="154" y="92" width="1120" height="584" id="Documentation" internal_type="SLIDING" order="8" type="SLIDING" />
+      <window_info anchor="right" id="Preview" order="9" weight="0.22777778" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" x="154" y="92" width="1120" height="584" id="Documentation" internal_type="SLIDING" order="8" type="SLIDING" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4920635" weight="0.42484662" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2887,63 +2853,290 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_delete.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/AddClassMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        <state relative-caret-position="204">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerImpProcessCurrentClassDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CreateClassTermDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="418">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_second.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerLogicProcessCurrentClassDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/home_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_create_class_term.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+        <state relative-caret-position="153">
+          <caret line="188" column="61" selection-start-line="188" selection-start-column="61" selection-end-line="188" selection-end-column="61" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/HomeView/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="55" column="81" selection-start-line="55" selection-start-column="81" selection-end-line="55" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_activity.xml">
       <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/botom_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/top_menu_class.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_add_class_member.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_activity_class.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_student_row.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_activity_class_row.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/student_activity_info_row.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_info.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/current_class_row.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state>
+          <caret selection-end-line="56" selection-end-column="15" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_activity.xml">
       <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="46" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/management_activity_row.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_management.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/FragmentManagementTypeStudent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/UserModel/UserItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_activity_row.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassDetailModel/ClassDetailItem.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassDetailModel/ClassDetailAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-299">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding>
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/LogInController/ControllerLogicProcessLogIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/LogInController/ControllerImpProcessLogIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerLogicProcessActivityClassDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="126" column="8" selection-start-line="126" selection-start-column="8" selection-end-line="159" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ViewProcessManagementClass.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailStudentActivityInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2954,367 +3147,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ModelSchoolTable/ModelSchoolTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/table_header.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/et_bg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/table_data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityLevelItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailCreateActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_create_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/SignUpView/SignUpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassController/ControllerLogicProcessCurrentClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassView/CurrentClassActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="89" column="84" selection-start-line="89" selection-start-column="84" selection-end-line="89" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassModel/ClassItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassModel/ClassAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_current_class_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/CurrentClassDetailModel/ClassDetailAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="81" column="58" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_activity_class_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" selection-start-line="45" selection-end-line="56" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/current_class_detail_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_activity_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/botom_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_menu_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/top_menu_class.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/student_activity_info_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="21" column="26" lean-forward="true" selection-end-line="36" selection-end-column="15" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_student_activity_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityLevelAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityStudentInfoItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityStudentInfoAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/management_activity_row.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityManagementAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_management.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="79" column="45" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailStudentActivityInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailManagement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/AppConstants/AppUrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="58" />
+        <state relative-caret-position="561">
+          <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerImpProcessActivityClassDetail.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerImpProcessManagementClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerImpProcessCurrentClassDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="101" selection-start-line="7" selection-start-column="101" selection-end-line="7" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/CurrentClassDetailController/ControllerLogicProcessCurrentClassDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ViewProcessActivityClassDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ActivityClassDetailController/ControllerLogicProcessActivityClassDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="246" column="92" selection-start-line="246" selection-start-column="92" selection-end-line="246" selection-end-column="92" />
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/ActivityClassDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="397" selection-start-line="397" selection-end-line="397" />
+        <state relative-caret-position="350">
+          <caret line="403" column="10" selection-start-line="403" selection-start-column="10" selection-end-line="403" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_management_class.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/ManagementClassActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="86" selection-start-line="75" selection-start-column="59" selection-end-line="75" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_class_list_management.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/class_list_management_row.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/ActivityModel/ActivityClassAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Controller/ManagementClassController/ControllerLogicProcessManagementClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
           <folding>
-            <element signature="method#openFragmentCreateActivity#0;class#ActivityClassDetailActivity#0" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ActivityClassDetailView/FragmentClassDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CreateClassView/CreateClassActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="73" column="62" selection-start-line="72" selection-start-column="28" selection-end-line="73" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/CurrentClassDetailView/CurrentClassDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/View/ManagementClassView/FragmentManagementClassList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hcmue/congvu/drlstudent/Model/StudentModel/StudentClassAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
         </state>
       </provider>
     </entry>

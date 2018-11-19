@@ -24,6 +24,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import hcmue.congvu.drlstudent.Controller.ActivityClassDetailController.ControllerLogicProcessActivityClassDetail;
+import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityClassAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityClassItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityGroupItem;
@@ -31,6 +32,7 @@ import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelAdapter;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityLevelItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityManagementItem;
 import hcmue.congvu.drlstudent.Model.ActivityModel.ActivityStudentInfoItem;
+import hcmue.congvu.drlstudent.Model.CurrentClassDetailModel.ClassDetailAdapter;
 import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassAdapter;
 import hcmue.congvu.drlstudent.Model.CurrentClassModel.ClassItem;
 import hcmue.congvu.drlstudent.R;
@@ -39,7 +41,7 @@ import hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity;
 /**
  * Created by CongVu on 06/10/2018.
  */
-public class ActivityClassDetailActivity extends AppCompatActivity implements ViewProcessActivityClassDetail {
+public class ActivityClassDetailActivity extends AppCompatActivity implements ViewProcessActivityClassDetail{
     BottomNavigationView bottomNavigationView;
     public FragmentManager fragmentManager;
     public FragmentTransaction fragmentTransaction;
@@ -199,7 +201,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                     fragmentTransaction.add(R.id.fragment_content, fragmentClassDetailList);*/
         fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailManagement, "activityManagement");
         fragmentTransaction.commit();
-        controllerLogicProcessActivityClassDetail.getActivityManagement(idClass, idClassDetail);
+        controllerLogicProcessActivityClassDetail.getActivityManagement(userId, idClass, idClassDetail);
     }
 
     public void openFragmentStudentActivityInfo(){
@@ -227,6 +229,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         fragmentClassDetailActivity.setArguments(bundle);
         fragmentTransaction.commit();
         controllerLogicProcessActivityClassDetail.getActivityClass(userId, idClass, idClassDetail);
+
     }
 
     public void openFragmentClassList(){
@@ -315,6 +318,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                 try{
                     JSONObject jsonObject = jsonArray.getJSONObject(i);
                     ActivityClassItem activityClassItem = new ActivityClassItem();
+                    activityClassItem.setmTypeUser(jsonObject.getInt("typeUser"));
                     activityClassItem.setmId(jsonObject.getInt("idActivityClass"));
                     activityClassItem.setmIdGroup(jsonObject.getInt("idGroup"));
                     activityClassItem.setmIdLevel(jsonObject.getInt("idLevel"));
@@ -388,7 +392,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                 ActivityManagementItem item = new ActivityManagementItem();
                 item.setmFullname(jsonObject.getString("fullname"));
                 item.setmUsername(jsonObject.getString("username"));
-                item.setmActivityname(jsonObject.getString("activity"));
+                item.setmActivityname(jsonObject.getString("content"));
                 totalRequest++;
                 arrActivityManagement.add(item);
             } catch (JSONException e) {
@@ -397,11 +401,12 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         }
 
         fragment.tvTotalActivityRequest.setText(String.valueOf(totalRequest) + " Yêu Cầu");
-        Log.i("requestFinal", totalRequest+"");
+        //Log.i("requestFinal", totalRequest+"");
         fragment.setDataActivityManagement(arrActivityManagement);
     }
 
     public void createActivityClass(int idUser, int idClass, int idClassDetail, int idActivityGroup, int idActivityLevel, String s, String s1, String s2, String s3) {
         controllerLogicProcessActivityClassDetail.createAcitvityClass(idUser, idClass, idClassDetail, idActivityGroup, idActivityLevel, s, s1, s2, s3);
     }
+
 }

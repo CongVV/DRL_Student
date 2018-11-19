@@ -5,4 +5,5 @@ package hcmue.congvu.drlstudent.Controller.CurrentClassController;
  */
 public interface ControllerImpProcessCurrentClass {
     void getCurrentClassList(int idUser);
+    void deleteCurrentClass(int idClass);
 }

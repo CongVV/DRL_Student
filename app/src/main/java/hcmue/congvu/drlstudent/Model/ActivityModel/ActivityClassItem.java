@@ -4,17 +4,18 @@ package hcmue.congvu.drlstudent.Model.ActivityModel;
  * Created by CongVu on 11/10/2018.
  */
 public class ActivityClassItem {
-    int mId, mIdGroup, mIdLevel, mScores;
+    int mId, mIdGroup, mIdLevel, mScores, mTypeUser;
     String mDateTimeStart, mDateTimeEnd, mContent;
 
     public ActivityClassItem() {
     }
 
-    public ActivityClassItem(int mId, int mIdGroup, int mIdLevel, int mScores, String mDateTimeStart, String mDateTimeEnd, String mContent) {
+    public ActivityClassItem(int mId, int mIdGroup, int mIdLevel, int mScores, int mTypeUser, String mDateTimeStart, String mDateTimeEnd, String mContent) {
         this.mId = mId;
         this.mIdGroup = mIdGroup;
         this.mIdLevel = mIdLevel;
         this.mScores = mScores;
+        this.mTypeUser = mTypeUser;
         this.mDateTimeStart = mDateTimeStart;
         this.mDateTimeEnd = mDateTimeEnd;
         this.mContent = mContent;
@@ -50,6 +51,14 @@ public class ActivityClassItem {
 
     public void setmScores(int mScores) {
         this.mScores = mScores;
+    }
+
+    public int getmTypeUser() {
+        return mTypeUser;
+    }
+
+    public void setmTypeUser(int mTypeUser) {
+        this.mTypeUser = mTypeUser;
     }
 
     public String getmDateTimeStart() {

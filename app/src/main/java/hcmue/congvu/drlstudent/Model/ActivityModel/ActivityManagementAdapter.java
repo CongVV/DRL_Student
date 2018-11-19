@@ -45,7 +45,14 @@ public class ActivityManagementAdapter extends ArrayAdapter<ActivityManagementIt
                     + System.getProperty ("line.separator")
                     + item.getmUsername();
             tvFullname.setText(s);
-            tvActivity.setText(item.getmActivityname());
+            String content="";
+            if(item.getmActivityname().length() < 20){
+                content = item.getmActivityname() + System.getProperty("line.separator");
+            }
+            else{
+                content = item.getmActivityname();
+            }
+            tvActivity.setText(content);
         }
         return convertView;
     }
