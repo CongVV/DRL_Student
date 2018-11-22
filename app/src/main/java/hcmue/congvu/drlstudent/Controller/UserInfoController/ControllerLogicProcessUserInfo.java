@@ -183,7 +183,7 @@ public class ControllerLogicProcessUserInfo extends AppUrl implements Controller
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.i("tagPassUpdate", response);
+                        //Log.i("tagPassUpdate", response);
                         if(response.equals("true")){
                             viewProcessUserInfo.updatePassword("true");
                         }
@@ -204,6 +204,34 @@ public class ControllerLogicProcessUserInfo extends AppUrl implements Controller
                 Map<String, String> params = new HashMap<>();
                 params.put("userId", String.valueOf(userId));
                 params.put("newPassword", newPassword);
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void getAvatar(final int idUser) {
+        final RequestQueue requestQueue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_GET_AVATAR,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        //Log.i("tagPassUpdate", response);
+                        viewProcessUserInfo.resultGetAvatar(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley", error.toString());
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("userId", String.valueOf(idUser));
                 return params;
             }
         };

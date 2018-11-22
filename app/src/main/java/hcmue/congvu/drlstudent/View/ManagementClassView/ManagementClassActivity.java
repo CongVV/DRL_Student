@@ -25,7 +25,7 @@ import hcmue.congvu.drlstudent.R;
  * Created by CongVu on 18/11/2018.
  */
 public class ManagementClassActivity extends AppCompatActivity implements ViewProcessManagementClass {
-    int idUser, idClass;
+    int idUser, idClass, numberStudent;
     BottomNavigationView bottomNavigationView;
     public FragmentManager fragmentManager;
     public FragmentTransaction fragmentTransaction;
@@ -43,6 +43,7 @@ public class ManagementClassActivity extends AppCompatActivity implements ViewPr
         if(bundle!=null){
             idUser = bundle.getInt("idUser");
             idClass = bundle.getInt("idClass");
+            numberStudent = bundle.getInt("numberStudent");
         }
         else{
             Toast.makeText(this, "Lỗi Mạng!", Toast.LENGTH_LONG).show();
@@ -64,6 +65,7 @@ public class ManagementClassActivity extends AppCompatActivity implements ViewPr
                     openFragmentManagementClassList();
                     break;
                 case R.id.item_type_student:
+                    openFragmentManagementTypeStudent();
                     break;
             }
             return true;
@@ -77,11 +79,24 @@ public class ManagementClassActivity extends AppCompatActivity implements ViewPr
         Bundle bundle = new Bundle();
         bundle.putInt("idClass", idClass);
         bundle.putInt("idUser", idUser);
+        bundle.putInt("numberStudent", numberStudent);
         fragmentManagementClassList.setArguments(bundle);
         fragmentTransaction.commit();
         controllerLogicProcessManagementClass.getClassList(idClass);
 
 
+    }
+
+    public void openFragmentManagementTypeStudent(){
+        fragmentManager = getFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_content, fragmentManagementTypeStudent, "managementTypeStudent");
+        Bundle bundle = new Bundle();
+        bundle.putInt("idClass", idClass);
+        bundle.putInt("idUser", idUser);
+        fragmentManagementTypeStudent.setArguments(bundle);
+        fragmentTransaction.commit();
+        controllerLogicProcessManagementClass.getClassListTypeStudent(idClass);
     }
 
     @Override
@@ -101,11 +116,63 @@ public class ManagementClassActivity extends AppCompatActivity implements ViewPr
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            fragment.setDataManagementClassList(arrStudentClass);
+        }
+        fragment.setDataManagementClassList(arrStudentClass);
+    }
+
+    @Override
+    public void setClassListTypeStudent(JSONArray jsonArray) {
+        ArrayList<StudentClassItem> arrStudentClass= new ArrayList<>();
+        FragmentManagementTypeStudent fragment = (FragmentManagementTypeStudent) getFragmentManager().findFragmentByTag("managementTypeStudent");
+        for(int i=0; i<jsonArray.length(); i++){
+            try {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                StudentClassItem item = new StudentClassItem();
+                item.setIdClass(idClass);
+                item.setIdUser(jsonObject.getInt("idUser"));
+                item.setUserNameStudent(jsonObject.getString("username"));
+                item.setFullNameStudent(jsonObject.getString("fullname"));
+                item.setTypeStudentClass(jsonObject.getInt("typeStudent"));
+                arrStudentClass.add(item);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        fragment.setDataManagementTypeStudent(arrStudentClass);
+    }
+
+    @Override
+    public void resultDeleteStudentClass(boolean result) {
+        if(result){
+            Toast.makeText(this, "Xóa Sinh Viên Thành Công!", Toast.LENGTH_SHORT).show();
+            numberStudent--;
+            FragmentManagementClassList fragment = (FragmentManagementClassList) getFragmentManager().findFragmentByTag("managementClassList");
+            fragment.setDataManagementClassList(fragment.arrayClassList);
+
+        }
+        else{
+            Toast.makeText(this, "Xóa Sinh Viên Thất Bại!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void applyDeleteStudentClassItem(int idUser, int idClass){
-        Toast.makeText(this, "Xóa sinh viên : "+idUser+" ở lớp: "+idClass, Toast.LENGTH_SHORT).show();
+    @Override
+    public void resultTypeStudentClass(boolean result) {
+        if(result){
+            Toast.makeText(this, "Cập Nhật Thành Công!", Toast.LENGTH_SHORT).show();
+
+        }
+        else{
+            Toast.makeText(this, "Cập Nhật Thất Bại!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void applyDeleteStudentClassItem(int index, int idUser, int idClass){
+        FragmentManagementClassList fragment = (FragmentManagementClassList) getFragmentManager().findFragmentByTag("managementClassList");
+        fragment.arrayClassList.remove(index);
+        controllerLogicProcessManagementClass.deleteStudentClass(idClass, idUser, numberStudent);
+    }
+
+    public void applyUpdateTypeStudentClass(int idClass, ArrayList<StudentClassItem> arrayList){
+        controllerLogicProcessManagementClass.updateTypeStudentClass(idClass, arrayList);
     }
 }

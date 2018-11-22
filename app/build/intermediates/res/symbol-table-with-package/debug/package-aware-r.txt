@@ -792,6 +792,7 @@ drawable btn_add
 drawable btn_back
 drawable btn_bg
 drawable btn_delete
+drawable btn_edit
 drawable btn_next
 drawable classdetail
 drawable content_bg
@@ -832,6 +833,8 @@ drawable ic_user_24dp
 drawable icon_delete
 drawable icon_launcher
 drawable icon_logout
+drawable icon_pending
+drawable icon_refuse
 drawable login_bg
 drawable logo_drl_student
 drawable male_avatar
@@ -895,6 +898,7 @@ id blocking
 id bottom
 id bottom_navi
 id btnDeleteStudent
+id btnUpdateTypeStudent
 id btn_Add_Student
 id btn_avatar
 id btn_birthday
@@ -1005,6 +1009,7 @@ id linear1
 id linear2
 id linearAddStudent
 id linearListTerm
+id linearTask
 id linear_book
 id linear_correct
 id linear_system
@@ -1018,6 +1023,7 @@ id list_item
 id lvClassListManagement
 id lvManagementActivity
 id lvStudentActivityInfo
+id lvTypeStudentManagement
 id masked
 id media_actions
 id message
@@ -1092,6 +1098,7 @@ id snap
 id sort_view
 id spacer
 id spinnerStyleStudent
+id spinnerTypeStudent
 id spinner_activity_group
 id spinner_activity_level
 id spinner_school
@@ -1163,6 +1170,7 @@ id tv_content
 id tv_create_class
 id tv_current_class
 id tv_date_time
+id tv_del
 id tv_edit
 id tv_email
 id tv_login
@@ -1257,6 +1265,7 @@ layout fragment_create_activity
 layout fragment_list
 layout fragment_management
 layout fragment_student_activity_info
+layout fragment_type_student_management
 layout home_item
 layout list_activity_class_row
 layout management_activity_row
@@ -1282,6 +1291,7 @@ layout select_dialog_singlechoice_material
 layout sortable_header
 layout student_activity_info_row
 layout support_simple_spinner_dropdown_item
+layout type_student_management_row
 menu botom_menu
 menu bottom_menu_activity
 menu bottom_menu_management

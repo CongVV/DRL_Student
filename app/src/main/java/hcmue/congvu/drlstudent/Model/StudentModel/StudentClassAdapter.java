@@ -67,7 +67,7 @@ public class StudentClassAdapter extends ArrayAdapter<StudentClassItem> {
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        confirm.deleteStudentClassItem(getItem(position).getIdUser(), getItem(position).getIdClass());
+                        confirm.deleteStudentClassItem(position, getItem(position).getIdUser(), getItem(position).getIdClass());
                     }
                 });
                 builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
@@ -76,12 +76,14 @@ public class StudentClassAdapter extends ArrayAdapter<StudentClassItem> {
                         dialog.cancel();;
                     }
                 });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
         return convertView;
     }
 
     public interface ConfirmDeleteClassItemListener{
-        void deleteStudentClassItem(int idUser, int idClass);
+        void deleteStudentClassItem(int index, int idUser, int idClass);
     }
 }

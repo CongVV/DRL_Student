@@ -14,4 +14,5 @@ public interface ViewProcessUserInfo {
     void updateSuccessful();
     void resultCheckPassword(String result);
     void updatePassword(String result);
+    void resultGetAvatar(String response);
 }

@@ -39,7 +39,7 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
     ArrayList<ClassDetailItem> arrayClassDetail;
     int userId;
     int idClass;
-    int typeStudent, typeStudentAddNewMember;
+    int typeStudent, typeStudentAddNewMember, numberStudent;
     boolean isAdmin;
     android.support.design.widget.BottomNavigationView bottomNavigationItemView;
     LinearLayout linearListTerm;
@@ -56,6 +56,7 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
             userId = bundle.getInt("userId");
             avatar = bundle.getString("avatar");
             idClass = bundle.getInt("idClass");
+            numberStudent = bundle.getInt("numberStudent");
             isAdmin = bundle.getBoolean("isAdmin");
             typeStudent = bundle.getInt("typeUserClass");
         }
@@ -114,6 +115,7 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
                     classDetailItem.setmTerm(jsonObject.getInt("term"));
                     classDetailItem.setmYearStart(jsonObject.getInt("yearStart"));
                     classDetailItem.setmYearEnd(jsonObject.getInt("yearEnd"));
+                    classDetailItem.setMtypeStudent(typeStudent);
                     classDetailItem.setmIsAdmin(isAdmin);
                     arrayClassDetail.add(classDetailItem);
                 } catch (JSONException e){
@@ -193,6 +195,7 @@ public class CurrentClassDetailActivity extends AppCompatActivity implements Vie
                     Intent intent = new Intent(CurrentClassDetailActivity.this, ManagementClassActivity.class);
                     intent.putExtra("idUser", userId);
                     intent.putExtra("idClass", idClass);
+                    intent.putExtra("numberStudent", numberStudent);
                     startActivity(intent);
                     break;
                 case R.id.item_nav_add_member:

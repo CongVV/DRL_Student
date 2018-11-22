@@ -37,13 +37,13 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
     private int userId;
     private UserInfo userInfoHome = new UserInfo();
     public String avatar="";
-    private Button btnCreateClass, btnCurrentClass;
+    //private Button btnCreateClass, btnCurrentClass;
     private GridView gridView;
     private ControllerLogicProcessHome controllerLogicProcessHome = new ControllerLogicProcessHome(this, this);
     private String[] nameIcon = {"Lớp Hiện Tại", "Tạo Lớp Mới", "Thống Kê", "Thông Tin"};
     private int[] imgIcon = {R.drawable.ic_current_class_24dp, R.drawable.ic_new_class_24dp, R.drawable.ic_analysis_24dp, R.drawable.ic_user_24dp};
-    private TextView tvNameIcon;
-
+    private Menu menuHome;
+    private MenuItem menuItem;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -93,23 +93,40 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                         Intent intentUserInfo = new Intent(HomeActivity.this, UserInfoActivity.class);
                         intentUserInfo.putExtra("userId", userId);
                         intentUserInfo.putExtra("avatar", avatar);
+                        //intentUserInfo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intentUserInfo);
                         break;
                 }
                 //Toast.makeText(HomeActivity.this, ""+position, Toast.LENGTH_SHORT).show();
             }
         });
+/*
+        if(avatar.equals("male")){
+            this.menuItem.setIcon(R.drawable.male_avatar);
+        } else if(avatar.equals("female")){
+            this.menuItem.setIcon(R.drawable.female_avatar);
+        } else{
+//            menuItem = menuHome.findItem(R.id.item_user);
+            Glide.with(this).load(avatar).into(new SimpleTarget<Drawable>() {
+                @Override
+                public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                    menuItem.setIcon(resource);
+                }
+            });
+        }*/
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        this.menuHome = menu;
         getMenuInflater().inflate(R.menu.home_menu, menu);
-        final MenuItem menuItem = menu.findItem(R.id.item_user);
+        this.menuItem = menu.findItem(R.id.item_user);
 
         if(avatar.equals("male")){
-            menuItem.setIcon(R.drawable.male_avatar);
+            this.menuItem.setIcon(R.drawable.male_avatar);
         } else if(avatar.equals("female")){
-            menuItem.setIcon(R.drawable.female_avatar);
+            this.menuItem.setIcon(R.drawable.female_avatar);
         } else{
             Glide.with(this).load(avatar).into(new SimpleTarget<Drawable>() {
                 @Override
@@ -122,6 +139,9 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
         //menuItem.setIcon(R.drawable.female_avatar);
         return super.onCreateOptionsMenu(menu);
     }
+
+
+
 
     /*@Override
     public boolean onPrepareOptionsMenu(final Menu menu) {
@@ -142,6 +162,7 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                 Intent intentUserInfo = new Intent(HomeActivity.this, UserInfoActivity.class);
                 intentUserInfo.putExtra("userId", userId);
                 intentUserInfo.putExtra("avatar", avatar);
+                //intentUserInfo.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intentUserInfo);
                 break;
             case R.id.item_logout:

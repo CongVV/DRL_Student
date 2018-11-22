@@ -58,10 +58,13 @@ public class ClassDetailAdapter extends BaseAdapter {
         tvClassDetailName.setText(String.valueOf(classDetailItemList.get(position).getmYearStart()) + " - " +
                 String.valueOf(classDetailItemList.get(position).getmYearEnd()) + " (Học kỳ: " +
                 String.valueOf(classDetailItemList.get(position).getmTerm()) + ")");
+        if(classDetailItemList.get(position).getMtypeStudent() != 2){
+            tvDeleteClassDetail.setVisibility(View.GONE);
+        }
         tvDeleteClassDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(classDetailItemList.get(position).ismIsAdmin()){
+                if(classDetailItemList.get(position).getMtypeStudent() == 2){
                     AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setMessage("Bạn có muốn xóa???");
 

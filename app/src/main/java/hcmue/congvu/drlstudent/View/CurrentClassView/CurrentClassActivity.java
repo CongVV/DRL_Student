@@ -52,11 +52,12 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
         listViewClass.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ClassItem clickedItem = (ClassItem) parent.getItemAtPosition(position);
+                //ClassItem clickedItem = (ClassItem) parent.getItemAtPosition(position);
                 Intent intentClassDetail = new Intent(CurrentClassActivity.this, CurrentClassDetailActivity.class);
                 intentClassDetail.putExtra("userId", userId);
                 intentClassDetail.putExtra("avatar", avatar);
                 intentClassDetail.putExtra("idClass", arrayClass.get(position).getmIdClass());
+                intentClassDetail.putExtra("numberStudent", arrayClass.get(position).getmNumberStudent());
                 intentClassDetail.putExtra("isAdmin", arrayClass.get(position).ismIsAdmin());
                 intentClassDetail.putExtra("typeUserClass", arrayClass.get(position).getmTypeUserClass());
 

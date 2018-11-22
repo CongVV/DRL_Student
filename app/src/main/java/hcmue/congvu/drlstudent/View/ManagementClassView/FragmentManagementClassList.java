@@ -20,6 +20,7 @@ import hcmue.congvu.drlstudent.R;
  */
 public class FragmentManagementClassList extends Fragment implements StudentClassAdapter.ConfirmDeleteClassItemListener{
     ListView lvManagementClassList;
+    ArrayList<StudentClassItem> arrayClassList;
     int idUser, idClass;
 
     @Nullable
@@ -37,6 +38,7 @@ public class FragmentManagementClassList extends Fragment implements StudentClas
     }
 
     public void setDataManagementClassList(ArrayList<StudentClassItem> arrayList){
+        arrayClassList = arrayList;
         StudentClassAdapter adapter = new StudentClassAdapter(getActivity(), arrayList);
         adapter.idUser = idUser;
         adapter.confirm=this;
@@ -44,9 +46,9 @@ public class FragmentManagementClassList extends Fragment implements StudentClas
     }
 
     @Override
-    public void deleteStudentClassItem(int idUser, int idClass) {
+    public void deleteStudentClassItem(int index, int idUser, int idClass) {
         //Toast.makeText(getActivity(), "Xóa nha!!! haha", Toast.LENGTH_SHORT).show();
-        ManagementClassActivity act = new ManagementClassActivity();
-        act.applyDeleteStudentClassItem(idUser, idClass);
+        ManagementClassActivity act = (ManagementClassActivity) getActivity();
+        act.applyDeleteStudentClassItem(index, idUser, idClass);
     }
 }

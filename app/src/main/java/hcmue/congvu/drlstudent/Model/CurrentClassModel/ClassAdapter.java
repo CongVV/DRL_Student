@@ -68,6 +68,9 @@ public class ClassAdapter extends BaseAdapter {
         imgClass.setImageResource(R.drawable.book);
         tvClassName.setText(classItemList.get(position).getmClassName());
         tvClassNumberStudent.setText(String.valueOf(classItemList.get(position).getmNumberStudent()) + " Sinh viên");
+        if(!classItemList.get(position).ismIsAdmin()){
+            tvDeleteClass.setVisibility(View.GONE);
+        }
         tvDeleteClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

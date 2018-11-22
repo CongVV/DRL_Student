@@ -1256,6 +1256,10 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\home_sync_ani_01.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_type_student_management.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\fragment_type_student_management.xml"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -1310,6 +1314,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_password.xml.flat",
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\activity_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_type_student_management_row.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\layout\\type_student_management_row.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_management_24dp.xml.flat",
@@ -1674,6 +1682,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_edit.xml.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\btn_edit.xml"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_secondary_text_material_light.xml.flat",
@@ -2368,6 +2380,10 @@
         "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_list_class_24dp.png"
     },
     {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_pending.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\icon_pending.png"
+    },
+    {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\anim\\abc_slide_in_top.xml"
     },
@@ -2390,6 +2406,10 @@
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
         "source": "C:\\Users\\congv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\9cd514fc923f6e4a531d6b18e50578b3\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icon_refuse.png.flat",
+        "source": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\src\\main\\res\\drawable\\icon_refuse.png"
     },
     {
         "merged": "C:\\Users\\congv\\Documents\\GitHub\\DRL_Student\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_radio.xml.flat",

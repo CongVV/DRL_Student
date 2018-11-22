@@ -49,10 +49,13 @@ public class ActivityStudentInfoAdapter extends ArrayAdapter<ActivityStudentInfo
                 imgStatusActivity.setImageResource(R.drawable.correct);
             }
             else if(activityStudentInfoItem.getmStatus()==0){
-                imgStatusActivity.setImageResource(R.drawable.icon_logout);
+                imgStatusActivity.setImageResource(R.drawable.icon_delete);
+            }
+            else if(activityStudentInfoItem.getmStatus()==2){
+                imgStatusActivity.setImageResource(R.drawable.icon_pending);
             }
             else{
-                imgStatusActivity.setImageResource(R.drawable.book);
+                imgStatusActivity.setImageResource(R.drawable.icon_refuse);
             }
             tvScoresActivity.setText(String.valueOf(activityStudentInfoItem.getmScores()));
         }

@@ -41,13 +41,16 @@ public class FragmentClassDetailCreateActivity extends Fragment {
     //ArrayList<ActivityLevelItem> mActivityLevelList = new ArrayList<>();
     ActivityGroupAdapter activityGroupAdapter;
     ActivityLevelAdapter activityLevelAdapter;
+    //ArrayList<ActivityGroupItem> activityGroupList= new ArrayList<>();;
+    //ArrayList<ActivityLevelItem> activityLevelList= new ArrayList<>();;
     Spinner spinnerActivityGroup;
     Spinner spinnerActivityLevel;
     DatePickerDialog.OnDateSetListener datePickerDialogStart, datePickerDialogEnd;
     TimePickerDialog.OnTimeSetListener timePickerDialogStart, timePickerDialogEnd;
     Button btnDatePickerStart, btnDatePickerEnd, btnTimePickerStart, btnTimePickerEnd, btnCreateActivity;
-    String dStart, dEnd, tStart, tEnd;
-    int idActivityGroup, idActivityLevel, idUser, idClass, idClassDetail;
+    String dStart, dEnd, tStart, tEnd, timeStart="", timeEnd="", content="";
+    int idActivityGroup=1, idActivityLevel=1, idUser, idClass, idClassDetail, idActivity, scores=0;
+    //boolean checkGroup=false, checkLevel=false;
     EditText edtContent, edtScores;
 
 
@@ -55,12 +58,7 @@ public class FragmentClassDetailCreateActivity extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        Bundle bundle = getArguments();
-        if(bundle != null){
-            idUser = bundle.getInt("idUser");
-            idClass = bundle.getInt("idClass");
-            idClassDetail = bundle.getInt("idClassDetail");
-        }
+
         View view = inflater.inflate(R.layout.fragment_create_activity, container, false);
         spinnerActivityGroup = view.findViewById(R.id.spinner_activity_group);
         spinnerActivityLevel = view.findViewById(R.id.spinner_activity_level);
@@ -71,6 +69,30 @@ public class FragmentClassDetailCreateActivity extends Fragment {
         edtContent = view.findViewById(R.id.edt_activity_content);
         edtScores = view.findViewById(R.id.edt_scores);
         btnCreateActivity = view.findViewById(R.id.btn_create_activity);
+
+        Bundle bundle = getArguments();
+        if(bundle != null){
+            idUser = bundle.getInt("idUser");
+            idClass = bundle.getInt("idClass");
+            idClassDetail = bundle.getInt("idClassDetail");
+            idActivity = bundle.getInt("idActivity");
+            if(idActivity!=-1){
+                idActivityGroup = bundle.getInt("idGroup");
+                idActivityLevel = bundle.getInt("idLevel");
+                content = bundle.getString("content");
+                timeStart = bundle.getString("timeStart");
+                timeEnd = bundle.getString("timeEnd");
+                scores = bundle.getInt("scores");
+                //checkGroup = true;
+                //checkLevel = true;
+            }
+        }
+
+        //Toast.makeText(getActivity(), idActivity+"", Toast.LENGTH_SHORT).show();
+        edtContent.setText(content);
+        edtScores.setText(String.valueOf(scores));
+        //spinnerActivityGroup.setSelection(activityGroupAdapter.getPosition(activityGroupList.get(idActivityGroup)));
+        //spinnerActivityLevel.setSelection(activityLevelAdapter.getPosition(activityLevelList.get(idActivityLevel)));
 
         Calendar cal = Calendar.getInstance();
         int y = cal.get(Calendar.YEAR);
@@ -86,6 +108,21 @@ public class FragmentClassDetailCreateActivity extends Fragment {
         tStart = tEnd = h + ":" + mi;
         btnTimePickerStart.setText(tStart);
         btnTimePickerEnd.setText(tEnd);
+        if(!timeStart.equals("")){
+            dStart = timeStart.substring(0, 10);
+            tStart = timeStart.substring(11, 16);
+            btnDatePickerStart.setText(dStart);
+            btnTimePickerStart.setText(tStart);
+
+        }
+
+        if(!timeEnd.equals("")){
+            dEnd = timeEnd.substring(0, 10);
+            tEnd = timeEnd.substring(11, 16);
+            btnDatePickerEnd.setText(dEnd);
+            btnTimePickerEnd.setText(tEnd);
+        }
+
 
         datePickerDialogStart = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -193,7 +230,7 @@ public class FragmentClassDetailCreateActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
-                act.createActivityClass(idUser, idClass, idClassDetail, idActivityGroup, idActivityLevel,
+                act.createActivityClass(idUser, idClass, idClassDetail, idActivity, idActivityGroup, idActivityLevel,
                                                                 dStart+" "+tStart, dEnd+" "+tEnd,
                                                                 edtContent.getText().toString(),
                                                                 edtScores.getText().toString());
@@ -203,8 +240,12 @@ public class FragmentClassDetailCreateActivity extends Fragment {
     }
 
     public void setGroupList(final ArrayList<ActivityGroupItem> mActivityGroupList){
+        //activityGroupList = new ArrayList<>(mActivityGroupList);
         activityGroupAdapter = new ActivityGroupAdapter(getActivity(), mActivityGroupList);
         spinnerActivityGroup.setAdapter(activityGroupAdapter);
+
+        spinnerActivityGroup.setSelection(idActivityGroup-1);
+
         spinnerActivityGroup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -220,8 +261,12 @@ public class FragmentClassDetailCreateActivity extends Fragment {
     }
 
     public void setLevelList(final ArrayList<ActivityLevelItem> mActivityLevelList){
+        //activityLevelList = new ArrayList<>(mActivityLevelList);
         activityLevelAdapter = new ActivityLevelAdapter(getActivity(), mActivityLevelList);
         spinnerActivityLevel.setAdapter(activityLevelAdapter);
+
+        spinnerActivityLevel.setSelection(idActivityLevel-1);
+
         spinnerActivityLevel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -234,5 +279,11 @@ public class FragmentClassDetailCreateActivity extends Fragment {
 
             }
         });
+    }
+
+    public void setDataUpdateActivityClass(int idUser, int idClass, int idClassDetail, int idGroup, int idLevel, String content, String timeStart, String timeEnd, int scores){
+        //spinnerActivityGroup.setSelection(idGroup-1);
+        edtContent.setText(content);
+        edtScores.setText(scores);
     }
 }

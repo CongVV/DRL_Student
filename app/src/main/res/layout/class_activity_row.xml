@@ -46,15 +46,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:orientation="vertical"
-        android:gravity="center">
+        android:layout_gravity="center">
         <TextView
             android:id="@+id/tv_confirm"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:layout_weight="1"
             android:layout_gravity="center"
             android:gravity="center"
             android:text="CHECK"
@@ -62,16 +63,42 @@
             android:textColor="@color/colorWhite"
             android:background="@drawable/btn_add"/>
 
-        <TextView
-            android:id="@+id/tv_edit"
+        <LinearLayout
+            android:id="@+id/linearTask"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="Edit"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:visibility="gone"
-            android:textStyle="bold"
-            android:textColor="@color/colorWhite"
-            android:background="@drawable/btn_delete"/>
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_del"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginRight="1dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="DEL"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_delete"/>
+
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="EDIT"
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_edit"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

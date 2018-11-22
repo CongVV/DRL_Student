@@ -28,6 +28,7 @@ public class FragmentClassDetailActivity extends Fragment implements ActivityCla
     ListView lvActivityClass;
     TextView tvEmpty;
     int idUser, idClass, idClassDetail;
+    ArrayList<ActivityClassItem> arrayActivityClass;
 
     @Nullable
     @Override
@@ -54,6 +55,7 @@ public class FragmentClassDetailActivity extends Fragment implements ActivityCla
     }
 
     public void setDataActivityClass(ArrayList<ActivityClassItem> arrActivityClass){
+        arrayActivityClass = arrActivityClass;
         ActivityClassAdapter adapter = new ActivityClassAdapter(getActivity(), arrActivityClass);
         adapter.idUser = idUser;
         adapter.idClass = idClass;
@@ -64,11 +66,21 @@ public class FragmentClassDetailActivity extends Fragment implements ActivityCla
 
     @Override
     public void checkActivity(int idUser, int idClass, int idClassDetail, int idActivity) {
-        Toast.makeText(getActivity(), "Confirm nè!", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "Confirm nè!", Toast.LENGTH_SHORT).show();
+        ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
+        act.applyConfirmAcceptActivity(idUser, idClass, idClassDetail, idActivity);
     }
 
     @Override
-    public void editActivity(int idUser) {
-        Toast.makeText(getActivity(), "Edit Activity nha!", Toast.LENGTH_SHORT).show();
+    public void editActivity(int idUser, int idClass, int idClassDetail, int idActivity, int idGroup, int idLevel, String content, String timeStart, String timeEnd, int scores) {
+        //Toast.makeText(getActivity(), "Edit Activity nha!", Toast.LENGTH_SHORT).show();
+        ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
+        act.applyUpdateClasActivity(idUser, idClass, idClassDetail, idActivity, idGroup, idLevel, content, timeStart, timeEnd, scores);
+    }
+
+    @Override
+    public void deleteActivity(int index, int idUser, int idClass, int idClassDetail, int idActivity) {
+        ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
+        act.applyDeleteActivity(index, idUser, idClass, idClassDetail, idActivity);
     }
 }
