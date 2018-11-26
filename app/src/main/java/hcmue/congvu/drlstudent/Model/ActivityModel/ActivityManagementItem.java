@@ -4,6 +4,7 @@ package hcmue.congvu.drlstudent.Model.ActivityModel;
  * Created by CongVu on 10/11/2018.
  */
 public class ActivityManagementItem {
+    int idUser, idActivity;
     String mUsername;
     String mFullname;
     String mActivityname;
@@ -11,10 +12,28 @@ public class ActivityManagementItem {
     public ActivityManagementItem() {
     }
 
-    public ActivityManagementItem(String mUsername, String mFullname, String mActivityname) {
+    public ActivityManagementItem(int idUser, int idActivity, String mUsername, String mFullname, String mActivityname) {
+        this.idUser = idUser;
+        this.idActivity = idActivity;
         this.mUsername = mUsername;
         this.mFullname = mFullname;
         this.mActivityname = mActivityname;
+    }
+
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
+    }
+
+    public int getIdActivity() {
+        return idActivity;
+    }
+
+    public void setIdActivity(int idActivity) {
+        this.idActivity = idActivity;
     }
 
     public String getmUsername() {

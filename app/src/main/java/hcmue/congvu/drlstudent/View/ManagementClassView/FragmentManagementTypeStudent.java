@@ -43,9 +43,9 @@ public class FragmentManagementTypeStudent extends Fragment {
         btnUpdateTypeStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Gson gson = new GsonBuilder().create();
+                /*Gson gson = new GsonBuilder().create();
                 final JsonArray jsonArrayTypeStudentClass = gson.toJsonTree(arrayListTypeStudent).getAsJsonArray();
-                Log.i("arrRes", jsonArrayTypeStudentClass.toString());
+                Log.i("arrRes", jsonArrayTypeStudentClass.toString());*/
 
                 ManagementClassActivity act = (ManagementClassActivity) getActivity();
                 act.applyUpdateTypeStudentClass(idClass, arrayListTypeStudent);

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\fd19606f3ad4c1f8da2854836d0784f8\AndroidManifest.xml:17:1-22:12
 MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:2:1-13:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\9cd514fc923f6e4a531d6b18e50578b3\AndroidManifest.xml:17:1-22:12
@@ -25,20 +25,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\congv\.gradle\
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3a883e5c4f8b81fb374808077198b38d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\54b8d5f059e72868c5adf906fc4db41b\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\86429acbc937d53d927a5915e9fcc6af\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
 	package
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
 		INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:1-67:12
 		INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:2:11-69
@@ -51,7 +51,7 @@ ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:6:22-77
 application
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:8:5-60:19
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:8:5-65:19
 MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:11:5-53
 MERGED from [de.codecrafters.tableview:tableview:2.8.0] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\tableview-2.8.0.aar\5671122810f7eb2913acb5d64358a2c6\AndroidManifest.xml:11:5-53
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] C:\Users\congv\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.2.aar\f7ae48b57c2159893eb6f968faf9d293\AndroidManifest.xml:9:5-20
@@ -75,89 +75,105 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.7.1] C:\Users\congv\.gradle\
 	android:theme
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:14:9-40
 activity#hcmue.congvu.drlstudent.View.StartView.StartActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:15:9-22:20
 	android:screenOrientation
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:16:13-49
 	android:name
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:15:19-63
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:17:13-20:29
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
 ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
 		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:18:25-66
+action#android.intent.action.VIEW
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:20:27-74
 activity#hcmue.congvu.drlstudent.View.LogInView.LogInActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:23:9-24:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:24:9-25:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:24:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:25:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:23:19-63
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:24:19-63
 activity#hcmue.congvu.drlstudent.View.SignUpView.SignUpActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:26:9-27:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:27:9-28:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:27:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:28:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:26:19-65
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:27:19-65
 activity#hcmue.congvu.drlstudent.View.ForgotPassView.ForgotPassActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:29:9-30:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:30:9-31:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:30:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:31:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:29:19-73
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:30:19-73
 activity#hcmue.congvu.drlstudent.View.HomeView.HomeActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:32:9-36:20
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:33:9-35:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:34:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:35:13-49
 	android:theme
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:34:13-45
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:32:19-61
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:33:19-61
 activity#hcmue.congvu.drlstudent.View.UserInfoView.UserInfoActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:38:9-39:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:37:9-38:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:39:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:38:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:38:19-69
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:37:19-69
 activity#hcmue.congvu.drlstudent.View.CreateClassView.CreateClassActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:41:9-42:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:40:9-41:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:42:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:41:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:41:19-75
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:40:19-75
 activity#hcmue.congvu.drlstudent.View.CreateClassView.CreateClassSecondActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:44:9-45:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:43:9-44:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:45:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:44:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:44:19-81
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:43:19-81
 activity#hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:47:9-48:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:46:9-47:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:48:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:47:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:47:19-77
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:46:19-77
 activity#hcmue.congvu.drlstudent.View.CurrentClassDetailView.CurrentClassDetailActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:50:9-51:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:49:9-50:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:51:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:50:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:50:19-89
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:49:19-89
 activity#hcmue.congvu.drlstudent.View.ActivityClassDetailView.ActivityClassDetailActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:53:9-54:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:52:9-53:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:54:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:53:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:53:19-91
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:52:19-91
 activity#hcmue.congvu.drlstudent.View.ManagementClassView.ManagementClassActivity
-ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:56:9-57:61
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:55:9-56:61
 	android:screenOrientation
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:57:13-49
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:56:13-49
 	android:name
-		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:56:19-83
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:55:19-83
+activity#hcmue.congvu.drlstudent.View.DataChartView.DataChartActivity
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:58:9-59:61
+	android:screenOrientation
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:59:13-49
+	android:name
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:58:19-71
+activity#hcmue.congvu.drlstudent.View.DataChartView.DataChartListActivity
+ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:61:9-62:61
+	android:screenOrientation
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:62:13-49
+	android:name
+		ADDED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml:61:19-75
 uses-sdk
 INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\congv\Documents\GitHub\DRL_Student\app\src\main\AndroidManifest.xml

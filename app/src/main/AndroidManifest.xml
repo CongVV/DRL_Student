@@ -16,6 +16,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -31,9 +32,7 @@
 
         <activity android:name=".View.HomeView.HomeActivity"
             android:theme="@style/ThemeHome"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity android:name=".View.UserInfoView.UserInfoActivity"
             android:screenOrientation="portrait"></activity>
@@ -54,6 +53,12 @@
             android:screenOrientation="portrait"></activity>
 
         <activity android:name=".View.ManagementClassView.ManagementClassActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".View.DataChartView.DataChartActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".View.DataChartView.DataChartListActivity"
             android:screenOrientation="portrait"></activity>
 
 

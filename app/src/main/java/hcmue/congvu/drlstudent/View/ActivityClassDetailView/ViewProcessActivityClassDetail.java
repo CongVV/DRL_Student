@@ -15,4 +15,7 @@ public interface ViewProcessActivityClassDetail {
     void setActivityManagement(JSONArray jsonArray);
     void resultConfirmActivity(boolean result);
     void resultDeleteActivityClass(boolean result);
+    void resultAcceptActivityClass(boolean result);
+    void resultCancelActivityClass(boolean result);
+    void resultUpdateActivityClass(boolean result);
 }

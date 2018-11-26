@@ -1,8 +1,10 @@
 package hcmue.congvu.drlstudent.Model.ActivityModel;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -40,6 +43,7 @@ public class ActivityClassAdapter extends ArrayAdapter<ActivityClassItem> {
         return initView(position, convertView, parent);
     }
 
+    @SuppressLint("ResourceAsColor")
     private View initView(final int position, View convertView, ViewGroup parent){
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(
@@ -55,32 +59,79 @@ public class ActivityClassAdapter extends ArrayAdapter<ActivityClassItem> {
         LinearLayout linearTask = convertView.findViewById(R.id.linearTask);
         //TextView tvConfirm = convertView.findViewById(R.id.tv_confirm);
 
-
         final ActivityClassItem activityClassItem = getItem(position);
 
+
         if(activityClassItem != null) {
+            if(activityClassItem.getmStatus()==1){
+                tvCheck.setText("Accepted");
+                //tvCheck.setBackgroundColor(R.drawable.btn_add);
+            }
+            else if(activityClassItem.getmStatus()==0){
+                tvCheck.setText("Check");
+                //tvCheck.setBackgroundColor(R.drawable.btn_delete);
+            }
+            else if(activityClassItem.getmStatus()==2){
+                tvCheck.setText("Pending");
+                //tvCheck.setBackgroundColor(R.drawable.btn_delete);
+            }
+            else if(activityClassItem.getmStatus()==3){
+                tvCheck.setText("Re-Check");
+                //tvCheck.setBackgroundColor(R.drawable.btn_delete);
+            }
+
             tvCheck.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-                    builder.setMessage("Bạn đã hoàn thành hoạt động này???");
+                    if(activityClassItem.getmStatus()==1){
+                        Toast.makeText(getContext(), "Bạn đã hoàn thành hoạt động này!!!", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(activityClassItem.getmStatus()==0){
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                        builder.setMessage("Bạn muốn xác nhận hoạt động này???");
 
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //Toast.makeText(context, "Xóa nè!!!", Toast.LENGTH_SHORT).show();
-                            confirm.checkActivity(idUser, idClass, idClassDetail, activityClassItem.getmId());
-                        }
-                    });
-                    builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //Toast.makeText(context, "Xóa nè!!!", Toast.LENGTH_SHORT).show();
+                                confirm.checkActivity(idUser, idClass, idClassDetail, activityClassItem.getmId());
+                            }
+                        });
+                        builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
 
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+                    }
+                    else if(activityClassItem.getmStatus()==2){
+                        Toast.makeText(getContext(), "Yêu cầu của bạn đang chờ duyệt!", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                        builder.setMessage("Bạn muốn xác nhận lại hoạt động này???");
+
+                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //Toast.makeText(context, "Xóa nè!!!", Toast.LENGTH_SHORT).show();
+                                confirm.checkActivity(idUser, idClass, idClassDetail, activityClassItem.getmId());
+                            }
+                        });
+                        builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+                    }
+
                 }
             });
 

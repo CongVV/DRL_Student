@@ -916,6 +916,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id chart1
 id checkbox
 id chronometer
 id clip_horizontal
@@ -975,6 +976,8 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imgAccept
+id imgCancel
 id imgIconHome
 id imgLogo
 id imgStatusActivity
@@ -1141,10 +1144,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id tvAccept
 id tvActivityname
 id tvBook
-id tvCancel
 id tvClassDetailEmpty
 id tvClassDetailName
 id tvClassName
@@ -1229,6 +1230,8 @@ layout activity_create_class
 layout activity_create_class_second
 layout activity_current_class
 layout activity_current_class_detail
+layout activity_data_chart
+layout activity_data_chart_list
 layout activity_forgot_password
 layout activity_home
 layout activity_login
@@ -1239,6 +1242,7 @@ layout activity_user_info
 layout add_student_row
 layout class_activity_row
 layout class_list_management_row
+layout current_class_data_row
 layout current_class_detail_row
 layout current_class_row
 layout design_bottom_navigation_item

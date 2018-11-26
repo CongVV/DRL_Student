@@ -27,6 +27,7 @@ import hcmue.congvu.drlstudent.R;
 import hcmue.congvu.drlstudent.View.CreateClassView.CreateClassActivity;
 import hcmue.congvu.drlstudent.View.CreateClassView.CreateClassSecondActivity;
 import hcmue.congvu.drlstudent.View.CurrentClassView.CurrentClassActivity;
+import hcmue.congvu.drlstudent.View.DataChartView.DataChartListActivity;
 import hcmue.congvu.drlstudent.View.LogInView.LogInActivity;
 import hcmue.congvu.drlstudent.View.UserInfoView.UserInfoActivity;
 
@@ -88,6 +89,10 @@ public class HomeActivity extends AppCompatActivity implements ViewProcessHome, 
                         finish();
                         break;
                     case 2:
+                        Intent intentDataClass = new Intent(HomeActivity.this, DataChartListActivity.class);
+                        intentDataClass.putExtra("userId", userId);
+                        intentDataClass.putExtra("avatar", avatar);
+                        startActivity(intentDataClass);
                         break;
                     case 3:
                         Intent intentUserInfo = new Intent(HomeActivity.this, UserInfoActivity.class);

@@ -14,4 +14,6 @@ public interface ControllerImpProcessActivityClassDetail {
     void getActivityManagement(int idUser, int idClass, int idClassDetail);
     void confirmAcceptActivity(int idUser, int idClass, int idClassDetail, int idActivity);
     void deleteActivityClass(int idUser, int idClass, int idClassDetail, int idActivity);
+    void acceptActivityClass(int idUser, int idClass, int idClassDetail, int idActivity);
+    void cancelActivityClass(int idUser, int idClass, int idClassDetail, int idActivity);
 }

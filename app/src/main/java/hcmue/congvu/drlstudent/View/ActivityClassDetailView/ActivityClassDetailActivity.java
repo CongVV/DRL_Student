@@ -50,11 +50,11 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
     public FragmentClassDetailCreateActivity fragmentClassDetailCreateActivity;
     public FragmentClassDetailManagement fragmentClassDetailManagement;
     public FragmentClassDetailStudentActivityInfo fragmentClassDetailStudentActivityInfo;
-    int userId, idClass, idClassDetail, typeStudent;
+    int userId, idClass, idClassDetail, typeStudent, indexPosition;
     public int totalScores=0;
     boolean isAdmin;
-    String avatar;
-    private int idActivityGroup, idActivityLevel;
+    String avatar, timeStart, timeEnd, content;
+    public int idActivityGroup, idActivityLevel, idActivity = -1, scores;
     public ControllerLogicProcessActivityClassDetail controllerLogicProcessActivityClassDetail = new ControllerLogicProcessActivityClassDetail(this, this);
     public ArrayList<ActivityGroupItem> mActivityGroupList = new ArrayList<>();
     public ArrayList<ActivityLevelItem> mActivityLevelList = new ArrayList<>();
@@ -107,18 +107,22 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()){
                 case R.id.item_activity_current:
+                    idActivity = -1;
                     openFragmentActivity();
                     break;
                 case R.id.item_status_class_list:
+                    idActivity = -1;
                     openFragmentClassList();
                     break;
                 case R.id.item_activity_create:
-                    openFragmentCreateActivity(-1);
+                    openFragmentCreateActivity(idActivity);
                     break;
                 case R.id.item_student_info:
+                    idActivity = -1;
                     openFragmentStudentActivityInfo();
                     break;
                 case R.id.item_management:
+                    idActivity = -1;
                     openFragmentManagementActiviyClass();
                     break;
             }
@@ -146,6 +150,14 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         bundle.putInt("idClass", idClass);
         bundle.putInt("idClassDetail", idClassDetail);
         bundle.putInt("idActivity", idActivity);
+        if(idActivity != -1 ){
+            bundle.putInt("idGroup", idActivityGroup);
+            bundle.putInt("idLevel", idActivityLevel);
+            bundle.putString("content", content);
+            bundle.putInt("scores", scores);
+            bundle.putString("timeStart", timeStart);
+            bundle.putString("timeEnd", timeEnd);
+        }
         fragmentClassDetailCreateActivity.setArguments(bundle);
 
         fragmentTransaction.commit();
@@ -161,6 +173,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
 
         fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailManagement, "activityManagement");
         fragmentTransaction.commit();
+        //Toast.makeText(this, ""+userId+"-"+idClass+"-"+idClassDetail, Toast.LENGTH_SHORT).show();
         controllerLogicProcessActivityClassDetail.getActivityManagement(userId, idClass, idClassDetail);
     }
 
@@ -199,37 +212,6 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         fragmentTransaction.commit();
 
         controllerLogicProcessActivityClassDetail.getActivityClassList(idClass, idClassDetail);
-    }
-
-    public void openFragmentCreateActivity(int idUser, int idClass, int idClassDetail, int idActivity, int idGroup, int idLevel, String content, String timeStart, String timeEnd, int scores){
-        //openFragmentCreateActivity(idActivity);
-        bottomNavigationView.setSelectedItemId(R.id.item_activity_create);
-        fragmentManager     = getFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_content, fragmentClassDetailCreateActivity, "createActivity");
-
-        Bundle bundle = new Bundle();
-        bundle.putInt("idUser", userId);
-        bundle.putInt("idClass", idClass);
-        bundle.putInt("idClassDetail", idClassDetail);
-        bundle.putInt("idActivity", idActivity);
-        bundle.putInt("idGroup", idGroup);
-        bundle.putInt("idLevel", idLevel);
-        bundle.putString("content", content);
-        bundle.putString("timeStart", timeStart);
-        bundle.putString("timeEnd", timeEnd);
-        bundle.putInt("scores", scores);
-        fragmentClassDetailCreateActivity.setArguments(bundle);
-
-        fragmentTransaction.commit();
-
-        //controllerLogicProcessActivityClassDetail.getActivityGroupList();
-        //controllerLogicProcessActivityClassDetail.getActivityLevelList();
-
-        Log.i("resAciti", ""+idUser+"-"+idClass+"-"+idClassDetail+"-"+idActivity+"-"+idGroup+"-"+idLevel+"-"+content+"-"+timeStart+"-"+timeEnd+"-"+scores);
-        //Toast.makeText(this, ""+idUser+"-"+idClass+"-"+idClassDetail+"-"+idActivity+"-"+idGroup+"-"+idLevel+"-"+content+"-"+timeStart+"-"+timeEnd+"-"+scores, Toast.LENGTH_SHORT).show();
-        //FragmentClassDetailCreateActivity fragment = (FragmentClassDetailCreateActivity) getFragmentManager().findFragmentByTag("createActivity");
-        //fragment.setDataUpdateActivityClass(idUser, idClass, idClassDetail, idGroup, idLevel, content, timeStart, timeEnd, scores);
     }
 
     @Override
@@ -296,6 +278,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
                     ActivityClassItem activityClassItem = new ActivityClassItem();
                     activityClassItem.setmTypeUser(jsonObject.getInt("typeUser"));
                     activityClassItem.setmId(jsonObject.getInt("idActivityClass"));
+                    activityClassItem.setmStatus(jsonObject.getInt("status"));
                     activityClassItem.setmIdGroup(jsonObject.getInt("idGroup"));
                     activityClassItem.setmIdLevel(jsonObject.getInt("idLevel"));
                     activityClassItem.setmScores(jsonObject.getInt("scores"));
@@ -366,6 +349,8 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
             try {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 ActivityManagementItem item = new ActivityManagementItem();
+                item.setIdUser(jsonObject.getInt("idUser"));
+                item.setIdActivity(jsonObject.getInt("idActivity"));
                 item.setmFullname(jsonObject.getString("fullname"));
                 item.setmUsername(jsonObject.getString("username"));
                 item.setmActivityname(jsonObject.getString("content"));
@@ -377,6 +362,7 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         }
 
         fragment.tvTotalActivityRequest.setText(String.valueOf(totalRequest) + " Yêu Cầu");
+        fragment.totalRequest = totalRequest;
         //Log.i("requestFinal", totalRequest+"");
         fragment.setDataActivityManagement(arrActivityManagement);
     }
@@ -396,7 +382,51 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
         if(result == true){
             Toast.makeText(this, "Hoạt Động Đã Được Xóa!", Toast.LENGTH_LONG).show();
             FragmentClassDetailActivity fragment = (FragmentClassDetailActivity) getFragmentManager().findFragmentByTag("activityClass");
+            fragment.arrayActivityClass.remove(indexPosition);
             fragment.setDataActivityClass(fragment.arrayActivityClass);
+        }
+        else {
+            Toast.makeText(this, "Lỗi Mạng! Vui Lòng Thử Lại!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void resultAcceptActivityClass(boolean result) {
+        if(result == true){
+            Toast.makeText(this, "Đã Xác Nhận Hoàn Thành Hoạt Động!", Toast.LENGTH_LONG).show();
+            FragmentClassDetailManagement fragment = (FragmentClassDetailManagement) getFragmentManager().findFragmentByTag("activityManagement");
+            fragment.arrayRequest.remove(indexPosition);
+            fragment.setDataActivityManagement(fragment.arrayRequest);
+            fragment.totalRequest--;
+            fragment.tvTotalActivityRequest.setText(String.valueOf(fragment.totalRequest) + " Yêu Cầu");
+        }
+        else {
+            Toast.makeText(this, "Lỗi Mạng! Vui Lòng Thử Lại!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void resultCancelActivityClass(boolean result) {
+        if(result == true){
+            Toast.makeText(this, "Đã Hủy Yêu Cầu Xác Nhận!", Toast.LENGTH_LONG).show();
+            FragmentClassDetailManagement fragment = (FragmentClassDetailManagement) getFragmentManager().findFragmentByTag("activityManagement");
+            fragment.arrayRequest.remove(indexPosition);
+            fragment.setDataActivityManagement(fragment.arrayRequest);
+            fragment.totalRequest--;
+            fragment.tvTotalActivityRequest.setText(String.valueOf(fragment.totalRequest) + " Yêu Cầu");
+        }
+        else {
+            Toast.makeText(this, "Lỗi Mạng! Vui Lòng Thử Lại!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void resultUpdateActivityClass(boolean result) {
+        if(result == true){
+            Toast.makeText(this, "Cập Nhật Hoạt Động Thành Công!", Toast.LENGTH_LONG).show();
+            this.idActivity = -1;
+
+            bottomNavigationView.setSelectedItemId(R.id.item_activity_current);
         }
         else {
             Toast.makeText(this, "Lỗi Mạng! Vui Lòng Thử Lại!", Toast.LENGTH_LONG).show();
@@ -412,13 +442,40 @@ public class ActivityClassDetailActivity extends AppCompatActivity implements Vi
     }
 
     public void applyUpdateClasActivity(int idUser, int idClass, int idClassDetail, int idActivity, int idGroup, int idLevel, String content, String timeStart, String timeEnd, int scores){
-        openFragmentCreateActivity(idUser, idClass, idClassDetail, idActivity, idGroup, idLevel, content, timeStart, timeEnd, scores);
+        //openFragmentCreateActivity(idUser, idClass, idClassDetail, idActivity, idGroup, idLevel, content, timeStart, timeEnd, scores);
+
+        Log.i("resAciti", "idUser: "+idUser+" - idClass: "+idClass+" - idClassDetail: "+idClassDetail+" - idActivity: "+idActivity+" - idGroup: "+idGroup+" - idLevel: "+idLevel+" - content: "+content+" - timeStart: "+timeStart+" - timeEnd: "+timeEnd+" - scores: "+scores);
+
+        this.idActivity = idActivity;
+        this.idActivityGroup = idGroup;
+        this.idActivityLevel = idLevel;
+        this.timeStart = timeStart;
+        this.timeEnd = timeEnd;
+        this.scores = scores;
+        this.content = content;
+        bottomNavigationView.setSelectedItemId(R.id.item_activity_create);
+
+
+        //FragmentClassDetailCreateActivity fragment = (FragmentClassDetailCreateActivity) getFragmentManager().findFragmentByTag("createActivity");
+        //fragment.edtContent.setText(content);
+        //fragment.edtScores.setText(String.valueOf(scores));
+        //fragment.btnTimePickerStart.setText("20100");
     }
 
     public void applyDeleteActivity(int index, int idUser, int idClass, int idClassDetail, int idActivity){
-        FragmentClassDetailActivity fragment = (FragmentClassDetailActivity) getFragmentManager().findFragmentByTag("activityClass");
-        fragment.arrayActivityClass.remove(index);
+        indexPosition = index;
         controllerLogicProcessActivityClassDetail.deleteActivityClass(idUser, idClass, idClassDetail, idActivity);
+    }
+
+    public void applyAcceptActivity(int index, int idUser, int idActivity){
+        //Toast.makeText(this, idUser+"-"+idClass+"-"+idClassDetail+"-"+idActivity, Toast.LENGTH_SHORT).show();
+        indexPosition = index;
+        controllerLogicProcessActivityClassDetail.acceptActivityClass(idUser, idClass, idClassDetail, idActivity);
+    }
+
+    public void applyCancelActivity(int index, int idUser, int idActivity){
+        indexPosition = index;
+        controllerLogicProcessActivityClassDetail.cancelActivityClass(idUser, idClass, idClassDetail, idActivity);
     }
 
 }

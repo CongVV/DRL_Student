@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".View.DataChartView.DataChartListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow">
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_current_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toRightOf="@id/imgLogo"
+            android:fontFamily="sans-serif"
+            android:text="Danh Sách Lớp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/listViewClassCurrent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="125dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="auto_fit">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="(Danh Sách Rỗng)"
+        android:textColor="@color/colorBlack"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarCurrentClass"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
+</RelativeLayout>

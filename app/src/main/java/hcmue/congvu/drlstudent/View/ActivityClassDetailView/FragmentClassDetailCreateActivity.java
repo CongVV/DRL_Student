@@ -43,15 +43,15 @@ public class FragmentClassDetailCreateActivity extends Fragment {
     ActivityLevelAdapter activityLevelAdapter;
     //ArrayList<ActivityGroupItem> activityGroupList= new ArrayList<>();;
     //ArrayList<ActivityLevelItem> activityLevelList= new ArrayList<>();;
-    Spinner spinnerActivityGroup;
-    Spinner spinnerActivityLevel;
+    public Spinner spinnerActivityGroup;
+    public Spinner spinnerActivityLevel;
     DatePickerDialog.OnDateSetListener datePickerDialogStart, datePickerDialogEnd;
     TimePickerDialog.OnTimeSetListener timePickerDialogStart, timePickerDialogEnd;
-    Button btnDatePickerStart, btnDatePickerEnd, btnTimePickerStart, btnTimePickerEnd, btnCreateActivity;
+    public Button btnDatePickerStart, btnDatePickerEnd, btnTimePickerStart, btnTimePickerEnd, btnCreateActivity;
     String dStart, dEnd, tStart, tEnd, timeStart="", timeEnd="", content="";
     int idActivityGroup=1, idActivityLevel=1, idUser, idClass, idClassDetail, idActivity, scores=0;
     //boolean checkGroup=false, checkLevel=false;
-    EditText edtContent, edtScores;
+    public EditText edtContent, edtScores;
 
 
 
@@ -76,53 +76,63 @@ public class FragmentClassDetailCreateActivity extends Fragment {
             idClass = bundle.getInt("idClass");
             idClassDetail = bundle.getInt("idClassDetail");
             idActivity = bundle.getInt("idActivity");
-            if(idActivity!=-1){
-                idActivityGroup = bundle.getInt("idGroup");
-                idActivityLevel = bundle.getInt("idLevel");
-                content = bundle.getString("content");
+            Toast.makeText(getActivity(), "idActivity: "+idActivity, Toast.LENGTH_SHORT).show();
+            if(idActivity != -1){
                 timeStart = bundle.getString("timeStart");
                 timeEnd = bundle.getString("timeEnd");
+                content = bundle.getString("content");
                 scores = bundle.getInt("scores");
-                //checkGroup = true;
-                //checkLevel = true;
+                idActivityGroup = bundle.getInt("idGroup");
+                idActivityLevel = bundle.getInt("idLevel");
+            }
+            else{
+                idActivityGroup = 1;
+                idActivityLevel = 1;
+                content = "";
+                scores = 0;
             }
         }
 
-        //Toast.makeText(getActivity(), idActivity+"", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "con: "+content+" - sco: "+scores, Toast.LENGTH_SHORT).show();
+
+        edtContent.getText().clear();
+        edtScores.getText().clear();
         edtContent.setText(content);
         edtScores.setText(String.valueOf(scores));
-        //spinnerActivityGroup.setSelection(activityGroupAdapter.getPosition(activityGroupList.get(idActivityGroup)));
-        //spinnerActivityLevel.setSelection(activityLevelAdapter.getPosition(activityLevelList.get(idActivityLevel)));
 
-        Calendar cal = Calendar.getInstance();
-        int y = cal.get(Calendar.YEAR);
-        int m = cal.get(Calendar.MONTH);
-        int d = cal.get(Calendar.DAY_OF_MONTH);
-        dStart = y + "-" + m + "-" + d;
-        dEnd = y + "-" + m + "-" + d;
-        btnDatePickerStart.setText(d + "/" + m + "/" + y);
-        btnDatePickerEnd.setText(d + "/" + m + "/" + y);
 
-        int h   = cal.get(Calendar.HOUR_OF_DAY);
-        int mi  = cal.get(Calendar.MINUTE);
-        tStart = tEnd = h + ":" + mi;
-        btnTimePickerStart.setText(tStart);
-        btnTimePickerEnd.setText(tEnd);
-        if(!timeStart.equals("")){
-            dStart = timeStart.substring(0, 10);
-            tStart = timeStart.substring(11, 16);
-            btnDatePickerStart.setText(dStart);
+        if(idActivity == -1){
+            Calendar cal = Calendar.getInstance();
+            int y = cal.get(Calendar.YEAR);
+            int m = cal.get(Calendar.MONTH);
+            int d = cal.get(Calendar.DAY_OF_MONTH);
+            dStart = y + "-" + m + "-" + d;
+            dEnd = y + "-" + m + "-" + d;
+            btnDatePickerStart.setText(d + "/" + m + "/" + y);
+            btnDatePickerEnd.setText(d + "/" + m + "/" + y);
+
+            int h   = cal.get(Calendar.HOUR_OF_DAY);
+            int mi  = cal.get(Calendar.MINUTE);
+            tStart = tEnd = h + ":" + mi;
             btnTimePickerStart.setText(tStart);
-
-        }
-
-        if(!timeEnd.equals("")){
-            dEnd = timeEnd.substring(0, 10);
-            tEnd = timeEnd.substring(11, 16);
-            btnDatePickerEnd.setText(dEnd);
             btnTimePickerEnd.setText(tEnd);
         }
+        else{
+            if(!timeStart.equals("")){
+                dStart = timeStart.substring(0, 10);
+                tStart = timeStart.substring(11, 16);
+                btnDatePickerStart.setText(dStart);
+                btnTimePickerStart.setText(tStart);
 
+            }
+
+            if(!timeEnd.equals("")){
+                dEnd = timeEnd.substring(0, 10);
+                tEnd = timeEnd.substring(11, 16);
+                btnDatePickerEnd.setText(dEnd);
+                btnTimePickerEnd.setText(tEnd);
+            }
+        }
 
         datePickerDialogStart = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -234,6 +244,8 @@ public class FragmentClassDetailCreateActivity extends Fragment {
                                                                 dStart+" "+tStart, dEnd+" "+tEnd,
                                                                 edtContent.getText().toString(),
                                                                 edtScores.getText().toString());
+                edtContent.setText("");
+                edtScores.setText("0");
             }
         });
         return view;
@@ -281,9 +293,4 @@ public class FragmentClassDetailCreateActivity extends Fragment {
         });
     }
 
-    public void setDataUpdateActivityClass(int idUser, int idClass, int idClassDetail, int idGroup, int idLevel, String content, String timeStart, String timeEnd, int scores){
-        //spinnerActivityGroup.setSelection(idGroup-1);
-        edtContent.setText(content);
-        edtScores.setText(scores);
-    }
 }

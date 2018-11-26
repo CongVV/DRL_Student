@@ -91,7 +91,6 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:fontFamily="sans-serif"
-                    android:inputType="text"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"
                     android:textStyle="italic"

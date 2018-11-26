@@ -9,9 +9,4 @@
         android:id="@+id/item_type_student"
         android:icon="@drawable/ic_student_info_24dp"
         android:title="Phân Quyền"/>
-
-    <item
-        android:id="@+id/item_management"
-        android:icon="@drawable/ic_management_24dp"
-        android:title="Quản Lý"/>
 </menu>

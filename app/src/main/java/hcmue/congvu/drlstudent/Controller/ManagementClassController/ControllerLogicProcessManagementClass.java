@@ -149,17 +149,19 @@ public class ControllerLogicProcessManagementClass extends AppUrl implements Con
     public void updateTypeStudentClass(final int idClass, final ArrayList<StudentClassItem> arrayList) {
         Gson gson = new GsonBuilder().create();
         final JsonArray jsonArrayTypeStudentClass = gson.toJsonTree(arrayList).getAsJsonArray();
+
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_UPDATE_TYPE_STUDENT_CLASS,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         //Log.i("respun", response);
+                        //Log.i("json", jsonArrayTypeStudentClass.toString());
                         if(response.equals("success")){
                             viewProcessManagementClass.resultTypeStudentClass(true);
                         }
                         else {
-                            viewProcessManagementClass.resultDeleteStudentClass(false);
+                            viewProcessManagementClass.resultTypeStudentClass(false);
                         }
                     }
                 },

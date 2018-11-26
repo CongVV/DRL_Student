@@ -4,8 +4,8 @@ package hcmue.congvu.drlstudent.AppConstants;
  * Created by CongVu on 29/08/2018.
  */
 public abstract class AppUrl {
-    public static final String URL_APP_BASE = "http://192.168.1.18/drlstudent/";
-    //public static final String URL_APP_BASE                         = "http://congchicken.000webhostapp.com/";
+    //public static final String URL_APP_BASE = "http://192.168.1.18/drlstudent/";
+    public static final String URL_APP_BASE                         = "http://congchicken.000webhostapp.com/";
     public static final String URL_CHECK_LOG_IN                     = URL_APP_BASE + "checklogin.php";
     protected static final String URL_GET_SCHOOL_LIST               = URL_APP_BASE + "getdataschool.php";
     public static final String URL_CHECK_USERNAME                   = URL_APP_BASE + "checkusername.php";
@@ -37,6 +37,9 @@ public abstract class AppUrl {
     public static final String URL_CONFIRM_ACCEPT_ACTIVITY          = URL_APP_BASE + "confirmacceptactivity.php";
     public static final String URL_DELETE_ACTIVITY_CLASS            = URL_APP_BASE + "deleteactivityclass.php";
     public static final String URL_GET_AVATAR                       = URL_APP_BASE + "getavatar.php";
+    public static final String URL_ACCEPT_ACTIVITY_CLASS            = URL_APP_BASE + "acceptactivityclass.php";
+    public static final String URL_CANCEL_ACTIVITY_CLASS            = URL_APP_BASE + "cancelactivityclass.php";
+    public static final String URL_GET_DATA_CHART_CLASS             = URL_APP_BASE + "getdatachartclass.php";
 
 
 }

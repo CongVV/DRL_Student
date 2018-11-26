@@ -18,9 +18,11 @@ import hcmue.congvu.drlstudent.R;
 /**
  * Created by CongVu on 11/10/2018.
  */
-public class FragmentClassDetailManagement extends Fragment {
+public class FragmentClassDetailManagement extends Fragment implements ActivityManagementAdapter.ConfirmActivityManagement{
     ListView lvAcitityRequest;
     TextView tvTotalActivityRequest;
+    ArrayList<ActivityManagementItem> arrayRequest;
+    int totalRequest = 0;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -31,7 +33,21 @@ public class FragmentClassDetailManagement extends Fragment {
     }
 
     public void setDataActivityManagement(ArrayList<ActivityManagementItem> arrayList){
+        arrayRequest = arrayList;
         ActivityManagementAdapter adapter = new ActivityManagementAdapter(getActivity(), arrayList);
+        adapter.confirm = this;
         lvAcitityRequest.setAdapter(adapter);
+    }
+
+    @Override
+    public void acceptActivity(int index, int idUser, int idActivity) {
+        ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
+        act.applyAcceptActivity(index, idUser, idActivity);
+    }
+
+    @Override
+    public void cancelActivity(int index, int idUser, int idActivity) {
+        ActivityClassDetailActivity act = (ActivityClassDetailActivity) getActivity();
+        act.applyCancelActivity(index, idUser, idActivity);
     }
 }

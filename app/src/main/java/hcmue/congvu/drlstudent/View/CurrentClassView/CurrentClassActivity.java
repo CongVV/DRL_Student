@@ -42,8 +42,14 @@ public class CurrentClassActivity extends AppCompatActivity implements ViewProce
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_class);
         Bundle bundle = this.getIntent().getExtras();
-        userId = bundle.getInt("userId");
-        avatar = bundle.getString("avatar");
+        if(bundle!=null){
+            userId = bundle.getInt("userId");
+            avatar = bundle.getString("avatar");
+        }
+        else{
+            Toast.makeText(this, "Lỗi mạng! Vui lòng thử lại!", Toast.LENGTH_SHORT).show();
+        }
+
 
         tvClassList = (TextView) findViewById(R.id.tvEmpty);
         listViewClass = (ListView) findViewById(R.id.listViewClassCurrent);

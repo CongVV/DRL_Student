@@ -88,11 +88,21 @@ public class ControllerLogicProcessActivityClassDetail extends AppUrl implements
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        if(response.equals("success")){
-                            viewProcessActivityClassDetail.resultCreateActivityClass(true);
+                        if(idActivity==-1){
+                            if(response.equals("success")){
+                                viewProcessActivityClassDetail.resultCreateActivityClass(true);
+                            }
+                            else {
+                                viewProcessActivityClassDetail.resultCreateActivityClass(false);
+                            }
                         }
                         else {
-                            viewProcessActivityClassDetail.resultCreateActivityClass(false);
+                            if(response.equals("success")){
+                                viewProcessActivityClassDetail.resultUpdateActivityClass(true);
+                            }
+                            else {
+                                viewProcessActivityClassDetail.resultUpdateActivityClass(false);
+                            }
                         }
                     }
                 },
@@ -321,6 +331,79 @@ public class ControllerLogicProcessActivityClassDetail extends AppUrl implements
                         }
                         else {
                             viewProcessActivityClassDetail.resultDeleteActivityClass(false);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley",error.toString());
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idClass",String.valueOf(idClass));
+                params.put("idUser",String.valueOf(idUser));
+                params.put("idClassDetail",String.valueOf(idClassDetail));
+                params.put("idActivity",String.valueOf(idActivity));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void acceptActivityClass(final int idUser, final int idClass, final int idClassDetail, final int idActivity) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        final StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_ACCEPT_ACTIVITY_CLASS,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.i("accp", response);
+                        if(response.equals("success")){
+                            viewProcessActivityClassDetail.resultAcceptActivityClass(true);
+                        }
+                        else {
+                            viewProcessActivityClassDetail.resultAcceptActivityClass(false);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("errVolley",error.toString());
+                        //Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String> params = new HashMap<>();
+                params.put("idClass",String.valueOf(idClass));
+                params.put("idUser",String.valueOf(idUser));
+                params.put("idClassDetail",String.valueOf(idClassDetail));
+                params.put("idActivity",String.valueOf(idActivity));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    @Override
+    public void cancelActivityClass(final int idUser, final int idClass, final int idClassDetail, final int idActivity) {
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        final StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_CANCEL_ACTIVITY_CLASS,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        if(response.equals("success")){
+                            viewProcessActivityClassDetail.resultCancelActivityClass(true);
+                        }
+                        else {
+                            viewProcessActivityClassDetail.resultCancelActivityClass(false);
                         }
                     }
                 },
