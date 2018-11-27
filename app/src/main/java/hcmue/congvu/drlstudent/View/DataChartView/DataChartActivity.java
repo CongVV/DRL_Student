@@ -1,5 +1,6 @@
 package hcmue.congvu.drlstudent.View.DataChartView;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -80,15 +81,22 @@ public class DataChartActivity extends AppCompatActivity implements ViewProcessD
         barEntries.add(new BarEntry(8, scores8));
 
         BarDataSet barDataSet = new BarDataSet(barEntries, "Điểm Rèn Luyện");
+        barDataSet.setColor(Color.RED);
 
         BarData data = new BarData(barDataSet);
         chart.setData(data);
 
-        String[] term = new String[]{term1, term2, term3, term4, term5, term6, term7, term8};
+        String[] term = new String[]{"", term1, term2, term3, term4, term5, term6, term7, term8};
 
         XAxis xAxis = chart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(term));
-        xAxis.setCenterAxisLabels(true);
+        //xAxis.setCenterAxisLabels(true);
+
+        //xAxis.setSpaceMin(1.5f);
+        //xAxis.setSpaceMax(1.5f);
+        //xAxis.setSpaceMin(5f);
+        xAxis.setSpaceMax(1f);
+
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1);
         xAxis.setGranularityEnabled(true);
@@ -99,8 +107,9 @@ public class DataChartActivity extends AppCompatActivity implements ViewProcessD
         float barSpace = 0.1f;
         float groupSpace = 0.5f;
 
-        data.setBarWidth(0.15f);
+        data.setBarWidth(0.5f);
         chart.getXAxis().setAxisMinimum(0);
+
         //chart.groupBars(0, groupSpace, barSpace);
         chart.invalidate();
     }
